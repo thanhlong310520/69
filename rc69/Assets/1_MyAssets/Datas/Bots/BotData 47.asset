@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0094d0ae2727c4c53aec92387256922b, type: 3}
+  m_Name: BotData 47
+  m_EditorClassIdentifier: 
+  id: 
+  itemName: Pollo Vestito
+  itemType: 2
+  spriteIcon: {fileID: 21300000, guid: 14fbc995358294bd8b1674ae013f0479, type: 3}
+  prefab: {fileID: 520775169151759742, guid: 0d4c6d55f6b8c4b86bb73331f976b5d7, type: 3}
+  rarityType: 1
+  colorType: 0
+  spriteIconLock: {fileID: 21300000, guid: b983ad800d2dc4354820c7b0db55b537, type: 3}
+  cost: 750
+  defaultItem: 0
+  income: 11
+  audioClip: {fileID: 8300000, guid: 2173c0f1ecaa044b38009f099b573edf, type: 3}
+  health: 307

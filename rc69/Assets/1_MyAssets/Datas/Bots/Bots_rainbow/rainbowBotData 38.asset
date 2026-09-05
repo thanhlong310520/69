@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0094d0ae2727c4c53aec92387256922b, type: 3}
+  m_Name: rainbowBotData 38
+  m_EditorClassIdentifier: 
+  id: 
+  itemName: Los Tralaleritos
+  itemType: 2
+  spriteIcon: {fileID: 21300000, guid: ca5c53f23a6df4378b369c73e38d1555, type: 3}
+  prefab: {fileID: 520775169151759742, guid: 391ad5ee60e62497090e8eb1cc72980d, type: 3}
+  rarityType: 6
+  colorType: 3
+  spriteIconLock: {fileID: 21300000, guid: 0d5d7ef15a8b8425280ae56c5d8a942b, type: 3}
+  cost: 22080
+  defaultItem: 0
+  income: 860
+  audioClip: {fileID: 8300000, guid: eb586f5ced9b5485b8b9a4d8086acdf9, type: 3}
+  health: 12880

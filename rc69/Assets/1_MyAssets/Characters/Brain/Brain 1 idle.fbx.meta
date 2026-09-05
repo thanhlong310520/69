@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: ee50343f9ab0f402bb382dcef1a2830c
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: <Root Transform>
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Brainske:Neck_M' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      internalID: 1827226128182048838
+      firstFrame: 0
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 9
+    meshCompression: 1
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 0
+    importPhysicalCameras: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 0
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 0
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Brainske:Root_M
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:Hip_L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:Hip_R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:Knee_L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:Knee_R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:Ankle_L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:Ankle_R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:Spine1_M
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:Chest_M
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:Head_M
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:Shoulder_L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:Shoulder_R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:Elbow_L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:Elbow_R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:Wrist_L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:Wrist_R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:ThumbFinger2_L
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:ThumbFinger3_L
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:MiddleFinger1_L
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:MiddleFinger2_L
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:ThumbFinger2_R
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:ThumbFinger3_R
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:MiddleFinger1_R
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Brainske:MiddleFinger2_R
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Brain 0 pose(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:MotionSystem
+      parentName: Brain 0 pose(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:MainSystem
+      parentName: Brainske:MotionSystem
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:Main
+      parentName: Brainske:MainSystem
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:DeformationSystem
+      parentName: Brain 0 pose(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:Root_M
+      parentName: Brainske:DeformationSystem
+      position: {x: -2.6607805e-17, y: 0.64233404, z: -0.035479}
+      rotation: {x: 0.5019252, y: -0.4980674, z: -0.5019252, w: 0.4980674}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:Spine1_M
+      parentName: Brainske:Root_M
+      position: {x: -0.14902085, y: -5.995205e-17, z: -4.5056703e-17}
+      rotation: {x: -0, y: -0, z: -0.0016524793, w: 0.9999986}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.99999976}
+    - name: Brainske:Chest_M
+      parentName: Brainske:Spine1_M
+      position: {x: -0.13465798, y: 4.5913277e-15, z: -2.1353944e-17}
+      rotation: {x: -0, y: -0, z: -0.009611098, w: 0.9999538}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:Neck_M
+      parentName: Brainske:Chest_M
+      position: {x: -0.1437215, y: 1.3988811e-16, z: 5.192394e-16}
+      rotation: {x: -0, y: -0, z: 0.19668028, w: -0.98046774}
+      scale: {x: 1.0000002, y: 1.000001, z: 1.0000004}
+    - name: Brainske:Head_M
+      parentName: Brainske:Neck_M
+      position: {x: -0.014641675, y: 6.3948854e-16, z: -5.935776e-17}
+      rotation: {x: -0.00000002296206, y: -0.00000003534262, z: -0.19964366, w: -0.97986865}
+      scale: {x: 1.0000013, y: 1.0000013, z: 1.0000012}
+    - name: Brainske:HeadEnd_M
+      parentName: Brainske:Head_M
+      position: {x: -0.45405728, y: -3.497203e-16, z: 2.0464233e-16}
+      rotation: {x: -0, y: -0, z: -8.1153925e-16, w: 1}
+      scale: {x: 1, y: 1, z: 0.9999993}
+    - name: Brainske:Shoulder_R
+      parentName: Brainske:Chest_M
+      position: {x: -0.10285492, y: -0.008702199, z: -0.25266737}
+      rotation: {x: 0.11655439, y: 0.70779985, z: 0.11726187, w: -0.6867926}
+      scale: {x: 1.0000012, y: 1.0000012, z: 1.0000005}
+    - name: Brainske:Elbow_R
+      parentName: Brainske:Shoulder_R
+      position: {x: -0.23160651, y: -2.398082e-16, z: 0}
+      rotation: {x: 0.004123776, y: 0.013272014, z: -0.025164599, w: 0.9995867}
+      scale: {x: 1.0000006, y: 1, z: 1.0000005}
+    - name: Brainske:Wrist_R
+      parentName: Brainske:Elbow_R
+      position: {x: -0.20426509, y: 4.9960036e-16, z: 4.796164e-16}
+      rotation: {x: 0.1151226, y: 0.06885144, z: 0.04323508, w: 0.9900188}
+      scale: {x: 1.000001, y: 1, z: 1.0000002}
+    - name: Brainske:MiddleFinger1_R
+      parentName: Brainske:Wrist_R
+      position: {x: -0.1370929, y: 1.7985614e-16, z: 2.398082e-16}
+      rotation: {x: 0.036464714, y: -0.05796066, z: -0.0075585945, w: 0.9976241}
+      scale: {x: 0.9999995, y: 1.0000005, z: 1.0000008}
+    - name: Brainske:MiddleFinger2_R
+      parentName: Brainske:MiddleFinger1_R
+      position: {x: -0.095015265, y: -1.5987214e-16, z: 4.796164e-16}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 0.99999976, y: 0.99999976, z: 0.9999999}
+    - name: Brainske:ThumbFinger2_R
+      parentName: Brainske:Wrist_R
+      position: {x: -0.019471353, y: 0.013339106, z: -0.06434857}
+      rotation: {x: 0.9247308, y: -0.3525009, z: 0.06255653, w: -0.12923971}
+      scale: {x: 0.9999995, y: 1.000001, z: 1.0000021}
+    - name: Brainske:ThumbFinger3_R
+      parentName: Brainske:ThumbFinger2_R
+      position: {x: -0.09032876, y: 3.9968034e-17, z: -1.9984015e-16}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1.0000005}
+    - name: Brainske:Shoulder_L
+      parentName: Brainske:Chest_M
+      position: {x: -0.10285492, y: -0.008702199, z: 0.25266737}
+      rotation: {x: -0.70779985, y: 0.116554335, z: -0.68679273, w: -0.11726183}
+      scale: {x: 1.0000008, y: 1.0000005, z: 1.0000004}
+    - name: Brainske:Elbow_L
+      parentName: Brainske:Shoulder_L
+      position: {x: 0.23160651, y: 2.398082e-16, z: 7.993607e-17}
+      rotation: {x: -0.004123768, y: -0.013271575, z: 0.025164608, w: -0.9995867}
+      scale: {x: 1.0000012, y: 1.0000011, z: 1.0000011}
+    - name: Brainske:Wrist_L
+      parentName: Brainske:Elbow_L
+      position: {x: 0.20426509, y: -5.3956846e-16, z: -7.993607e-17}
+      rotation: {x: 0.11512259, y: 0.06885199, z: 0.04323527, w: 0.9900187}
+      scale: {x: 1.0000011, y: 1.0000005, z: 1.0000006}
+    - name: Brainske:MiddleFinger1_L
+      parentName: Brainske:Wrist_L
+      position: {x: 0.1370929, y: 0.0000000013392464, z: 3.386288e-10}
+      rotation: {x: 0.036464684, y: -0.057959784, z: -0.0075585637, w: 0.9976241}
+      scale: {x: 0.9999993, y: 1.0000006, z: 1.0000014}
+    - name: Brainske:MiddleFinger2_L
+      parentName: Brainske:MiddleFinger1_L
+      position: {x: 0.095015265, y: -0.0000000016732896, z: -7.805469e-11}
+      rotation: {x: -0, y: -0, z: 0.0000000018626451, w: 1}
+      scale: {x: 1.0000001, y: 1.0000013, z: 1.0000005}
+    - name: Brainske:ThumbFinger2_L
+      parentName: Brainske:Wrist_L
+      position: {x: 0.019471353, y: -0.013339106, z: 0.06434857}
+      rotation: {x: -0.9247307, y: 0.35250098, z: -0.06255655, w: 0.1292396}
+      scale: {x: 0.9999995, y: 1.0000005, z: 1.0000013}
+    - name: Brainske:ThumbFinger3_L
+      parentName: Brainske:ThumbFinger2_L
+      position: {x: 0.09032876, y: 0.0000000011012332, z: 1.00739424e-10}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 0.9999999, z: 1}
+    - name: Brainske:Hip_R
+      parentName: Brainske:Root_M
+      position: {x: 0.09227831, y: 0.00504672, z: -0.10965815}
+      rotation: {x: -0.04306546, y: 0.9989304, z: -0.016537994, w: -0.0031675398}
+      scale: {x: 1.0000008, y: 1.0000007, z: 1}
+    - name: Brainske:Knee_R
+      parentName: Brainske:Hip_R
+      position: {x: -0.27244848, y: -9.492408e-17, z: 1.8111715e-12}
+      rotation: {x: -0.00000006029949, y: 0.000000005820765, z: 0.13385431, w: 0.99100107}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1.0000004}
+    - name: Brainske:Ankle_R
+      parentName: Brainske:Knee_R
+      position: {x: -0.15476114, y: 0.000000023827573, z: 1.0562354e-12}
+      rotation: {x: -0.026866706, y: -0.00003148265, z: -0.094879, w: 0.9951262}
+      scale: {x: 1.0000005, y: 1.0000014, z: 1.000001}
+    - name: Brainske:Toes_R
+      parentName: Brainske:Ankle_R
+      position: {x: -0.0899258, y: 0.10858045, z: -8.243252e-11}
+      rotation: {x: 0.008144352, y: 0.0059812767, z: -0.59189576, w: 0.80595124}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000005}
+    - name: Brainske:ToesEnd_R
+      parentName: Brainske:Toes_R
+      position: {x: -0.12445651, y: -6.133094e-14, z: 0.00000022076271}
+      rotation: {x: 0.00000026775518, y: 0.00000079348666, z: 0.000000009255016, w: 1}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000007}
+    - name: Brainske:Hip_L
+      parentName: Brainske:Root_M
+      position: {x: 0.09227831, y: 0.00504672, z: 0.10965815}
+      rotation: {x: 0.9989304, y: 0.04306543, z: 0.0031674951, w: -0.01653792}
+      scale: {x: 1.0000011, y: 1.0000004, z: 1.0000004}
+    - name: Brainske:Knee_L
+      parentName: Brainske:Hip_L
+      position: {x: 0.27244848, y: 5.5235875e-11, z: -1.8112712e-12}
+      rotation: {x: -0.00000001862645, y: -0.000000043015458, z: -0.13385428, w: -0.99100107}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000004}
+    - name: Brainske:Ankle_L
+      parentName: Brainske:Knee_L
+      position: {x: 0.15476114, y: -0.0000000237962, z: -1.0564549e-12}
+      rotation: {x: 0.026866721, y: 0.00003148116, z: 0.094878994, w: -0.99512625}
+      scale: {x: 1.0000014, y: 1.0000019, z: 1.0000015}
+    - name: Brainske:Toes_L
+      parentName: Brainske:Ankle_L
+      position: {x: 0.0899258, y: -0.10858045, z: 3.71306e-10}
+      rotation: {x: 0.008145041, y: 0.0059818067, z: -0.59189576, w: 0.8059512}
+      scale: {x: 0.99999964, y: 1, z: 0.99999976}
+    - name: Brainske:ToesEnd_L
+      parentName: Brainske:Toes_L
+      position: {x: 0.12445651, y: -1.3988811e-16, z: 0.00000000201564}
+      rotation: {x: 0.000000021420414, y: -0.000000010244546, z: 0.000000004900356, w: 1}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1.0000002}
+    - name: Brainske:Geometry
+      parentName: Brain 0 pose(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:geo
+      parentName: Brainske:Geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:body
+      parentName: Brainske:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:hair
+      parentName: Brainske:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:head
+      parentName: Brainske:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:than
+      parentName: Brainske:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:hong
+      parentName: Brainske:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:chan_p_tren
+      parentName: Brainske:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:chan_p_duoi
+      parentName: Brainske:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:giay_p
+      parentName: Brainske:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:mui_giay_p
+      parentName: Brainske:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:chan_t_tren
+      parentName: Brainske:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:chan_t_duoi
+      parentName: Brainske:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:giay_t
+      parentName: Brainske:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:mui_giay_t
+      parentName: Brainske:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:tay_t_tren
+      parentName: Brainske:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:tay_t_duoi
+      parentName: Brainske:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:tay_t
+      parentName: Brainske:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:tay_p_tren
+      parentName: Brainske:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:tay_p_duoi
+      parentName: Brainske:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Brainske:tay_p
+      parentName: Brainske:body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 9
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 082832ed9617345fc89920070117533a, type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6eb8bf8ea3c499d8a070aee49adeff, type: 3}
+  m_Name: FashionData_3
+  m_EditorClassIdentifier: 
+  id: 
+  itemName: Eliah
+  priority: 0
+  itemType: 3
+  spriteIcon: {fileID: 21300000, guid: 79cfe9d2c3b17487796a4f308354b0f8, type: 3}
+  prefab: {fileID: 5947028138587960578, guid: 48cae694d78b67446af87eb80c09ed9b, type: 3}
+  rarityType: 1
+  colorType: 0
+  spriteIconLock: {fileID: 0}
+  cost: 0
+  avatar: {fileID: 21300000, guid: cb5aba312d948a941aeecdad2cef0e13, type: 3}
+  male: 1
+  numberAds: 3

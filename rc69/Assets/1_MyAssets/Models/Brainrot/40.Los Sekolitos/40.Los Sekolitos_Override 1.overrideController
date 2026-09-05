@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 40.Los Sekolitos_Override 1
+  m_Controller: {fileID: 9100000, guid: 19d0abdc965784a37bfe66f41a496caf, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -7616177253730708855, guid: e6640c53915c64ad38a7ed1b41ddc70d, type: 3}
+    m_OverrideClip: {fileID: -408792478151208584, guid: bec2ebacdbb1143b28a50e3e39f89390, type: 3}
+  - m_OriginalClip: {fileID: -3939750429153035180, guid: 1af0b6cc4116e40bf80ec994f2b0b46b, type: 3}
+    m_OverrideClip: {fileID: 7347488885690778226, guid: 964e458830aff4421b249d7497afc6f4, type: 3}

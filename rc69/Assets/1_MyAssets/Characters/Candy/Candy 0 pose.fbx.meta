@@ -1,0 +1,402 @@
+fileFormatVersion: 2
+guid: 0292ddeda856d47989a639988fe92edc
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Candy_rig_lambert2
+    second: {fileID: 2100000, guid: 9adcecc246cef47f392333f76cfba207, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Candy_rig_lambert3
+    second: {fileID: 2100000, guid: 4e8834370aa7344de98cb7c5cb6da6b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Candyrig_lambert2
+    second: {fileID: 2100000, guid: 9adcecc246cef47f392333f76cfba207, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Candyrig_lambert3
+    second: {fileID: 2100000, guid: 4e8834370aa7344de98cb7c5cb6da6b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 6f952173841ab4a76a26b353b551ecd3, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 9
+    meshCompression: 1
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 0
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Candy 0 pose(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:MotionSystem
+      parentName: Candy 0 pose(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:MainSystem
+      parentName: Candyrig:MotionSystem
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:Main
+      parentName: Candyrig:MainSystem
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:DeformationSystem
+      parentName: Candy 0 pose(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:Root_M
+      parentName: Candyrig:DeformationSystem
+      position: {x: -2.2953706e-17, y: 0.70424944, z: 0.00633403}
+      rotation: {x: 0.50081265, y: -0.49918604, z: -0.50081265, w: 0.49918604}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: Candyrig:Spine1_M
+      parentName: Candyrig:Root_M
+      position: {x: -0.110475086, y: -2.1233017e-17, z: -4.5815248e-17}
+      rotation: {x: -0, y: -0, z: 0.0115400115, w: -0.9999334}
+      scale: {x: 1.0000006, y: 1.0000006, z: 1.0000002}
+    - name: Candyrig:Chest_M
+      parentName: Candyrig:Spine1_M
+      position: {x: -0.11134231, y: 3.272383e-16, z: -6.631213e-18}
+      rotation: {x: -0, y: -0, z: -0.0368189, w: -0.999322}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000007}
+    - name: Candyrig:Neck_M
+      parentName: Candyrig:Chest_M
+      position: {x: -0.14835167, y: -2.2981619e-16, z: 4.657018e-16}
+      rotation: {x: -0.000000029039265, y: 0.000000030546325, z: 0.014465723, w: 0.99989545}
+      scale: {x: 1.0000006, y: 1.0000005, z: 1.0000004}
+    - name: Candyrig:Head_M
+      parentName: Candyrig:Neck_M
+      position: {x: -0.023355935, y: -4.996003e-17, z: -4.6970478e-17}
+      rotation: {x: 0.00000002981157, y: -0.000000029793064, z: -0.040052895, w: 0.99919754}
+      scale: {x: 1.000001, y: 1.0000011, z: 1.0000002}
+    - name: Candyrig:HeadEnd_M
+      parentName: Candyrig:Head_M
+      position: {x: -0.4333801, y: 2.2357117e-16, z: 7.659755e-17}
+      rotation: {x: -0, y: -0, z: 8.88178e-16, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: Candyrig:Scapula_R
+      parentName: Candyrig:Chest_M
+      position: {x: -0.11142874, y: -0.0019931437, z: -0.10775219}
+      rotation: {x: 0.043263897, y: 0.83260155, z: 0.027236287, w: -0.5515081}
+      scale: {x: 1.0000014, y: 1.0000004, z: 1.0000005}
+    - name: Candyrig:Shoulder_R
+      parentName: Candyrig:Scapula_R
+      position: {x: -0.08574328, y: 7.224221e-15, z: 3.1974422e-16}
+      rotation: {x: -0.021701101, y: 0.18262024, z: 0.005287804, w: 0.9829298}
+      scale: {x: 1.000001, y: 1.0000012, z: 1.0000012}
+    - name: Candyrig:Elbow_R
+      parentName: Candyrig:Shoulder_R
+      position: {x: -0.2042643, y: 3.9968025e-16, z: 3.9968025e-16}
+      rotation: {x: 0.0039017466, y: 0.014814267, z: -0.032261427, w: 0.99936205}
+      scale: {x: 1.0000017, y: 1.0000008, z: 1.0000013}
+    - name: Candyrig:Wrist_R
+      parentName: Candyrig:Elbow_R
+      position: {x: -0.21989553, y: -3.1974422e-16, z: 1.5987211e-16}
+      rotation: {x: -0.015529217, y: 0.08134243, z: -0.008651828, w: 0.99652773}
+      scale: {x: 1.0000014, y: 1.0000008, z: 1.000001}
+    - name: Candyrig:MiddleFinger1_R
+      parentName: Candyrig:Wrist_R
+      position: {x: -0.096325025, y: -7.9936054e-17, z: -3.1974422e-16}
+      rotation: {x: 0.024437882, y: -0.063239075, z: -0.00067911705, w: 0.99769896}
+      scale: {x: 1.0000002, y: 1, z: 1.0000012}
+    - name: Candyrig:MiddleFinger2_R
+      parentName: Candyrig:MiddleFinger1_R
+      position: {x: -0.062753886, y: 5.9952046e-17, z: -3.9968025e-16}
+      rotation: {x: -0, y: -0, z: 9.3132235e-10, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Candyrig:IndexFinger1_R
+      parentName: Candyrig:Wrist_R
+      position: {x: -0.035587665, y: 0.0073036286, z: -0.05041053}
+      rotation: {x: 0.99738324, y: -0.004259387, z: 0.068208404, w: -0.023583662}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1.0000011}
+    - name: Candyrig:IndexFinger2_R
+      parentName: Candyrig:IndexFinger1_R
+      position: {x: -0.0620996, y: 1.5987211e-16, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 0.9999995, y: 0.9999994, z: 0.99999976}
+    - name: Candyrig:Scapula_L
+      parentName: Candyrig:Chest_M
+      position: {x: -0.11142874, y: -0.0019931437, z: 0.10775219}
+      rotation: {x: -0.8326014, y: 0.043263894, z: -0.5515081, w: -0.027236283}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000004}
+    - name: Candyrig:Shoulder_L
+      parentName: Candyrig:Scapula_L
+      position: {x: 0.08574328, y: -7.0743417e-15, z: 1.5987211e-16}
+      rotation: {x: -0.021701176, y: 0.18262014, z: 0.005287737, w: 0.9829298}
+      scale: {x: 0.9999984, y: 0.9999993, z: 0.99999964}
+    - name: Candyrig:Elbow_L
+      parentName: Candyrig:Shoulder_L
+      position: {x: 0.2042643, y: -2.7977617e-16, z: -1.5987211e-16}
+      rotation: {x: -0.003901842, y: -0.014814343, z: 0.03226092, w: -0.99936205}
+      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000005}
+    - name: Candyrig:Wrist_L
+      parentName: Candyrig:Elbow_L
+      position: {x: 0.21989553, y: 2.3980818e-16, z: -4.7961637e-16}
+      rotation: {x: -0.015529296, y: 0.08134246, z: -0.008651626, w: 0.9965277}
+      scale: {x: 1.0000012, y: 1.0000006, z: 1.0000004}
+    - name: Candyrig:MiddleFinger1_L
+      parentName: Candyrig:Wrist_L
+      position: {x: 0.096325025, y: 1.5987211e-16, z: -3.1974422e-16}
+      rotation: {x: 0.024437869, y: -0.063238464, z: -0.00067941746, w: 0.99769896}
+      scale: {x: 0.99999917, y: 0.99999964, z: 1.0000001}
+    - name: Candyrig:MiddleFinger2_L
+      parentName: Candyrig:MiddleFinger1_L
+      position: {x: 0.062753886, y: -7.9936054e-17, z: 3.1974422e-16}
+      rotation: {x: -0.0000000018626449, y: -0, z: 0.0000000018626449, w: 1}
+      scale: {x: 1.0000002, y: 1.0000006, z: 0.9999999}
+    - name: Candyrig:IndexFinger1_L
+      parentName: Candyrig:Wrist_L
+      position: {x: 0.035587665, y: -0.0073036286, z: 0.05041053}
+      rotation: {x: -0.9973833, y: 0.004259671, z: -0.06820725, w: 0.023583505}
+      scale: {x: 0.99999905, y: 0.9999999, z: 1.0000004}
+    - name: Candyrig:IndexFinger2_L
+      parentName: Candyrig:IndexFinger1_L
+      position: {x: 0.0620996, y: -7.9936054e-17, z: 0}
+      rotation: {x: 0.00000005401671, y: 0.00000005826587, z: 0.000000014901161, w: 1}
+      scale: {x: 1.0000012, y: 1.0000007, z: 1.0000007}
+    - name: Candyrig:Hip_R
+      parentName: Candyrig:Root_M
+      position: {x: 0.04918791, y: 0.00021866217, z: -0.09189041}
+      rotation: {x: -0.023628073, y: 0.99970084, z: -0.0016346873, w: -0.006109745}
+      scale: {x: 1.0000005, y: 1, z: 0.99999917}
+    - name: Candyrig:Knee_R
+      parentName: Candyrig:Hip_R
+      position: {x: -0.3566417, y: -1.348921e-16, z: -9.0547585e-14}
+      rotation: {x: 0.00000004468893, y: -0.000000003259629, z: 0.077730544, w: 0.9969744}
+      scale: {x: 0.9999994, y: 0.99999905, z: 1.0000001}
+    - name: Candyrig:Ankle_R
+      parentName: Candyrig:Knee_R
+      position: {x: -0.2013356, y: -0.000000038717324, z: -5.059953e-14}
+      rotation: {x: -0.014329534, y: -0.0052837012, z: -0.055843644, w: 0.9983227}
+      scale: {x: 1.0000006, y: 1.0000012, z: 1.000001}
+    - name: Candyrig:Toes_R
+      parentName: Candyrig:Ankle_R
+      position: {x: -0.07757612, y: 0.07724522, z: -7.9537943e-10}
+      rotation: {x: 0.009488959, y: 0.007752973, z: -0.63266474, w: 0.77432895}
+      scale: {x: 1.0000002, y: 0.9999995, z: 1.0000001}
+    - name: Candyrig:ToesEnd_R
+      parentName: Candyrig:Toes_R
+      position: {x: -0.087587416, y: -4.156675e-14, z: 0.00000018920709}
+      rotation: {x: 0.00000022863966, y: 0.0000010374932, z: 0.00000009745416, w: 1}
+      scale: {x: 1.0000007, y: 0.9999999, z: 1.0000008}
+    - name: Candyrig:Hip_L
+      parentName: Candyrig:Root_M
+      position: {x: 0.04918791, y: 0.00021866217, z: 0.09189041}
+      rotation: {x: 0.9997008, y: 0.0236281, z: 0.006109789, w: -0.0016347468}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000001}
+    - name: Candyrig:Knee_L
+      parentName: Candyrig:Hip_L
+      position: {x: 0.3566417, y: -3.03452e-11, z: 9.0707444e-14}
+      rotation: {x: 0.00000004889444, y: -0.000000014944819, z: -0.0777306, w: -0.9969744}
+      scale: {x: 0.9999994, y: 0.99999976, z: 0.99999964}
+    - name: Candyrig:Ankle_L
+      parentName: Candyrig:Knee_L
+      position: {x: 0.2013356, y: 0.0000000387002, z: 8.3253405e-14}
+      rotation: {x: -0.014329506, y: -0.0052837767, z: -0.05584373, w: 0.9983228}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1.0000004}
+    - name: Candyrig:Toes_L
+      parentName: Candyrig:Ankle_L
+      position: {x: 0.07757612, y: -0.07724522, z: 8.066747e-10}
+      rotation: {x: -0.009489719, y: -0.007753604, z: 0.6326646, w: -0.7743289}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1}
+    - name: Candyrig:ToesEnd_L
+      parentName: Candyrig:Toes_L
+      position: {x: 0.087587416, y: -4.4964026e-17, z: 5.0098625e-10}
+      rotation: {x: 0.000000008381903, y: -0.000000003259629, z: 0.0000000024738256, w: 1}
+      scale: {x: 1, y: 1.0000007, z: 1.0000004}
+    - name: Candyrig:Geometry
+      parentName: Candy 0 pose(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:geo
+      parentName: Candyrig:Geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:toc
+      parentName: Candyrig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:dau
+      parentName: Candyrig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:than
+      parentName: Candyrig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:tay_p1
+      parentName: Candyrig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:tay_p2
+      parentName: Candyrig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:tay_p3
+      parentName: Candyrig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:tay_t1
+      parentName: Candyrig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:tay_t2
+      parentName: Candyrig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:tay_t3
+      parentName: Candyrig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:chan_p1
+      parentName: Candyrig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:chan_p2
+      parentName: Candyrig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:chan_p3
+      parentName: Candyrig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:chan_t1
+      parentName: Candyrig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:chan_t2
+      parentName: Candyrig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Candyrig:chan_t3
+      parentName: Candyrig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 9
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0094d0ae2727c4c53aec92387256922b, type: 3}
+  m_Name: BotData 25
+  m_EditorClassIdentifier: 
+  id: 
+  itemName: Bombardiro Crocodilo
+  itemType: 2
+  spriteIcon: {fileID: 21300000, guid: ec771e18f26074b238e9fc116ce9d0bc, type: 3}
+  prefab: {fileID: 5549537848070527891, guid: 547334e47186f41c696f15e1f3bb8c22, type: 3}
+  rarityType: 4
+  colorType: 0
+  spriteIconLock: {fileID: 21300000, guid: 783570be4d0af42379262a5236ccfdbf, type: 3}
+  cost: 5280
+  defaultItem: 0
+  income: 53
+  audioClip: {fileID: 8300000, guid: 231e97877b5ac4239ae30452ac8da188, type: 3}
+  health: 2304

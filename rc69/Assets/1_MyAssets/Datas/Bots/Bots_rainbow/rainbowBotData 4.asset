@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0094d0ae2727c4c53aec92387256922b, type: 3}
+  m_Name: rainbowBotData 4
+  m_EditorClassIdentifier: 
+  id: 
+  itemName: Virile Larila
+  itemType: 2
+  spriteIcon: {fileID: 21300000, guid: 79ce8d57c73424b5597e85717669b8ec, type: 3}
+  prefab: {fileID: 3645224765758544874, guid: 3989affd3cf8e4dbf9b1dd1bd4c6a2f0, type: 3}
+  rarityType: 1
+  colorType: 3
+  spriteIconLock: {fileID: 21300000, guid: 81765e24fb73e470eb12d817ecf84c84, type: 3}
+  cost: 1344
+  defaultItem: 0
+  income: 26
+  audioClip: {fileID: 8300000, guid: 56a4e703c1d8f439dbcf7a61cd061850, type: 3}
+  health: 784

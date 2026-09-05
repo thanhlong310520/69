@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0094d0ae2727c4c53aec92387256922b, type: 3}
+  m_Name: BotData 20
+  m_EditorClassIdentifier: 
+  id: 
+  itemName: Bananita Dolphinita
+  itemType: 2
+  spriteIcon: {fileID: 21300000, guid: 3ea5b0512f34b4572abef1f90e6554b1, type: 3}
+  prefab: {fileID: 6626581760611408475, guid: e4788658b9fd146058a4f373fa9e2734, type: 3}
+  rarityType: 3
+  colorType: 0
+  spriteIconLock: {fileID: 21300000, guid: 38bc9d43db221458a9bfb7e16da77cfc, type: 3}
+  cost: 2016
+  defaultItem: 0
+  income: 29
+  audioClip: {fileID: 8300000, guid: 39af06f934763489985c50a368b78eaa, type: 3}
+  health: 1296

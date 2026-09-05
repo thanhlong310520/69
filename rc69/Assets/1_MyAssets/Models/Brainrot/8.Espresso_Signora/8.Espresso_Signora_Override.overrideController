@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 8.Espresso_Signora_Override
+  m_Controller: {fileID: 9100000, guid: 19d0abdc965784a37bfe66f41a496caf, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -7616177253730708855, guid: e6640c53915c64ad38a7ed1b41ddc70d, type: 3}
+    m_OverrideClip: {fileID: -7090772102207607840, guid: a8ad41790f1d14aeba5125c723ec3267, type: 3}
+  - m_OriginalClip: {fileID: -3939750429153035180, guid: 1af0b6cc4116e40bf80ec994f2b0b46b, type: 3}
+    m_OverrideClip: {fileID: -4960832806336441350, guid: b27e3b96e9f7e4c6ea6111fe98ba2b34, type: 3}

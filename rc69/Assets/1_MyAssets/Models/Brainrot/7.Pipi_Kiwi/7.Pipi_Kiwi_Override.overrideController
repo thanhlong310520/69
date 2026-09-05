@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 7.Pipi_Kiwi_Override
+  m_Controller: {fileID: 9100000, guid: 19d0abdc965784a37bfe66f41a496caf, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -7616177253730708855, guid: e6640c53915c64ad38a7ed1b41ddc70d, type: 3}
+    m_OverrideClip: {fileID: 3861644015180238168, guid: bf5eab7a1c5ea4f94be7933bc09309e8, type: 3}
+  - m_OriginalClip: {fileID: -3939750429153035180, guid: 1af0b6cc4116e40bf80ec994f2b0b46b, type: 3}
+    m_OverrideClip: {fileID: 5371706962889301150, guid: 9eed440a1fa6146f39f062c54faa0e38, type: 3}

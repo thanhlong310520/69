@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fabc39100e2c7424d8442b41be06c237, type: 3}
+  m_Name: Upgrade_Speed
+  m_EditorClassIdentifier: Assembly-CSharp::UpgradeDataSO
+  type: 0
+  icon: {fileID: 1785774420, guid: 1a238b428eaf1aa46926f1b442fbb380, type: 3}
+  bgIcon: {fileID: 21300000, guid: b67bbe24171e50848998d0631e9f3fb8, type: 3}
+  data: []
+  isDynamicData: 1
+  basePrice: 283
+  r: 2
+  maxData: 50

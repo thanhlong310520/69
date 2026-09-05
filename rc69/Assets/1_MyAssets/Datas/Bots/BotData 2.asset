@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0094d0ae2727c4c53aec92387256922b, type: 3}
+  m_Name: BotData 2
+  m_EditorClassIdentifier: 
+  id: 
+  itemName: Trulimero Trulicina
+  itemType: 2
+  spriteIcon: {fileID: 21300000, guid: bd72ee6e51f904ea5b38c44c97dab46c, type: 3}
+  prefab: {fileID: 2656619184201478023, guid: 3d09ea34a4a8f4c64a9d3fdceea458e4, type: 3}
+  rarityType: 1
+  colorType: 0
+  spriteIconLock: {fileID: 21300000, guid: 446ad26c8be8f491db4e3acf7c5febef, type: 3}
+  cost: 268
+  defaultItem: 0
+  income: 7
+  audioClip: {fileID: 8300000, guid: a60b8a51825914394a16669ba918f0a6, type: 3}
+  health: 360

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e18ba26f5715794cbc8f08aee72132b, type: 3}
+  m_Name: Rebirth 12
+  m_EditorClassIdentifier: 
+  id: rebirth_12
+  moneyMult: 3.4
+  slotUnlock: 1
+  requireMoneyBase: 87
+  requireMoneyExponent: 5
+  requireWorkerCount: 1
+  requireWorkers:
+  - {fileID: 11400000, guid: 613dea3f0ca364db59e80e8ec5f4f2ee, type: 2}

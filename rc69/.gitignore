@@ -1,0 +1,17 @@
+/Library/
+/Temp/
+/Obj/
+/Build/
+/Builds/
+/Logs/
+.vscode
+/.idea/
+.DS_Store
+Assembly-CSharp*.csproj
+/Assets/Digger/Misc/Textures
+/Assets/DiggerData/Scenes/
+/Assets/ExternalDependencyManager/
+/Assets/Plugins/
+/Assets/Firebase/
+/Assets/Editor Default Resources/
+.vs

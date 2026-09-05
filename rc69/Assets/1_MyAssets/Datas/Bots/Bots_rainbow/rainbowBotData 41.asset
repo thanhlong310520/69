@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0094d0ae2727c4c53aec92387256922b, type: 3}
+  m_Name: rainbowBotData 41
+  m_EditorClassIdentifier: 
+  id: 
+  itemName: 67
+  itemType: 2
+  spriteIcon: {fileID: 21300000, guid: 3519f5fa56d624e37ade9d7228a3ee65, type: 3}
+  prefab: {fileID: 520775169151759742, guid: 5ea45ee09cf934c92afd418591ffb770, type: 3}
+  rarityType: 20
+  colorType: 3
+  spriteIconLock: {fileID: 21300000, guid: f33964b44ac6149a7995af95f8adcaa0, type: 3}
+  cost: 47998
+  defaultItem: 0
+  income: 2000
+  audioClip: {fileID: 8300000, guid: d7ecdd2b054c142e9aa9d9cd07bb7f62, type: 3}
+  health: 27999

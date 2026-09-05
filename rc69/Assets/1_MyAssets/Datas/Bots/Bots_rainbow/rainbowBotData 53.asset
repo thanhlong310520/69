@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0094d0ae2727c4c53aec92387256922b, type: 3}
+  m_Name: rainbowBotData 53
+  m_EditorClassIdentifier: 
+  id: 
+  itemName: Svinino Bombardino
+  itemType: 2
+  spriteIcon: {fileID: 21300000, guid: 062d1c35adb9445eab2cda414104d4ea, type: 3}
+  prefab: {fileID: 520775169151759742, guid: e8f68d6f1211841bd880525f7e9584db, type: 3}
+  rarityType: 2
+  colorType: 3
+  spriteIconLock: {fileID: 21300000, guid: 1757b6aea35c343e68f4248885931c3a, type: 3}
+  cost: 47250
+  defaultItem: 0
+  income: 675
+  audioClip: {fileID: 8300000, guid: e1818de1eb2cb4c27aafe92776b950a5, type: 3}
+  health: 12873

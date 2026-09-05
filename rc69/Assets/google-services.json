@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "379711304096",
+    "project_id": "rc69-monster-eggs-steal-run",
+    "storage_bucket": "rc69-monster-eggs-steal-run.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379711304096:android:be69ebdbed19014b8f74c5",
+        "android_client_info": {
+          "package_name": "com.RC69.monster.eggs.steal.run"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBle1aTEgvrvkWAixigLi8LoGs-6XD4b_k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

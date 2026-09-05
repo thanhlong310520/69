@@ -1,0 +1,168 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7556683720158250940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3793509627165445471}
+  - component: {fileID: 3361163331111619890}
+  m_Layer: 0
+  m_Name: ChangeEnvironment
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3793509627165445471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7556683720158250940}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 18, z: 252}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3361163331111619890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7556683720158250940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f0b098da7129a419e1c28b6ac50a56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeEnvironment
+  groundRds:
+  - {fileID: 0}
+  - {fileID: 0}
+  wallRd: {fileID: 0}
+  baseGround: {fileID: 0}
+  adsGround: {fileID: 0}
+  datas:
+  - type: 0
+    timeInmap: 30
+    vfx: {fileID: 0}
+    clip: {fileID: 0}
+    vol: 0.7
+    color: {r: 0.6862745, g: 0.6862745, b: 0.6862745, a: 0}
+    skyboxMaterial: {fileID: 2100000, guid: 97537ad2ed58c284d8a98adf5e13d684, type: 2}
+    groundMaterials:
+    - {fileID: 2100000, guid: ebcfac82c5b0da6449d55a2d69fdf6b9, type: 2}
+    wallMaterials:
+    - {fileID: 2100000, guid: 460664d897033614d970725ec4aa9a39, type: 2}
+    - {fileID: 2100000, guid: 54d9e5904a00f9c4f9b9113500ed9506, type: 2}
+    - {fileID: 2100000, guid: e6ddd1ea8170668438aaf482ee821393, type: 2}
+    - {fileID: 2100000, guid: c9b4c99f71b168646973a680df122ac3, type: 2}
+    baseGroundMaterials:
+    - {fileID: 2100000, guid: 2531a94738223574ca4f17077688e6a4, type: 2}
+    adsMaterials:
+    - {fileID: 2100000, guid: ff463df93e0f6f04f93bf439678669da, type: 2}
+  - type: 1
+    timeInmap: 90
+    vfx: {fileID: 1505092688743565777, guid: 9cad04e0fa7a351418cfe8a47ccf78b4, type: 3}
+    clip: {fileID: 8300000, guid: 181dea013abf0e843a60f731216a66a8, type: 3}
+    vol: 0.7
+    color: {r: 0.6862745, g: 0.6862745, b: 0.6862745, a: 0}
+    skyboxMaterial: {fileID: 2100000, guid: fa82707e91bdd3d4e828328de7ca5f88, type: 2}
+    groundMaterials:
+    - {fileID: 2100000, guid: d7ce5e61804b7624f846773327132a3d, type: 2}
+    wallMaterials:
+    - {fileID: 2100000, guid: 460664d897033614d970725ec4aa9a39, type: 2}
+    - {fileID: 2100000, guid: 54d9e5904a00f9c4f9b9113500ed9506, type: 2}
+    - {fileID: 2100000, guid: be729d9a4c20f4a48b9fc68527ee3f5c, type: 2}
+    - {fileID: 2100000, guid: eee5f54bfd73de64791936992b3145ed, type: 2}
+    baseGroundMaterials:
+    - {fileID: 2100000, guid: 2531a94738223574ca4f17077688e6a4, type: 2}
+    adsMaterials:
+    - {fileID: 2100000, guid: ff463df93e0f6f04f93bf439678669da, type: 2}
+  - type: 2
+    timeInmap: 90
+    vfx: {fileID: 4115947518298663230, guid: 3a4558f6b0c4d3c4d8e9b227034ef17f, type: 3}
+    clip: {fileID: 8300000, guid: b8f1471d3742c794abc4a8570d49a9ae, type: 3}
+    vol: 0.2
+    color: {r: 0.6862745, g: 0.6862745, b: 0.6862745, a: 0}
+    skyboxMaterial: {fileID: 2100000, guid: 29f9ffdc3d2e95c439d24e1342085889, type: 2}
+    groundMaterials:
+    - {fileID: 2100000, guid: 16e88de5397ab0741b1ec7ed5ef08af1, type: 2}
+    wallMaterials:
+    - {fileID: 2100000, guid: 6173adab7af6c7547b0bcd6f64b99cd0, type: 2}
+    - {fileID: 2100000, guid: 6173adab7af6c7547b0bcd6f64b99cd0, type: 2}
+    - {fileID: 2100000, guid: cb563a663717f2d438e510787db51be1, type: 2}
+    - {fileID: 2100000, guid: c3c5ab643a71c1545bb043985b463967, type: 2}
+    baseGroundMaterials:
+    - {fileID: 2100000, guid: 0f2bcb5e8e8efa0429b9e32c59311e85, type: 2}
+    adsMaterials:
+    - {fileID: 2100000, guid: dc545d3856c914143b5743341fe50083, type: 2}
+  - type: 3
+    timeInmap: 90
+    vfx: {fileID: 1709254077376921, guid: a019d6e1ae2c29045a2837b1353da01e, type: 3}
+    clip: {fileID: 8300000, guid: a8cf8b893e587174fa7faecfb6673847, type: 3}
+    vol: 0.7
+    color: {r: 0.6862745, g: 0.6862745, b: 0.6862745, a: 0}
+    skyboxMaterial: {fileID: 2100000, guid: 60c6e3084f1143242bbaa8ed6fda4092, type: 2}
+    groundMaterials:
+    - {fileID: 2100000, guid: 841229e4185f38345a3bfd71c9524517, type: 2}
+    wallMaterials:
+    - {fileID: 2100000, guid: 460664d897033614d970725ec4aa9a39, type: 2}
+    - {fileID: 2100000, guid: 54d9e5904a00f9c4f9b9113500ed9506, type: 2}
+    - {fileID: 2100000, guid: 9c5e7dfff18a03a4ba549870eb87a86b, type: 2}
+    - {fileID: 2100000, guid: 934e0a4f9e16c9042a33da5743b99624, type: 2}
+    baseGroundMaterials:
+    - {fileID: 2100000, guid: 2531a94738223574ca4f17077688e6a4, type: 2}
+    adsMaterials:
+    - {fileID: 2100000, guid: ff463df93e0f6f04f93bf439678669da, type: 2}
+  - type: 4
+    timeInmap: 90
+    vfx: {fileID: 1709254077376921, guid: c1ede641e541f614c9e975bc6858c5e4, type: 3}
+    clip: {fileID: 8300000, guid: e230861acf9c68d4fa85160193cd3724, type: 3}
+    vol: 0.7
+    color: {r: 0.6862745, g: 0.6862745, b: 0.6862745, a: 0}
+    skyboxMaterial: {fileID: 2100000, guid: 9c3e370af416a964b8f99d89c249883f, type: 2}
+    groundMaterials:
+    - {fileID: 2100000, guid: c43df8d1de82bd64caff07b0c775c53e, type: 2}
+    wallMaterials:
+    - {fileID: 2100000, guid: 6dcb9bacb15fb894694a13a67dfeffc2, type: 2}
+    - {fileID: 2100000, guid: 6dcb9bacb15fb894694a13a67dfeffc2, type: 2}
+    - {fileID: 2100000, guid: 1d896df21d03e4245b6a9b1f2bc055d0, type: 2}
+    - {fileID: 2100000, guid: c443f9ac000d1a14c8be532cfad9b559, type: 2}
+    baseGroundMaterials:
+    - {fileID: 2100000, guid: e5ba557bb13db3d49bb51a064233a56b, type: 2}
+    adsMaterials:
+    - {fileID: 2100000, guid: 933962eba0c26434db1a832ab0be0597, type: 2}
+  - type: 5
+    timeInmap: 90
+    vfx: {fileID: 1709254077376921, guid: 37ed8eba77a444641a3f03740f87e7be, type: 3}
+    clip: {fileID: 8300000, guid: ef40ce8fc1934374cb80faf0da8035ad, type: 3}
+    vol: 0.5
+    color: {r: 0.6862745, g: 0.6862745, b: 0.6862745, a: 0}
+    skyboxMaterial: {fileID: 2100000, guid: 0bf68ebf8c31b084586b4ea278eadef5, type: 2}
+    groundMaterials:
+    - {fileID: 2100000, guid: 78611986c7a8ff54cb4fd0ae43c704f2, type: 2}
+    wallMaterials:
+    - {fileID: 2100000, guid: 460664d897033614d970725ec4aa9a39, type: 2}
+    - {fileID: 2100000, guid: 54d9e5904a00f9c4f9b9113500ed9506, type: 2}
+    - {fileID: 2100000, guid: 6f0dcc80499c70a429fcc18baf8bd95f, type: 2}
+    - {fileID: 2100000, guid: a61921f20818c6b4eb0987c50a81a5d8, type: 2}
+    baseGroundMaterials:
+    - {fileID: 2100000, guid: 7d30ba224a12b1c4a9bb75d08a618e09, type: 2}
+    adsMaterials:
+    - {fileID: 2100000, guid: ff463df93e0f6f04f93bf439678669da, type: 2}
+  eventCountTime:
+    m_PersistentCalls:
+      m_Calls: []
+  eventChange:
+    m_PersistentCalls:
+      m_Calls: []
+  duration: 10

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fabc39100e2c7424d8442b41be06c237, type: 3}
+  m_Name: Upgrade_SlotLoot
+  m_EditorClassIdentifier: Assembly-CSharp::UpgradeDataSO
+  type: 2
+  icon: {fileID: 386545931, guid: 1a238b428eaf1aa46926f1b442fbb380, type: 3}
+  bgIcon: {fileID: 21300000, guid: d54b48ed2d0c610428ee9e531eb1d4ad, type: 3}
+  data:
+  - price: 1000000
+    precent: 1
+  - price: 50000000
+    precent: 2
+  - price: 200000000
+    precent: 3
+  - price: 500000000
+    precent: 4
+  - price: 1000000000
+    precent: 5

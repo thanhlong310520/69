@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0094d0ae2727c4c53aec92387256922b, type: 3}
+  m_Name: BotData 19
+  m_EditorClassIdentifier: 
+  id: 
+  itemName: Ballerina Cappuccina
+  itemType: 2
+  spriteIcon: {fileID: 21300000, guid: b179e76a9fc9e4a878d7fd74447da79a, type: 3}
+  prefab: {fileID: 6304171081707953572, guid: 0bd9965a3c5da48fe8821303ee5954fd, type: 3}
+  rarityType: 3
+  colorType: 0
+  spriteIconLock: {fileID: 21300000, guid: 41f51d848d59344d88314e9643a5fa69, type: 3}
+  cost: 1848
+  defaultItem: 0
+  income: 26
+  audioClip: {fileID: 8300000, guid: 8d53f0fe92da54e3490bb919c3f8fcf0, type: 3}
+  health: 1224
