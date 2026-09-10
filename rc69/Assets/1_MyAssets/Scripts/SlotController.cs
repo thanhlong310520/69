@@ -198,8 +198,4 @@ namespace Raccoon.Building
         LockGate = 10,
     }
 
-    public class SlotMerge
-    {
-        public List<SlotController> slotSameData;
-    }
 }
