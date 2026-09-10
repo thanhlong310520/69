@@ -431,9 +431,9 @@ namespace Raccoon.Controller
         }
         void LootSuccess(ItemCtr item)
         {
-
             ObserverEventManager.Instance.Publish<SoundType>(EventObserverName.PlaySfx.ToString(), SoundType.LootItem);
-            item.Pick(stateHandle.holderItem);
+            item.Stealed(stateHandle.holderItem);
+
             stateHandle.LootHandle();
         }
         void OnWhileLoot(float progess)

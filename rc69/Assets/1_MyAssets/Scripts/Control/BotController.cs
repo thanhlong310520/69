@@ -41,12 +41,12 @@ namespace Raccoon.Bot
         private Dictionary<Material, Color> originalColors = new Dictionary<Material, Color>();
         private Dictionary<Renderer, Material[]> originalMats = new Dictionary<Renderer, Material[]>();
 
-        public override void Spawned(UnityAction<ItemCtr> action)
-        {
-            base.Spawned(action);
-            countTime.Init(GetTimeCount(), ShowTimeCount, DestroyBot);
-            infor.SetActiveTxtCountTime(true);
-        }
+        // public override void Spawned(UnityAction<ItemCtr> action)
+        // {
+        //     base.Spawned(action);
+        //     //countTime.Init(GetTimeCount(), ShowTimeCount, DestroyBot);
+        //     infor.SetActiveTxtCountTime(true);
+        // }
 
         int GetTimeCount()
         {

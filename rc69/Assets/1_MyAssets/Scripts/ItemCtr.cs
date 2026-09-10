@@ -19,6 +19,8 @@ namespace Raccoon.Item
         public ItemConfig GetItemConfig => config;
         public FollowTarget ftarget;
         public UnityAction<ItemCtr> eventRemoveFromSpawner;
+        public UnityAction<ItemCtr> actionSteal;
+        public UnityAction<ItemCtr> actionStealFail;
 
         public Collider colli;
         public Collider GetCollider{
@@ -68,11 +70,26 @@ namespace Raccoon.Item
             SetState(ItemState.Normal);
             GetCollider.enabled = true;
         }
-        public virtual void Spawned(UnityAction<ItemCtr> action)
+
+        public virtual void Stealed(Transform target)
+        {
+            Pick(target);
+            actionSteal?.Invoke(this);
+        }
+        public virtual void StealFail()
+        {
+            actionStealFail?.Invoke(this);
+            SetTarget(null);
+            SetState(ItemState.Normal);
+            GetCollider.enabled = true;
+        }
+        public virtual void Spawned(UnityAction<ItemCtr> actionRemove, UnityAction<ItemCtr> actionSteal, UnityAction<ItemCtr> actionStealFail)
         {
             SetIsSave(false);
             GetCollider.enabled = true;
-            SetEventRemoteFromSpawner(action);
+            this.actionSteal = actionSteal;
+            this.actionStealFail = actionStealFail;
+            SetEventRemoteFromSpawner(actionRemove);
             SetTarget(null);
         }
         void SetEventRemoteFromSpawner(UnityAction<ItemCtr> action)

@@ -89,7 +89,7 @@ public class PlayerLoot : MonoBehaviour
         {
             if (item != null)
             {
-                item.Drop(true);
+                item.StealFail();
                 item.transform.position = transform.position;
             }
         }

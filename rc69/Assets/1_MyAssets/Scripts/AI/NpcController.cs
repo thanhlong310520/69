@@ -319,7 +319,7 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
     }
     void LootSuccess(ItemCtr item)
     {
-        item.Pick(stateHandle.holderItem);
+        item.Stealed(stateHandle.holderItem);
         stateHandle.LootHandle();
     }
     void OnWhileLoot(float progess)

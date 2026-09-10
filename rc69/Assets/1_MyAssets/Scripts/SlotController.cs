@@ -109,46 +109,6 @@ namespace Raccoon.Building
             incomeInSlot.gameObject.SetActive(false);
             incomeInSlot.SetPosCanvas(direc);
         }
-        //public void SetWaitBotMove()
-        //{
-        //    slotState = Slot_state.WaitBot;
-        //}
-
-        //public void SetSlotStealing()
-        //{
-        //    slotState = Slot_state.Stealing;
-        //}
-
-        //public void SetDataByPaid(BotController bot)
-        //{
-        //    if (bot == null) return;
-        //    if (botAtSlot != null) return;
-
-        //    botAtSlot = bot;
-        //    data = bot.dataSO;
-        //    SetModel();
-        //    slotState = Slot_state.Incoming;
-
-        //    if (playerSlot)
-        //    {
-        //        PlayerData.Get.AddBotToSlot(GetSlotIdOrder, data.GetId);
-        //        if (uiCanvas != null)
-        //            uiCanvas.SetActive(true);
-        //        // VoxelPlayThirdPersonController.instance.CheckShowBtnMergeSlot();
-        //    }
-        //}
-
-        //public void SetSlotEvolution(BotDataSO botEvolution)
-        //{
-        //    var obj = Instantiate(botEvolution.prefab);
-        //    var bot = obj.GetComponent<BotController>();
-        //    // bot.InitSaveSlot(this, botEvolution);
-        //    vfxMerge?.SetActive(true);
-        //    if (playerSlot)
-        //    {
-        //        PlayerData.Get.AddBotToSlot(GetSlotIdOrder, botEvolution.GetId);
-        //    }
-        //}
 
         public void SetEmpty()
         {
@@ -165,42 +125,6 @@ namespace Raccoon.Building
 
         }
 
-        //public void SetSlotRestore()
-        //{
-        //    if (data == null) return;
-        //    if (botAtSlot == null) return;
-
-        //    SetModel();
-        //    slotState = Slot_state.Incoming;
-
-        //    if (playerSlot)
-        //    {
-        //        //PlayerData.Get.AddBotToSlot(GetSlotIdOrder, data.GetId);
-        //        if (uiCanvas != null)
-        //            uiCanvas.SetActive(true);
-        //    }
-        //}
-
-        //public void SetDataSteal(SlotController slotSteal)
-        //{
-        //    if (slotSteal == null || slotSteal.GetBotToSteal() == null) return;
-        //    data = slotSteal.data;
-
-        //    var bot = slotSteal.GetBotToSteal();
-        //    botAtSlot = bot.GetComponent<BotController>();
-        //    SetModel();
-        //    slotState = Slot_state.Incoming;
-
-        //    if (uiCanvas != null && playerSlot)
-        //        uiCanvas.SetActive(true);
-
-        //    if (playerSlot)
-        //    {
-        //        PlayerData.Get.AddBotToSlot(GetSlotIdOrder, data.GetId);
-        //        GameAudio.Get.PlaySFX("bot_sound", data.audioClip);
-        //    }
-        //}
-
         private void SetModel()
         {
             if (botAtSlot == null) return;
@@ -215,50 +139,11 @@ namespace Raccoon.Building
 
 
 
-        //public void OnSellSlot()
-        //{
-        //    if (data == null) return;
-        //    if (slotState != Slot_state.Incoming) return;
-
-        //    //sell
-        //    PlayerData.Get.OnAddCoin(Mathf.RoundToInt(data.cost / 2f));
-        //    PlayerData.Get.RemoveBotAtSlot(GetSlotIdOrder);
-        //    GameAudio.Get.PlaySFX("bot_sound", data.audioClip);
-        //    SetEmpty();
-        //}
-
-        //public long GetTotalInCome()
-        //{
-        //    var temp = totalIncome;
-        //    totalIncome = 0;
-        //    return temp;
-        //}
-
-        //public GameObject GetBotToSteal()
-        //{
-        //    totalIncome = 0;
-        //    slotState = Slot_state.Stealing;
-        //    if (botAtSlot == null) return null;
-        //    return botAtSlot.gameObject;
-        //}
-
         public BotController GetBotAtSlot()
         {
             return botAtSlot;
         }
 
-        //public BotController GetBotToMerge()
-        //{
-        //    totalIncome = 0;
-        //    slotState = Slot_state.Merging;
-        //    if (botAtSlot == null) return null;
-        //    return botAtSlot;
-        //}
-
-        //public void SetSlotMerging()
-        //{
-        //    slotState = Slot_state.Merging;
-        //}
 
         public void PutBrainrot(BotController bot)
         {
@@ -309,6 +194,7 @@ namespace Raccoon.Building
     {
         Free = 0,
         HaveBot,
+        HaveEgg,
         LockGate = 10,
     }
 
