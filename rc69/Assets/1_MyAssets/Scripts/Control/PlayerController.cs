@@ -46,7 +46,6 @@ namespace Raccoon.Controller
         public Camera mainCam;
         public CharactorData data;
         public CharactorData GetCharactorData => data;
-        //public UnityEvent<EPlayerState> EventChangeStatePlayer;
         public UnityEvent<TypeHandleSlot> eventShowUIHandleSlot;
         public UnityEvent<bool> eventShowUIPickupItem;
         public UnityEvent<bool> eventShowUIDropItemLoot;
@@ -673,7 +672,7 @@ namespace Raccoon.Controller
         {
             if (stateHandle.GetCurrentItem != null)
             {
-                if (stateHandle.GetCurrentItem.data.itemType == ItemType.Brainrot)
+                if (stateHandle.GetCurrentItem.data.itemType == ItemType.Brainrot || stateHandle.GetCurrentItem.data.itemType == ItemType.Egg)
                 {
                     stateHandle.ResetItem();
                 }
@@ -684,7 +683,7 @@ namespace Raccoon.Controller
             foreach (var cf in data.itemConfigs)
             {
                 var so = GamePlayControl.instance.GetItemDataSO(cf.id);
-                if(so != null && so.itemType == ItemType.Brainrot)
+                if(so != null && (so.itemType == ItemType.Brainrot || so.itemType == ItemType.Egg))
                 {
                     removes.Add(cf);
                     UpdateItemBackPack(so, cf, false);
