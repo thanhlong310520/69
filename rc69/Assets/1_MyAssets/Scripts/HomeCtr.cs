@@ -55,17 +55,22 @@ public class HomeCtr : MonoBehaviour
     {
         foreach (var s in home.AllSlots)
         {
-            DataBrainInSlot dataBrainInSlot = data.GetIdBotInSlot(s.id);
+            DataItemSlot dataBrainInSlot = data.GetIdBotInSlot(s.id);
             s.SetStateSlot(Slot_state.Free);
             if(dataBrainInSlot != null)
             {
+                Debug.Log("dataBrainInSlot.config.id " + dataBrainInSlot.config.id);
+
+                Debug.Log("list so " + GamePlayControl.instance.GetBotDataSOs().Count);
+
                 ItemDataSO itemData = GamePlayControl.instance.GetBotDataSOs().Find(i => i.GetId == dataBrainInSlot.config.id);
+                Debug.Log("so " +  itemData);
                 var botGO = GamePlayControl.instance.SpawnItem(itemData.prefab);
                 if(botGO  != null)
                 {
-                    BotController bctr = botGO.GetComponent<BotController>();
-                    bctr.Init(itemData, dataBrainInSlot.config, Raccoon.EnumHolder.ItemState.Save);
-                    s.PutBrainrot(bctr);
+                    ItemCanStaySlot itemcanstayslot = botGO.GetComponent<ItemCanStaySlot>();
+                    itemcanstayslot.Init(itemData, dataBrainInSlot.config, Raccoon.EnumHolder.ItemState.Save);
+                    s.PutItem(itemcanstayslot);
                     s.SetActionChangeIncome(dataBrainInSlot.ChangeIncome);
                     s.SetStartIncome(dataBrainInSlot.income);
                     botGO.gameObject.SetActive(true);
@@ -101,7 +106,7 @@ public class HomeCtr : MonoBehaviour
     {
         foreach (var s in home.AllSlots)
         {
-            s.SetMultiIncome(multi);
+            s.SetMultiSpeed(multi);
         }
     }
     public bool UnlockGate2FormUser(Transform user)

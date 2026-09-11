@@ -144,7 +144,7 @@ public class MainUiControl : MonoBehaviour
         if (backPack == null) return;
         backPack.UpdateItem(data, config, isAdd);
     }
-    public void UpdateItemIndexUnlock(BotDataSO data)
+    public void UpdateItemIndexUnlock(ItemDataSO data)
     {
         if (pIndex == null) pIndex = LoadPopup(PopupCanvas.PopupType.Index).GetComponent<PopupIndex>();
         if (pIndex == null) return;

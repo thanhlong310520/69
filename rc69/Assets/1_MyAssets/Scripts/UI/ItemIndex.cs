@@ -8,14 +8,14 @@ using UnityEngine.UI;
 
 public class ItemIndex : MonoBehaviour
 {
-    BotDataSO data;
+    ItemDataSO data;
     public Image icon;
     public Image iconLock;
     public TMP_Text textIncome;
     public Image bg;
     public GameObject goLock;
     Image iconRainbow;
-    public void Init(BotDataSO so)
+    public void Init(ItemDataSO so)
     {
         data = so;
         goLock.SetActive(true);
@@ -42,7 +42,7 @@ public class ItemIndex : MonoBehaviour
     public void SetUnlock()
     {
         goLock.SetActive(false);
-        textIncome.text = data.income.ConvertCurrencyToString() + "/s";
+        //textIncome.text = data.income.ConvertCurrencyToString() + "/s";
     }
 
     private void OnEnable()
@@ -56,7 +56,7 @@ public class ItemIndex : MonoBehaviour
     {
         this.bg.sprite = bg;
     }
-    public BotDataSO GetData => data;
+    public ItemDataSO GetData => data;
 
 
 }

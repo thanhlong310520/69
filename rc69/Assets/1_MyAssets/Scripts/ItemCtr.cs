@@ -15,7 +15,7 @@ namespace Raccoon.Item
         public Transform user;
         public ItemState state;
         public ItemState GetState => state;
-        ItemConfig config;
+        protected ItemConfig config;
         public ItemConfig GetItemConfig => config;
         public FollowTarget ftarget;
         public UnityAction<ItemCtr> eventRemoveFromSpawner;

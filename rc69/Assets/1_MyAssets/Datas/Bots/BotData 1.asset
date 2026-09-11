@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   itemName: Fluri Flura
+  priority: 0
   itemType: 2
   spriteIcon: {fileID: 21300000, guid: 270c965fec5324e608a0058b6f32cffc, type: 3}
   prefab: {fileID: 2036148505346945416, guid: 31ec0a004d6c049c48b7952c5fb8e855, type: 3}
@@ -21,7 +22,6 @@ MonoBehaviour:
   colorType: 0
   spriteIconLock: {fileID: 21300000, guid: 39b44d4797a5b454292c24fb17189e20, type: 3}
   cost: 230
-  defaultItem: 0
   income: 6
   audioClip: {fileID: 8300000, guid: 8115a36a3cd884f8b8ee65cb802cb1e2, type: 3}
   health: 317

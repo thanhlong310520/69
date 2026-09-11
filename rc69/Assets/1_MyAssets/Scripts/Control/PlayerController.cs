@@ -316,15 +316,15 @@ namespace Raccoon.Controller
             {
                 if(curentSlot.user == transform)
                 {
-                    if (curentSlot.GetSlot_State == Slot_state.HaveBot) typeHandleSlot = TypeHandleSlot.PickupBot;
+                    if (curentSlot.GetSlot_State == Slot_state.HaveItem) typeHandleSlot = TypeHandleSlot.PickupBot;
                     else if(curentSlot.GetSlot_State == Slot_state.Free)
                     {
-                        if (stateHandle.GetCurrentItem != null && stateHandle.GetCurrentItem.data.itemType == ItemType.Brainrot) typeHandleSlot = TypeHandleSlot.PutBot;
+                        if (stateHandle.GetCurrentItem != null && (stateHandle.GetCurrentItem.data.itemType == ItemType.Brainrot || stateHandle.GetCurrentItem.data.itemType == ItemType.Egg)) typeHandleSlot = TypeHandleSlot.PutBot;
                     }
                 }
                 else
                 {
-                    if (curentSlot.GetSlot_State == Slot_state.HaveBot) typeHandleSlot = TypeHandleSlot.Steal;
+                    if (curentSlot.GetSlot_State == Slot_state.HaveItem) typeHandleSlot = TypeHandleSlot.Steal;
                 }
             }
             eventShowUIHandleSlot?.Invoke(typeHandleSlot);
@@ -368,7 +368,8 @@ namespace Raccoon.Controller
             if (!ShieldHomePlayer.instance.homePlayerContact.isPlayerInHome) return;
             if (stateHandle.GetCurrentItem == null) return;
             if (stateHandle.GetCurrentItem.data == null) return;
-            if (stateHandle.GetCurrentItem.data.itemType != ItemType.Brainrot) return;
+            if (stateHandle.GetCurrentItem.data.itemType != ItemType.Brainrot && stateHandle.GetCurrentItem.data.itemType != ItemType.Egg) return;
+
             var slot = GetFreeSlot();
             if(slot == null) return;
             stateHandle.HandleSlot(slot, TypeHandleSlot.PutBot);
@@ -551,7 +552,7 @@ namespace Raccoon.Controller
         {
             MainUiControl.instance.UpdateItemForPopupBackPack(so, config, isAdd);
         }
-        void UpdateItemIndexUnlock(BotDataSO so)
+        void UpdateItemIndexUnlock(ItemDataSO so)
         {
             if(so == null) return;
             MainUiControl.instance.UpdateItemIndexUnlock(so);

@@ -16,7 +16,7 @@ public class CharactorData
     public bool isUnlockGate;
     public string currentFashion;
     public CharactorUpgrade upgrade;
-    public Dictionary<string, DataBrainInSlot> dicBotInSlots;
+    public Dictionary<string, DataItemSlot> dicBotInSlots;
     public List<string> listBotUnlock;
     public List<string> listSlotGate2Unlock;
     public int indexRebirth = -1;
@@ -54,7 +54,7 @@ public class CharactorData
         itemConfigs = new List<ItemConfig>();
         itemConfigs.Add(new ItemConfig("default", 10));
         currentFashion = "FashionData_Brain";
-        dicBotInSlots = new Dictionary<string, DataBrainInSlot>();
+        dicBotInSlots = new Dictionary<string, DataItemSlot>();
         listBotUnlock = new List<string>();
         listSlotGate2Unlock = new List<string>();
     }
@@ -119,17 +119,17 @@ public class CharactorData
     {
         if(dicBotInSlots.ContainsKey(id)) dicBotInSlots.Remove(id);
     }
-    public DataBrainInSlot AddBotInSlot(string idSlot, ItemConfig botConfig)
+    public DataItemSlot AddBotInSlot(string idSlot, ItemConfig botConfig)
     {
-        if (!dicBotInSlots.ContainsKey(idSlot)) dicBotInSlots.Add(idSlot, new DataBrainInSlot(botConfig));
+        if (!dicBotInSlots.ContainsKey(idSlot)) dicBotInSlots.Add(idSlot, new DataItemSlot(botConfig));
         else dicBotInSlots[idSlot].config = botConfig;
         return dicBotInSlots[idSlot];
         
     }
 
-    public DataBrainInSlot GetIdBotInSlot(string idSlot)
+    public DataItemSlot GetIdBotInSlot(string idSlot)
     {
-        DataBrainInSlot result = null;
+        DataItemSlot result = null;
         if (dicBotInSlots.ContainsKey(idSlot)) result = dicBotInSlots[idSlot];
         return result;
     }
@@ -212,11 +212,11 @@ public class CharactorUpgrade
 
 [MessagePackObject(keyAsPropertyName: true)]
 [System.Serializable]
-public class DataBrainInSlot
+public class DataItemSlot
 {
     public ItemConfig config;
     public long income;
-    public DataBrainInSlot(ItemConfig config)
+    public DataItemSlot(ItemConfig config)
     {
         this.config = config;
         income = 0;

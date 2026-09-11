@@ -29,7 +29,7 @@ namespace Raccoon.Controller
         [SerializeField] private List<ItemDataSO> itemDataSOs;
         [SerializeField] private List<FashionDataSO> fashionDataSOs;
         [SerializeField] private List<ShowModelInMap> showFashion;
-        [SerializeField] private List<BotDataSO> botDataSOs;
+        [SerializeField] private List<ItemDataSO> itemCanStaySlotDataSOs;
         [SerializeField] private List<UpgradeDataSO> upgradeDataSOs;
         [SerializeField] private List<DataColorType> dataColorTypes;
         [SerializeField] private List<SpawnItem> spawnItems;
@@ -67,7 +67,7 @@ namespace Raccoon.Controller
             }
             StartCoroutine(DelayChangeMap());
             StartCoroutine(DelaySetDataFashionForShow());
-            itemDataSOs.AddRange(botDataSOs);
+            itemDataSOs.AddRange(itemCanStaySlotDataSOs);
             ResetAfterHidePopupInterBonus();
             SetCanAction(true);
             mainCam.enabled = true;
@@ -245,9 +245,9 @@ namespace Raccoon.Controller
             return itemDataSOs.Find(i => i.GetId == id);
         }
 
-        public List<BotDataSO> GetBotDataSOs()
+        public List<ItemDataSO> GetBotDataSOs()
         {
-            return botDataSOs;  
+            return itemCanStaySlotDataSOs;
         }
         public List<FashionDataSO> GetFashionDataSOs()
         {
@@ -257,10 +257,7 @@ namespace Raccoon.Controller
         {
             return fashionDataSOs.FirstOrDefault(so => so.GetId.Equals(id));
         }
-        public List<BotDataSO> GetBotDataSOsIncomeRange(int min, int max)
-        {
-            return botDataSOs.Where(bd => (bd.income >= min && bd.income <= max)).ToList();
-        }
+
         public float GetUpgradeValue(TypeUpgrade type, int index)
         {
             float result = 0;

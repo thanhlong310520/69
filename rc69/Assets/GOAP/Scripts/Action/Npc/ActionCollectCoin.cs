@@ -54,7 +54,7 @@ public class ActionCollectCoin : GoapAction
                 isMoving = true;
 
             }
-            if (slots[index].GetSlot_State != Slot_state.HaveBot)
+            if (slots[index].GetSlot_State != Slot_state.HaveItem)
             {
                 index++;
                 isMoving = false;

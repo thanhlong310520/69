@@ -124,7 +124,7 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
     {
         slots = HomeCtr.instance.GetAllSlots(transform);
         slotFree = slots.Where(s => s.GetSlot_State == Slot_state.Free).ToList();
-        slotIncome = slots.Where(s => s.GetSlot_State == Slot_state.HaveBot).ToList();
+        slotIncome = slots.Where(s => s.GetSlot_State == Slot_state.HaveItem).ToList();
     }
     public void GetBrainrot()
     {
@@ -410,7 +410,7 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
         var botso = GamePlayControl.instance.GetBotDataSOs();
         foreach (var cf in data.itemConfigs)
         {
-            BotDataSO so = botso.Find(i => i.GetId == cf.id);
+            ItemDataSO so = botso.Find(i => i.GetId == cf.id);
             AddBotData(so,cf);
         }
         ChangeModel();
@@ -426,7 +426,7 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
             SetDataUpgrade(u, data.upgrade.GetDicUpgraded(u.type));
         }
 
-        StartCoroutine(DelayStartGoap());
+        //StartCoroutine(DelayStartGoap());
     }
 
     IEnumerator DelayStartGoap()

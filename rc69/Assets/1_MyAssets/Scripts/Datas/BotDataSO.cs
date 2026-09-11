@@ -7,7 +7,6 @@ namespace Raccoon.Data
     {
         public long income;
         public AudioClip audioClip;
-        // public Material matColorType;
         public float health;
     }
 

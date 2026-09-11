@@ -13,14 +13,14 @@ namespace Raccoon.Building
     {
 
         public CalculateIncome calculateIncome;
-
+        public CalculateTime count_1_Time;
         public Transform user;
-        BotController botAtSlot;
+        ItemCanStaySlot itemAtSlot;
         IncomeInSlot incomeInSlot;
         public float xContainer = 0.65f;
         public UnityAction<long> actionChangeIncome;
 
-        public float multiIncome = 1;
+        public float multiSpeed = 1;
         int direc = 1;
 
         public GameObject vfxEmpty;
@@ -37,7 +37,7 @@ namespace Raccoon.Building
             container.SetParent(transform);
             container.localPosition = new Vector3(xContainer * (-direc), 0, 0);
             container.localRotation = Quaternion.Euler(0, 90 * direc, 0);
-            if (calculateIncome == null) LoadCalculateIncome();
+            LoadCalculate();
 
             if(incomeInSlot == null) LoadIncomeShow();
 
@@ -49,56 +49,44 @@ namespace Raccoon.Building
         public void HandleCollectIncome(Transform contactor)
         {
             if (contactor != user) return;
-            if (slotState != Slot_state.HaveBot) return;
+            if (slotState != Slot_state.HaveItem) return;
+            if (data == null) return;
+            if (data.itemType != ItemType.Brainrot) return;
 
-            if (calculateIncome == null) LoadCalculateIncome();
+            LoadCalculate();
 
-            //ObserverEventManager.Instance.Publish<SoundType>(EventObserverName.PlaySfx.ToString(), SoundType.ContactSlot);
             user.GetComponent<IIteractSlot>()?.Income(calculateIncome.GetIncome());
             calculateIncome.OnCollectIncome();
         }
 
-        public void SetMultiIncome(float multiIncome)
+        public void SetMultiSpeed(float multiIncome)
         {
-            this.multiIncome = multiIncome;
-            if (calculateIncome == null) LoadCalculateIncome();
+            this.multiSpeed = multiIncome;
+            if (calculateIncome == null) LoadCalculate();
             calculateIncome.SetBonus(multiIncome);
         }
 
 
         //public int order;
-        public BotDataSO data;
+        public ItemDataSO data;
         [SerializeField] private Slot_state slotState;
         public Slot_state GetSlot_State => slotState;
 
         public Transform container;
-        ///// Canvas UI
-        //public GameObject uiCanvas;
-        //public TextMeshProUGUI txtIncome;
-
-        //[SerializeField] private GameObject vfxMerge;
-
-        ////income
-        //private float incomeTimer;
-        //private float incomeInterval = 1f; // every 1 second
-        //private long totalIncome;
-
-        //public bool CanStealBot => slotState == Slot_state.Incoming && botAtSlot != null;
-        //public bool CanSellBot => slotState == Slot_state.Incoming && botAtSlot != null;
-        //public bool IsFreeSlot => slotState == Slot_state.Free;
-        //public string GetSlotIdOrder => $"slot_{order}";
 
         private void Start()
         {
             LoadComponent();
-            LoadCalculateIncome();
         }
 
-        void LoadCalculateIncome()
+        void LoadCalculate()
         {
             if (calculateIncome == null) calculateIncome = GetComponent<CalculateIncome>();
             if (calculateIncome == null) calculateIncome = gameObject.AddComponent<CalculateIncome>();
             calculateIncome.SetActionShowIncome(ChangeIncome);
+            if (count_1_Time == null) count_1_Time = GetComponent<CalculateTime>();
+            if (count_1_Time == null) count_1_Time = gameObject.AddComponent<CalculateTime>();
+            count_1_Time.SetActionCount(UpdateTime);
         }
         void LoadIncomeShow()
         {
@@ -112,12 +100,12 @@ namespace Raccoon.Building
 
         public void SetEmpty()
         {
-            if (botAtSlot != null) GamePlayControl.instance.RespawnItem(botAtSlot.gameObject);
-            botAtSlot = null;
+            if (itemAtSlot != null) GamePlayControl.instance.RespawnItem(itemAtSlot.gameObject);
+            itemAtSlot = null;
             data = null;
             SetStateSlot(Slot_state.Free);
-            if (calculateIncome == null) LoadCalculateIncome();
-            calculateIncome.ResetIncom();
+            LoadCalculate();
+            count_1_Time.ResetTime();
             SetActionChangeIncome(null);
 
             incomeInSlot.gameObject.SetActive(false);
@@ -127,36 +115,44 @@ namespace Raccoon.Building
 
         private void SetModel()
         {
-            if (botAtSlot == null) return;
-            botAtSlot.SetTarget(null);
-            botAtSlot.gameObject.SetActive(true);
-            botAtSlot.transform.SetParent(container);
-            botAtSlot.transform.localEulerAngles = Vector3.zero;
-            botAtSlot.transform.localPosition = Vector3.zero;
-            botAtSlot.PutToSlot();
+            if (itemAtSlot == null) return;
+            itemAtSlot.SetTarget(null);
+            itemAtSlot.gameObject.SetActive(true);
+            itemAtSlot.transform.SetParent(container);
+            itemAtSlot.transform.localEulerAngles = Vector3.zero;
+            itemAtSlot.transform.localPosition = Vector3.zero;
+            itemAtSlot.PutToSlot(PutItem);
             ReinitializeHighlight();
         }
 
 
 
-        public BotController GetBotAtSlot()
+        public ItemCanStaySlot GetBotAtSlot()
         {
-            return botAtSlot;
+            return itemAtSlot;
         }
 
 
-        public void PutBrainrot(BotController bot)
+        public void PutItem(ItemCanStaySlot item)
         {
-
-            if (data == null) data = bot.data as BotDataSO;
-            botAtSlot = bot;
+            SetEmpty();
+            data = item.data;
+            itemAtSlot = item;
             SetModel();
-            SetStateSlot(Slot_state.HaveBot);
-            if (calculateIncome == null) LoadCalculateIncome();
-            calculateIncome.OnSetDataIncome(data.income);
-            incomeInSlot.gameObject.SetActive(true);
-
             vfxEmpty?.SetActive(false);
+            HandleData();
+            count_1_Time.OnCaclulate();
+            SetStateSlot(Slot_state.HaveItem);
+        }
+
+        void HandleData()
+        {
+            if(data.itemType == ItemType.Brainrot)
+            {
+                var brainrotData = data as BotDataSO;
+                calculateIncome.OnSetDataIncome(brainrotData.income);
+                incomeInSlot.gameObject.SetActive(true);
+            }
 
         }
 
@@ -170,6 +166,11 @@ namespace Raccoon.Building
             slotState = state;
         }
 
+        void UpdateTime()
+        {
+            if (itemAtSlot != null) itemAtSlot.AddTimeInSlot(multiSpeed);
+            calculateIncome.Calculate();
+        }
         public void ChangeIncome(long incomeNumber)
         {
             actionChangeIncome?.Invoke(incomeNumber);
@@ -188,13 +189,13 @@ namespace Raccoon.Building
             user.GetComponent<ICharactor>()?.Stealed(this);
         }
 
+        
     }
 
     public enum Slot_state
     {
         Free = 0,
-        HaveBot,
-        HaveEgg,
+        HaveItem,
         LockGate = 10,
     }
 

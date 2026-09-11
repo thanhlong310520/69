@@ -80,7 +80,7 @@ public class PlayerStateHandle : MonoBehaviour
         if(currentItem != null)
         {
             typeItem = currentItem.data.itemType;
-            if (currentItem.data.itemType == ItemType.Brainrot || currentItem.data.itemType == ItemType.OtherItem) state = EPlayerState.HoldItemBot;
+            if (currentItem.data.itemType == ItemType.Brainrot || currentItem.data.itemType == ItemType.Egg) state = EPlayerState.HoldItemBot;
 
             currentItem.SetTarget(holderItem);
         }
@@ -92,7 +92,7 @@ public class PlayerStateHandle : MonoBehaviour
     {
         int layer = 0; 
         if(type == ItemType.Weapon || type == ItemType.OtherWeapon) layer = 1;
-        if(type == ItemType.Brainrot || type == ItemType.OtherItem) layer = 2;
+        if(type == ItemType.Brainrot || type == ItemType.Egg) layer = 2;
         playerAnim.SetWeightAnimator(layer, 1);
     }
     public void ResetItem()
@@ -103,7 +103,7 @@ public class PlayerStateHandle : MonoBehaviour
     public bool DropItem(bool activeAbility, UnityAction<ItemCtr> actionDropItem)
     {
         if (currentItem == null) return false;
-        if (currentItem.data.itemType == ItemType.OtherItem || currentItem.data.itemType == ItemType.Brainrot)
+        if (currentItem.data.itemType == ItemType.Egg || currentItem.data.itemType == ItemType.Brainrot)
         {
             var item = currentItem;
             currentItem.Drop(false, activeAbility);

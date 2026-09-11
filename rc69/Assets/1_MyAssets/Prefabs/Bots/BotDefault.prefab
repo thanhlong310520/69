@@ -87,9 +87,9 @@ GameObject:
   - component: {fileID: 529407120146750622}
   - component: {fileID: 8128949284451522664}
   - component: {fileID: 7026562428234671347}
-  - component: {fileID: 4144834247364844727}
   - component: {fileID: 5502082256216438563}
   - component: {fileID: -8884653621670525298}
+  - component: {fileID: 8094621439443331771}
   m_Layer: 8
   m_Name: BotDefault
   m_TagString: Bot
@@ -165,28 +165,6 @@ CapsuleCollider:
   m_Height: 2.2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &4144834247364844727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5889864012332952007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cc32fd166feabf42939f85c90897b22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Raccoon.Bot.BotController
-  data: {fileID: 0}
-  user: {fileID: 0}
-  state: 0
-  ftarget: {fileID: 5502082256216438563}
-  colli: {fileID: 7026562428234671347}
-  countTime: {fileID: -8884653621670525298}
-  colorRainbow: {fileID: 7278746098599927584}
-  effectBody: {fileID: 62707874808709508}
-  modelContainer: {fileID: 2939384586372646277}
-  infor: {fileID: 2710340364647757826}
 --- !u!114 &5502082256216438563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +191,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba32e18e220b88449e4ea05f739bc47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CountTime
+--- !u!114 &8094621439443331771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5889864012332952007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4899f8f259d9c2440a5be34823c904ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Raccoon.Bot.BotControl
+  data: {fileID: 0}
+  user: {fileID: 0}
+  state: 0
+  ftarget: {fileID: 5502082256216438563}
+  colli: {fileID: 7026562428234671347}
+  modelContainer: {fileID: 0}
+  vfx: {fileID: 0}
+  infor: {fileID: 2710340364647757826}
 --- !u!1001 &1233293993232284999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -221,6 +219,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 529407120146750622}
     m_Modifications:
+    - target: {fileID: 3783193466461275461, guid: 7afdd05b8ff354fcabf079a062689bd6, type: 3}
+      propertyPath: txtMoreInfor
+      value: 
+      objectReference: {fileID: 7887576646704880514}
     - target: {fileID: 8131046096532785814, guid: 7afdd05b8ff354fcabf079a062689bd6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -326,3 +328,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8131046096532785814, guid: 7afdd05b8ff354fcabf079a062689bd6, type: 3}
   m_PrefabInstance: {fileID: 1233293993232284999}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7887576646704880514 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8965478774707152581, guid: 7afdd05b8ff354fcabf079a062689bd6, type: 3}
+  m_PrefabInstance: {fileID: 1233293993232284999}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

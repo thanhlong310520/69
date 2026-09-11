@@ -39,7 +39,7 @@ public class ActionSteal : GoapAction
         Home home = HomeCtr.instance.GetHomeByUser(PlayerController.instance.transform);
         foreach (var s in home.AllSlots)
         {
-            if (s.GetSlot_State == Raccoon.Building.Slot_state.HaveBot)
+            if (s.GetSlot_State == Raccoon.Building.Slot_state.HaveItem)
             {
                 slot = s; break;
             }
@@ -51,7 +51,7 @@ public class ActionSteal : GoapAction
         if (gotoSlot)
         {
             if (slot == null) { done = true; return false; }
-            if (slot.GetSlot_State != Slot_state.HaveBot) { done = true; return false; }
+            if (slot.GetSlot_State != Slot_state.HaveItem) { done = true; return false; }
             if (ShieldHomePlayer.instance.IsShield) { done = true; return false; }
 
             if (!isMoving)
@@ -67,7 +67,7 @@ public class ActionSteal : GoapAction
             if (Vector3.Distance(transform.position, slot.transform.position) < threshold)
             {
                 if (slot == null) { done = true; return false; }
-                if (slot.GetSlot_State != Slot_state.HaveBot) { done = true; return false; }
+                if (slot.GetSlot_State != Slot_state.HaveItem) { done = true; return false; }
                 controller.StealBrainrotInSlot(slot);
                 gotoSlot = false;
                 isMoving = false;

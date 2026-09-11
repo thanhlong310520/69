@@ -36,6 +36,7 @@ namespace Raccoon.Data
         Fashion,
         OtherWeapon,
         OtherItem,
+        Egg,
     }
 
     public enum RarityType

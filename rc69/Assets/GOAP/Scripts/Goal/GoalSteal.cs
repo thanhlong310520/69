@@ -17,7 +17,7 @@ public class GoalSteal : GoapGoal
         Home home = HomeCtr.instance.GetHomeByUser(PlayerController.instance.transform);
         foreach (var s in home.AllSlots)
         {
-            if (s.GetSlot_State == Raccoon.Building.Slot_state.HaveBot)
+            if (s.GetSlot_State == Raccoon.Building.Slot_state.HaveItem)
             {
                 return true;
             }

@@ -56,9 +56,9 @@ public class PlayerHandleSlot : MonoBehaviour
     {
         if (slot == null) return;
         if (item == null) return;
-        if(item.GetComponent<BotController>() == null) return;
+        if(item.GetComponent<ItemCanStaySlot>() == null) return;
         actionPut?.Invoke(slot,item);
-        slot.PutBrainrot(item.GetComponent<BotController>());
+        slot.PutItem(item.GetComponent<ItemCanStaySlot>());
     }
 
     void StealBrainrotInSlot(SlotController slot)
