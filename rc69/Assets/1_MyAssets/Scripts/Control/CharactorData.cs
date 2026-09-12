@@ -13,7 +13,6 @@ public class CharactorData
     public string id;
     public string name;
     public long coin;
-    public bool isUnlockGate;
     public string currentFashion;
     public CharactorUpgrade upgrade;
     public Dictionary<string, DataItemSlot> dicBotInSlots;
@@ -49,7 +48,6 @@ public class CharactorData
         this.name = name;
         coin = 0;
         indexRebirth = -1;
-        isUnlockGate = false;
         upgrade = new CharactorUpgrade();
         itemConfigs = new List<ItemConfig>();
         itemConfigs.Add(new ItemConfig("default", 10));
@@ -162,11 +160,6 @@ public class CharactorData
         onChangeCoin?.Invoke(coin);
     }
 
-    public void SetUnlockGate(bool unLock)
-    {
-        Debug.Log("Data unlock");
-        isUnlockGate = unLock;  
-    }
     public void UnlockSlotGate2(string id)
     {
         if(listSlotGate2Unlock.Contains(id)) return;

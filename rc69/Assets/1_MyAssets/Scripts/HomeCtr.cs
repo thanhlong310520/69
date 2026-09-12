@@ -78,16 +78,6 @@ public class HomeCtr : MonoBehaviour
             }
         }
 
-        if (!data.isUnlockGate)
-        {
-            home.unlockGate.Init(home.user, costUnlock);
-            home.unlockGate.gameObject.SetActive(true);
-        }
-        else
-        {
-            home.unlockGate.gameObject.SetActive(false);
-        }
-
         foreach (var s in home.slots2)
         {
             if (!data.listSlotGate2Unlock.Contains(s.id))
@@ -108,16 +98,6 @@ public class HomeCtr : MonoBehaviour
         {
             s.SetMultiSpeed(multi);
         }
-    }
-    public bool UnlockGate2FormUser(Transform user)
-    {
-        var home = GetHomeByUser(user);
-        if (home == null) return false;
-
-        home.unlockGate.gameObject.SetActive(false);
-        home.SetUnlocSlot2();
-
-        return true;
     }
 
     public void UnlockSlotInGate2(Transform user, string idSlot)
@@ -142,16 +122,6 @@ public class HomeCtr : MonoBehaviour
         if(home != null)
         {
             result = home.startPoint;
-        }
-        return result;
-    }
-    public Transform GetUnlockGatePos(Transform user)
-    {
-        Transform result = null;
-        var home = listHome.FirstOrDefault(h => h.user == user);
-        if (home != null)
-        {
-            result = home.unlockGate.transform;
         }
         return result;
     }
@@ -201,7 +171,6 @@ public class Home
     public string nameHome;
     public Transform user;
     public Transform startPoint;
-    public UnlockGate2 unlockGate;
     public List<SlotController> slots1;
     public List<SlotController> slots2;
 

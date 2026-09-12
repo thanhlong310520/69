@@ -82,14 +82,14 @@ public class PlayerLoot : MonoBehaviour
         ResetLoot();
     }
 
-    public void DropItemLoot()
+    public void DropItemLoot(Transform control)
     {
         //drop
         foreach (var item in itemLoots)
         {
             if (item != null)
             {
-                item.StealFail();
+                item.StealFail(control);
                 item.transform.position = transform.position;
             }
         }
@@ -113,13 +113,13 @@ public class PlayerLoot : MonoBehaviour
         ResetLoot();
     }
     public List<ItemCtr> GetItemLoots => itemLoots;
-    public List<ItemConfig> SaveLoot()
+    public List<ItemConfig> SaveLoot(Transform control)
     {
         List<ItemConfig> listItemConfig = new List<ItemConfig>();
         foreach (var item in itemLoots)
         {
             listItemConfig.Add(item.GetItemConfig);
-            item.Save();
+            item.Save(control);
             GamePlayControl.instance.RespawnItem(item.gameObject);
         }
 

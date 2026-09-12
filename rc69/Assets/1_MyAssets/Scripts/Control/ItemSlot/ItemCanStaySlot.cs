@@ -29,11 +29,11 @@ namespace Raccoon.Bot
             config.AddTimeInSlot(time);
         }
 
-        public void DestroyItem()
-        {
-            eventRemoveFromSpawner?.Invoke(this);
-            GamePlayControl.instance.RespawnItem(gameObject);
-        }
+        //public void DestroyItem()
+        //{
+        //    eventRemoveFromSpawner?.Invoke(this, null);
+        //    GamePlayControl.instance.RespawnItem(gameObject);
+        //}
 
         protected UnityAction<ItemCanStaySlot> actionChangeItem;
         public virtual void PutToSlot(UnityAction<ItemCanStaySlot> actionChangeItem)

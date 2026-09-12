@@ -132,14 +132,6 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
         stateHandle.ChangeItem(dataSOs[0].config);
     }
 
-    public void UnlockGate()
-    {
-        data.SetUnlockGate(true);
-        HomeCtr.instance.UnlockGate2FormUser(transform);
-        slotFree = slots.Where(s => s.GetSlot_State == Slot_state.Free).ToList();
-        SetWorldStateData(GoapWorldStateEnum.IsUnlockGate, data.isUnlockGate);
-    }
-
     public void PushToSlot(SlotController slot)
     {
         if (stateHandle.GetCurrentItem == null) return;
@@ -306,7 +298,7 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
     }
     public void OnDropItemLoot()
     {
-        loot.DropItemLoot();
+        loot.DropItemLoot(transform);
         stateHandle.ChangeLayerItem(ItemType.None);
     }
     void OnStartLoot()
@@ -319,7 +311,7 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
     }
     void LootSuccess(ItemCtr item)
     {
-        item.Stealed(stateHandle.holderItem);
+        item.Stealed(stateHandle.holderItem,transform);
         stateHandle.LootHandle();
     }
     void OnWhileLoot(float progess)
@@ -336,7 +328,7 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
             AddBotData(item.data,item.GetItemConfig);
         }
 
-        var listSave = loot.SaveLoot();
+        var listSave = loot.SaveLoot(transform);
         data.AddListItemConfig(listSave);
         stateHandle.ChangeItem(data.itemConfigs[0]);
     }
@@ -417,7 +409,6 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
 
 
         SetWorldStateData(GoapWorldStateEnum.SaveLoot, false);
-        SetWorldStateData(GoapWorldStateEnum.IsUnlockGate, data.isUnlockGate);
         SetWorldStateData(GoapWorldStateEnum.CollectCoin, false);
         GetHaveUpgrade();
         UpdateWorldStateData();
@@ -460,7 +451,7 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
         data.RemoveBotInSlot(slot.id);
         slotFree.Add(slot);
         slotIncome.Remove(slot);
-        loot.DropItemLoot();
+        loot.DropItemLoot(transform);
         SetWorldStateData(GoapWorldStateEnum.Stealed, true);
         goapAgent.ForceReplan();
         
@@ -504,7 +495,7 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
     public void BackBase()
     {
         goapAgent.ForceReplan();
-        loot.DropItemLoot();
+        loot.DropItemLoot(transform);
         SetNormal(true);
 
     }
@@ -513,7 +504,7 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
     {
         capsule.enabled = false;
         stateHandle.Die();
-        loot.DropItemLoot();
+        loot.DropItemLoot(transform);
         goapAgent.StopAgent();
         move.StopMove();
     }

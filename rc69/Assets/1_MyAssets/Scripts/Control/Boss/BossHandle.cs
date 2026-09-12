@@ -1,11 +1,13 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BossInSteal
+[Serializable]
+public class BossHandle
 {
     public Transform stayTransform;
-    public List<Transform> listStealer;
+    public List<Transform> listTarget;
 
     [SerializeField] BossState state;
     public BossState GetState => state;
@@ -14,13 +16,13 @@ public class BossInSteal
 
     UnityAction<GoapWorldStateEnum,bool> actionSetWorldState;
 
-    public BossInSteal(Transform stayTransform, GoapAgent goapAgent, UnityAction<GoapWorldStateEnum, bool> actionSetWorldState)
+    public BossHandle(Transform stayTransform, GoapAgent goapAgent, UnityAction<GoapWorldStateEnum, bool> actionSetWorldState)
     {
         this.goapAgent = goapAgent;
         this.actionSetWorldState = actionSetWorldState;
         state = BossState.Normal;
         this.stayTransform = stayTransform;
-        listStealer = new List<Transform>();
+        listTarget = new List<Transform>();
     }
 
     #region Stealed
@@ -31,21 +33,21 @@ public class BossInSteal
         this.state = state;
     }
 
-    public void AddStealer(Transform stealer)
+    public void AddTarget(Transform target)
     {
-        if (listStealer.Contains(stealer)) return;
+        if (listTarget.Contains(target)) return;
 
-        listStealer.Add(stealer);
+        listTarget.Add(target);
     }
 
-    public void RemoveStealer(Transform stealer)
+    public void RemoveTarget(Transform target)
     {
-        listStealer.Remove(stealer);
+        listTarget.Remove(target);
     }
 
     public void Update()
     {
-        if (listStealer.Count > 0)
+        if (listTarget.Count > 0)
         {
             actionSetWorldState?.Invoke(GoapWorldStateEnum.Stealed, true);
             if (state == BossState.Normal)

@@ -25,6 +25,7 @@ public class ActionChaseStealer : GoapAction
     {
         if (controller.GetListChase().Count == 0)
         {
+            Debug.Log("no chase");
             movement.StopMove();
             done = true;
             return true;
@@ -33,6 +34,8 @@ public class ActionChaseStealer : GoapAction
         target = GetStealer();
         if (target == null)
         {
+            Debug.Log("no chase 1");
+
             movement.StopMove();
             done = true;
             return true;
@@ -45,7 +48,7 @@ public class ActionChaseStealer : GoapAction
     Transform GetStealer()
     {
         if (controller.GetListChase() == null) return null;
-        if (controller.GetListChase().Count >= 0) return null;
+        if (controller.GetListChase().Count <= 0) return null;
         return controller.GetListChase()[0];
     }
 

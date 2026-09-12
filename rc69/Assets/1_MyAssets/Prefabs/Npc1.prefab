@@ -61,7 +61,6 @@ GameObject:
   - component: {fileID: 4530367972944126942}
   - component: {fileID: 3618837267921048329}
   - component: {fileID: 1995961495995962550}
-  - component: {fileID: 6019409473562441972}
   - component: {fileID: 3012612489437503073}
   - component: {fileID: 8777281512891213592}
   - component: {fileID: 7723586900750325045}
@@ -70,7 +69,6 @@ GameObject:
   - component: {fileID: 3468014216449857508}
   - component: {fileID: 1709244933522286684}
   - component: {fileID: 3668036727437359166}
-  - component: {fileID: 8469917509645575611}
   - component: {fileID: 6575631151321628967}
   - component: {fileID: 6131934158378635516}
   - component: {fileID: 2419997765713126081}
@@ -207,18 +205,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26412f6d5b40c1441a7f8f6f88b37d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GoalUpgrade
---- !u!114 &6019409473562441972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4079334014641327826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3199a61fd6170d240891f0a95db897ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GoalUnlockGate
 --- !u!114 &3012612489437503073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,39 +437,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8469917509645575611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4079334014641327826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 426613f3b72b32a4ba24a524f28e7cae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ActionGotoUnlockGate
-  movement: {fileID: 1576202847375901780}
-  target: {fileID: 0}
-  controller: {fileID: 3538224743486369723}
-  threshold: 1
-  maxTimeStay: 3
-  minTimeStay: 1
-  unlockEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3538224743486369723}
-        m_TargetAssemblyTypeName: NpcController, Assembly-CSharp
-        m_MethodName: UnlockGate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &6575631151321628967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -692,7 +645,6 @@ MonoBehaviour:
     id: 
     name: 
     coin: 0
-    isUnlockGate: 0
     currentFashion: 
     listBotUnlock: []
     listSlotGate2Unlock: []

@@ -18,7 +18,7 @@ public class PlayShowInMap : MonoBehaviour
         SetIsPlay(true);
         this.currentClip = currentClip;
         currentTime = GetTimeDelay();
-        GameAudio.Get.StopSoundFX("Environment");
+        GameAudio.Instance.StopSoundFX("Environment");
     }
 
     public void SetIsPlay(bool isPlay)

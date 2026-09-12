@@ -108,16 +108,16 @@ namespace Raccoon
         void PlayBgMusic()
         {
             AudioClip clip = GetClipBgMusic();
-            GameAudio.Get.PlayMusic(bgId, clip);
+            GameAudio.Instance.PlayMusic(bgId, clip);
         }
         void PauseBgMusic()
         {
-            GameAudio.Get.PauseMusic(bgId);
+            GameAudio.Instance.PauseMusic(bgId);
         }
 
         public void StopSound()
         {
-            GameAudio.Get.StopAllSoundFX();
+            GameAudio.Instance.StopAllSoundFX();
         }
         private void OnApplicationQuit()
         {
@@ -132,7 +132,7 @@ namespace Raccoon
         {
             if (!PlayerData.Get.onSound) return;
 
-            GameAudio.Get.PlaySFX(idAs, clip, vol);
+            GameAudio.Instance.PlaySFX(idAs, clip, vol);
         }
         public void PlaySFX(SoundType type)
         {
@@ -141,7 +141,7 @@ namespace Raccoon
             float vol = GetVolBySoundType(type);
             if (clip == null) return;
 
-            GameAudio.Get.PlaySFX(type.ToString(), clip, vol);
+            GameAudio.Instance.PlaySFX(type.ToString(), clip, vol);
         }
         AudioClip GetClipBySoundType(SoundType type)
         {

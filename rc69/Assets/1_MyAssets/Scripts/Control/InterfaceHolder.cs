@@ -27,8 +27,6 @@ namespace Raccoon.Controller
         void SetCharactorData(CharactorData data);
         void SetStartPoint(Vector3 startPoint);
         void ContactShop(TypeShop type);
-        void ContactUnlockShop(long costUnlock);
-
         void ContactWave();
         void Stealed(SlotController slot);
     }

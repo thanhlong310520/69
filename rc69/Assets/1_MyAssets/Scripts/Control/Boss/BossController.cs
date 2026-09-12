@@ -7,11 +7,11 @@ public class BossController : MonoBehaviour
     public GoapAgent goapAgent;
     public WorldState worldState;
 
-    public BossInSteal bossInSteal;
+    public BossHandle bosshandle;
 
     public void Init(Transform stayTransform)
     {
-        bossInSteal = new BossInSteal(stayTransform,goapAgent,SetWorldStateData);
+        bosshandle = new BossHandle(stayTransform,goapAgent,SetWorldStateData);
         goapAgent.SetStart(true);
         
     }
@@ -19,7 +19,7 @@ public class BossController : MonoBehaviour
     
     private void Update()
     {
-        bossInSteal.Update();
+        bosshandle.Update();
     }
 
     void SetWorldStateData(GoapWorldStateEnum key, bool value)
@@ -29,7 +29,7 @@ public class BossController : MonoBehaviour
 
     public List<Transform> GetListChase()
     {
-        return bossInSteal.listStealer;
+        return bosshandle.listTarget;
     }
 }
 

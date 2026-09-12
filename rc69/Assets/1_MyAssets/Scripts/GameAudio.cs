@@ -12,7 +12,7 @@ namespace Raccoon
     public class GameAudio : MonoBehaviour
     {
         private static GameAudio instance;
-        public static GameAudio Get => instance;
+        public static GameAudio Instance => instance;
         
         private bool isSoundEnabled = true;
 

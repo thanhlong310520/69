@@ -18,11 +18,12 @@ namespace Raccoon.Item
         protected ItemConfig config;
         public ItemConfig GetItemConfig => config;
         public FollowTarget ftarget;
-        public UnityAction<ItemCtr> eventRemoveFromSpawner;
-        public UnityAction<ItemCtr> actionSteal;
-        public UnityAction<ItemCtr> actionStealFail;
+        public UnityAction<ItemCtr, Transform> eventRemoveFromSpawner;
+        public UnityAction<ItemCtr, Transform> actionSteal;
+        public UnityAction<ItemCtr, Transform> actionStealFail;
 
         public Collider colli;
+
         public Collider GetCollider{
             get
             {
@@ -71,19 +72,19 @@ namespace Raccoon.Item
             GetCollider.enabled = true;
         }
 
-        public virtual void Stealed(Transform target)
+        public virtual void Stealed(Transform target, Transform stealer)
         {
             Pick(target);
-            actionSteal?.Invoke(this);
+            actionSteal?.Invoke(this, stealer);
         }
-        public virtual void StealFail()
+        public virtual void StealFail(Transform stealer)
         {
-            actionStealFail?.Invoke(this);
+            actionStealFail?.Invoke(this, stealer);
             SetTarget(null);
             SetState(ItemState.Normal);
             GetCollider.enabled = true;
         }
-        public virtual void Spawned(UnityAction<ItemCtr> actionRemove, UnityAction<ItemCtr> actionSteal, UnityAction<ItemCtr> actionStealFail)
+        public virtual void Spawned(UnityAction<ItemCtr, Transform> actionRemove, UnityAction<ItemCtr, Transform> actionSteal, UnityAction<ItemCtr, Transform> actionStealFail)
         {
             SetIsSave(false);
             GetCollider.enabled = true;
@@ -92,15 +93,15 @@ namespace Raccoon.Item
             SetEventRemoteFromSpawner(actionRemove);
             SetTarget(null);
         }
-        void SetEventRemoteFromSpawner(UnityAction<ItemCtr> action)
+        void SetEventRemoteFromSpawner(UnityAction<ItemCtr, Transform> action)
         {
             eventRemoveFromSpawner = action;
         }
 
-        public virtual void Save()
+        public virtual void Save(Transform stealer)
         {
             SetIsSave(true);
-            eventRemoveFromSpawner?.Invoke(this);
+            eventRemoveFromSpawner?.Invoke(this, stealer);
             SetState(state);
             SetTarget(null);
         }

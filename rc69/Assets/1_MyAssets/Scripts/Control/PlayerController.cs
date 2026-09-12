@@ -112,14 +112,9 @@ namespace Raccoon.Controller
         }
         public void SetStartPoint(Vector3 startPoint)
         {
-            transform.position = startPoint;
+            rb.position = startPoint;
         }
 
-        public void ContactUnlockShop(long costUnlock)
-        {
-            data.SetUnlockGate(true);
-            HomeCtr.instance.UnlockGate2FormUser(transform);
-        }
         void AddItemToDataWhenPickup(SlotController slot, ItemCtr item)
         {
             var config = item.GetItemConfig;
@@ -412,7 +407,7 @@ namespace Raccoon.Controller
 
         public void OnDropItemLoot()
         {
-            loot.DropItemLoot();
+            loot.DropItemLoot(transform);
             stateHandle.ChangeLayerItem(ItemType.None);
         }
         void ShowButtonDropItemLoot()
@@ -432,7 +427,7 @@ namespace Raccoon.Controller
         void LootSuccess(ItemCtr item)
         {
             ObserverEventManager.Instance.Publish<SoundType>(EventObserverName.PlaySfx.ToString(), SoundType.LootItem);
-            item.Stealed(stateHandle.holderItem);
+            item.Stealed(stateHandle.holderItem,transform);
 
             stateHandle.LootHandle();
         }
@@ -457,7 +452,7 @@ namespace Raccoon.Controller
                     if (data.AddItemUnlock(bd.GetId)) UpdateItemIndexUnlock(bd);
                 }        
             }
-            var listSave = loot.SaveLoot();
+            var listSave = loot.SaveLoot(transform);
             data.AddListItemConfig(listSave);
             var lastItem = listSave[listSave.Count - 1];
             stateHandle.ChangeItem(lastItem);
@@ -604,7 +599,7 @@ namespace Raccoon.Controller
         {
             rb.isKinematic = true;
             capsule.enabled = false;
-            loot.DropItemLoot();
+            loot.DropItemLoot(transform);
             stateHandle.Die();
         }
 
@@ -613,7 +608,7 @@ namespace Raccoon.Controller
             if (haveResetPos)
             {
                 Transform startPos = HomeCtr.instance.GetStartPos(transform);
-                transform.position = startPos.position;
+                SetStartPoint(startPos.position);
             }
             rb.isKinematic = false;
             capsule.enabled = true;
@@ -626,7 +621,7 @@ namespace Raccoon.Controller
             if (stateHandle.GetPlayerState == EPlayerState.Dead || stateHandle.GetPlayerState == EPlayerState.KnockBack) return;
 
             Transform startPos = HomeCtr.instance.GetStartPos(transform);
-            transform.position = startPos.position;
+            SetStartPoint(startPos.position);
 
             VfxCtrl.instance.SpawnRandomVfx(TypeVFX.BackBase, startPos.position);
         }

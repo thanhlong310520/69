@@ -9,7 +9,8 @@ using UnityEngine;
 public class SpawnItem : MonoBehaviour
 {
     [SerializeField]List<DataSpawnEgg> datas;
-
+    [SerializeField] BossController boss;
+    [SerializeField] Transform bossStay;
     public List<ItemCtr> listItemSpawn;
     
     #region init
@@ -20,6 +21,7 @@ public class SpawnItem : MonoBehaviour
     }
     public void Init()
     {
+        boss.Init(bossStay);
         foreach (var dt in datas)
         {
             Spawn(dt.so, dt.holderEgg);
@@ -51,17 +53,20 @@ public class SpawnItem : MonoBehaviour
 
     #region Remove 
 
-    void RemoveItem(ItemCtr itemRemove)
+    void RemoveItem(ItemCtr itemRemove, Transform stealer)
     {
         listItemSpawn.Remove(itemRemove);
+        boss.bosshandle.RemoveTarget(stealer);
         ReSpawn(itemRemove.data);
     }
-    void Stealed(ItemCtr itemSteal)
+    void Stealed(ItemCtr itemSteal, Transform stealer)
     {
+        boss.bosshandle.AddTarget(stealer);
         listItemSpawn.Remove(itemSteal);
     }
-    void StealFail(ItemCtr itemSteal)
+    void StealFail(ItemCtr itemSteal, Transform stealer)
     {
+        boss.bosshandle.RemoveTarget(stealer);
         listItemSpawn.Add(itemSteal);
     }
 
