@@ -298,13 +298,38 @@ namespace Raccoon.Controller
         }
         #endregion
 
+        private readonly List<ItemCtr> _cachedItemBuffer = new List<ItemCtr>(32);
+
         public ItemCtr GetRandomItemInSpawnItem(int max = 5)
         {
-            int indexSpawn = UnityEngine.Random.Range(0, max);
-            List<ItemCtr> list = spawnItems[indexSpawn].listItemSpawn.Where(it => it.GetState == ItemState.Normal).ToList();
-            if(list == null || list.Count == 0) return null;
-            int indexItem = UnityEngine.Random.Range(0, list.Count);
-            return list[indexItem];
+            _cachedItemBuffer.Clear();
+            int count = Mathf.Min(max, spawnItems.Count);
+            for (int i = 0; i < count; i++)
+            {
+                var items = spawnItems[i].listItemSpawn;
+                for (int j = 0; j < items.Count; j++)
+                {
+                    if (items[j] != null && items[j].GetState == ItemState.Normal)
+                        _cachedItemBuffer.Add(items[j]);
+                }
+            }
+            if (_cachedItemBuffer.Count == 0) return null;
+            return _cachedItemBuffer[UnityEngine.Random.Range(0, _cachedItemBuffer.Count)];
+        }
+
+        public bool HasAvailableItemInSpawnItem(int max = 5)
+        {
+            int count = Mathf.Min(max, spawnItems.Count);
+            for (int i = 0; i < count; i++)
+            {
+                var items = spawnItems[i].listItemSpawn;
+                for (int j = 0; j < items.Count; j++)
+                {
+                    if (items[j] != null && items[j].GetState == ItemState.Normal)
+                        return true;
+                }
+            }
+            return false;
         }
 
         public void LookatTarget(Transform origin, Transform target, Vector3 offset)

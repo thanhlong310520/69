@@ -429,7 +429,7 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
             SetDataUpgrade(u);
         }
 
-        //StartCoroutine(DelayStartGoap());
+        StartCoroutine(DelayStartGoap());
     }
 
     IEnumerator DelayStartGoap()

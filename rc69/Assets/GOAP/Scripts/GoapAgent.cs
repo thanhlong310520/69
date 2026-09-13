@@ -21,6 +21,8 @@ public class GoapAgent : MonoBehaviour
     public UnityEvent eventMakePlan;
     private bool isStart = false;
     private bool canAction = true;
+    [SerializeField] private float replanCooldown = 0.3f;
+    private float nextPlanTime = 0f;
     void Awake()
     {
         canAction = true;
@@ -38,7 +40,7 @@ public class GoapAgent : MonoBehaviour
         switch (agentState)
         {
             case AgentState.Idle:
-                PlanAndBegin();
+                if (Time.time >= nextPlanTime) PlanAndBegin();
                 break;
 
             case AgentState.PerformAction:
@@ -85,11 +87,10 @@ public class GoapAgent : MonoBehaviour
             Debug.Log($"[GOAP] {name} → Goal: {activeGoal.GetType().Name}, Plan: {currentPlan.Count + 1} actions");
             eventMakePlan.Invoke();
         }
-
-        //else
-        //{
-        //    Debug.LogWarning($"[GOAP] {name} không tìm được kế hoạch cho {activeGoal.GetType().Name}");
-        //}
+        else
+        {
+            nextPlanTime = Time.time + replanCooldown;
+        }
     }
 
     private void ExecuteCurrentAction()
