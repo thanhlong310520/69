@@ -31,11 +31,17 @@ public class TutUpgrade : TutorialAction
     {
         foreach (var u in upgrades)
         {
-            int index = PlayerController.instance.GetCharactorData.upgrade.GetDicUpgraded(u.type) + 1;
-            if (u.GetPriceUpgrade(index) <= PlayerController.instance.GetCharactorData.GetCoin)
+            var listId = PlayerController.instance.GetCharactorData.upgrade.GetDicUpgraded(u.type);
+            foreach (var item in u.data)
             {
-                have = true;
-                break;
+                if (!listId.Contains(item.id))
+                {
+                    if (u.GetPriceUpgrade(item.id) <= PlayerController.instance.GetCharactorData.GetCoin)
+                    {
+                        have = true;
+                        break;
+                    }
+                }
             }
         }
 

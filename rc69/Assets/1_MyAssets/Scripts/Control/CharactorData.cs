@@ -14,6 +14,7 @@ public class CharactorData
     public string name;
     public long coin;
     public string currentFashion;
+    public float multybuytreaMill;
     public CharactorUpgrade upgrade;
     public Dictionary<string, DataItemSlot> dicBotInSlots;
     public List<string> listBotUnlock;
@@ -35,9 +36,9 @@ public class CharactorData
         if(upgrade == null) upgrade = new CharactorUpgrade();   
         return upgrade;
     }
-    public void CUpdate(TypeUpgrade type,int index)
+    public void CUpdate(TypeUpgrade type,string idUpdate)
     {
-        upgrade.Update(type,index);
+        upgrade.Update(type,idUpdate);
     }
 
 
@@ -48,6 +49,7 @@ public class CharactorData
         this.name = name;
         coin = 0;
         indexRebirth = -1;
+        multybuytreaMill = 0;
         upgrade = new CharactorUpgrade();
         itemConfigs = new List<ItemConfig>();
         itemConfigs.Add(new ItemConfig("default", 10));
@@ -183,23 +185,82 @@ public class CharactorData
 [System.Serializable]
 public class CharactorUpgrade
 {
-    public Dictionary<TypeUpgrade, int> dic;
+    public Dictionary<TypeUpgrade, List<UpgareData>> dic;
     public CharactorUpgrade()
     {
-        dic = new Dictionary<TypeUpgrade, int>();
+        dic = new Dictionary<TypeUpgrade, List<UpgareData>>();
     }
 
-    public int GetDicUpgraded(TypeUpgrade type)
+    public List<string> GetDicUpgraded(TypeUpgrade type)
     {
-        if(dic.ContainsKey(type)) return dic[type];
-        return -1;
+        List<string> ret = new List<string>();
+        if (dic.ContainsKey(type))
+        {
+            if(dic[type] == null)
+            {
+                dic[type] = new List<UpgareData>();
+                return ret;
+            }
+            dic[type].ForEach(d => {
+                if (d.upgraded) ret.Add(d.id);
+            } );
+        }
+        return ret;
     }
-    public void Update(TypeUpgrade type,int index)
+    public void Update(TypeUpgrade type,string idUpgrade)
     {
-        Debug.Log("upgrade " + type);
-        if (dic.ContainsKey(type)) dic[type] = index;
-        else dic[type] = 0;
+        UpgareData u = GetUpgareDataByID(type, idUpgrade);
+        u.upgraded = true;
 
+    }
+    public void AddAds(TypeUpgrade type, string idUpgrade)
+    {
+        UpgareData u = GetUpgareDataByID(type, idUpgrade);
+        u.AddAds();
+    }
+    public int GetNumberAds(TypeUpgrade type, string idUpgrade)
+    {
+        UpgareData u = GetUpgareDataByID(type, idUpgrade);
+        return u.numberAds;
+    }
+    UpgareData GetUpgareDataByID(TypeUpgrade type, string id)
+    {
+        if (!dic.ContainsKey(type))
+        {
+            dic[type] = new List<UpgareData> { new UpgareData(id) };
+        }
+        else
+        {
+            if (dic[type] == null)
+            {
+                dic[type] = new List<UpgareData> { new UpgareData(id) };
+            }
+        }
+        var result = dic[type].FirstOrDefault(u => u.id == id);
+        if (result == null)
+        {
+            result = new UpgareData(id);
+            dic[type].Add(result);
+        }
+        return result;
+    }
+}
+[MessagePackObject(keyAsPropertyName: true)]
+[System.Serializable]
+public class UpgareData
+{
+    public string id;
+    public bool upgraded;
+    public int numberAds;
+    public UpgareData(string id)
+    {
+        this.id = id;
+        this.upgraded = false;
+        this.numberAds = 0;
+    }
+    public void AddAds()
+    {
+        this.numberAds++;
     }
 }
 

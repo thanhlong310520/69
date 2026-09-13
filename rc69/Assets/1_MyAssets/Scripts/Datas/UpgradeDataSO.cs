@@ -1,59 +1,36 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "UpgradeDataSO", menuName = "Raccoon/Item/UpgradeDataSO")]
 public class UpgradeDataSO : ScriptableObject
 {
     public TypeUpgrade type;
-    public Sprite icon;
-    public Sprite bgIcon;
     public List<DataUpgrade> data;
-
-    public bool isDynamicData = false;
-    public int basePrice = 283;
-    public float r = 1.2f;
     public int maxData;
-    public DataUpgrade GetdataByIndex(int index)
+
+    public long GetPriceUpgrade(string id)
     {
-        if (index < 0 || index >= data.Count) return new DataUpgrade();
-        return data[index]; 
+        var d = GetData(id);
+        return d.price;
+    }
+    public DataUpgrade GetData(string id)
+    {
+        return data.FirstOrDefault(x => x.id == id);
     }
 
-    public long GetPriceUpgrade(int index)
+    public float GetPrecent(string id)
     {
-        if(!isDynamicData)
-        {
-            if (index < 0 || index >= data.Count) return 0;
-            return data[index].price;
-        }
-        long price = 0;
-        price = (long)Mathf.Pow(r, index) * basePrice;
-        return price;
+        var d = GetData(id);
+        return d.precent;
     }
 
-    public float GetPrecent(int index)
+    public bool EnoughAds(string id, int ads)
     {
-        if (!isDynamicData)
-        {
-            if (index < 0 || index >= data.Count) return 0;
-            return data[index].precent;
-        }
-        return index + 1;
+        var d = GetData(id);
+        return ads >= d.numberAds;
     }
 
-    public bool HaveData(int index)
-    {
-        if (!isDynamicData)
-        {
-            if(index >= data.Count) return false;
-            return true;
-        }
-        else
-        {
-            if(index > maxData) return false;
-            return true;
-        }
-    }
 }
 
 public enum TypeUpgrade
@@ -63,6 +40,11 @@ public enum TypeUpgrade
 
 [System.Serializable] public struct DataUpgrade
 {
+    public string id;
+    public Sprite icon;
+    public Sprite bgIcon;
+    public int numberAds;
     public long price;
     public float precent;
+
 }

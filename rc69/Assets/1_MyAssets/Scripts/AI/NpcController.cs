@@ -5,6 +5,7 @@ using Raccoon.Data;
 using Raccoon.EnumHolder;
 using Raccoon.Item;
 using Raccoon.Player;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,9 +55,12 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
             float set = 0;
             if(upgradeDataSOs != null)
             {
-                int index = data.upgrade.GetDicUpgraded(TypeUpgrade.Speed);
+                List<string> listUpdated = data.upgrade.GetDicUpgraded(TypeUpgrade.Speed);
                 var us = upgradeDataSOs.FirstOrDefault(u => u.type == TypeUpgrade.Speed);
-                if (us != null && index >= 0 && index < us.data.Count) set = us.GetPrecent(index);
+                foreach (var u in listUpdated)
+                {
+                    set += us.GetPrecent(u);
+                }
             }
             move.SetMultiSpeed(set);
         }
@@ -143,15 +147,21 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
     {
         if (!worldState.Data.Get(GoapWorldStateEnum.HaveUpgrade.ToString())) return;
 
-        PayForUpgrade(dataUpgrade.upgradeSO.GetPriceUpgrade(dataUpgrade.index));
-        data.CUpdate(dataUpgrade.upgradeSO.type, dataUpgrade.index);
-        SetDataUpgrade(dataUpgrade.upgradeSO, dataUpgrade.index);
+        PayForUpgrade(dataUpgrade.upgradeSO.data[dataUpgrade.index].price);
+        data.CUpdate(dataUpgrade.upgradeSO.type, dataUpgrade.upgradeSO.data[dataUpgrade.index].id);
+        SetDataUpgrade(dataUpgrade.upgradeSO);
     }
-    public void SetDataUpgrade(UpgradeDataSO upgradeData, int index)
+    public void SetDataUpgrade(UpgradeDataSO upgradeData)
     {
         float set = 0;
-        if (index >= 0 && upgradeData.HaveData(index)) set = upgradeData.GetPrecent(index);
-
+        if (upgradeData != null)
+        {
+            List<string> listUpdated = data.upgrade.GetDicUpgraded(upgradeData.type);
+            foreach (var u in listUpdated)
+            {
+                set += upgradeData.GetPrecent(u);
+            }
+        }
         switch (upgradeData.type)
         {
             case TypeUpgrade.Speed:
@@ -207,12 +217,14 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
         bool have = false;
         foreach (var u in upgradeDataSOs)
         {
-            int index = data.upgrade.GetDicUpgraded(u.type) + 1;
-            if (u.GetPriceUpgrade(index) <= data.GetCoin)
+            for (int i = 0; i < u.data.Count; i++)
             {
-                dataUpgrade = new DataNpcUpgrade(u, index);
-                have= true;
-                break;
+                if (u.data[i].price <= data.GetCoin)
+                {
+                    dataUpgrade = new DataNpcUpgrade(u, i);
+                    have = true;
+                    break;
+                }
             }
         }
         SetWorldStateData(GoapWorldStateEnum.HaveUpgrade, have);
@@ -414,7 +426,7 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
         UpdateWorldStateData();
         foreach (var u in upgradeDataSOs)
         {
-            SetDataUpgrade(u, data.upgrade.GetDicUpgraded(u.type));
+            SetDataUpgrade(u);
         }
 
         //StartCoroutine(DelayStartGoap());

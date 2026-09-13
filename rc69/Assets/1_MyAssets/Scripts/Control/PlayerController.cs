@@ -86,10 +86,14 @@ namespace Raccoon.Controller
                 data = GameData.Get.GetCharacterData(home.nameHome);
             }
             this.data = data;
-            foreach (TypeUpgrade type in Enum.GetValues(typeof(TypeUpgrade)))
+            //foreach (TypeUpgrade type in Enum.GetValues(typeof(TypeUpgrade)))
+            //{
+            //    UpgradeDataSO upgradeDataSO = GamePlayControl.instance.GetUpgradeDataByType(type);
+            //    SetDataUpgrade(upgradeDataSO);
+            //}
+            foreach (var item in GamePlayControl.instance.GetUpgradeDataSOs)
             {
-                UpgradeDataSO upgradeDataSO = GamePlayControl.instance.GetUpgradeDataByType(type);
-                SetDataUpgrade(upgradeDataSO, data.upgrade.GetDicUpgraded(type));
+                SetDataUpgrade(item);
             }
             this.data.onChangeItem += UpdateUIWhenChangeItem;
             this.data.onChangeCoin += UpdateUIWhenChangeCoin;
@@ -461,26 +465,54 @@ namespace Raccoon.Controller
 
         #endregion
 
-        public void Upgrade(UpgradeDataSO upgradeData, int index, bool useAds)
+
+        public void CheckUpgrade(UpgradeDataSO upgradeData, string id, bool useAds,UnityAction<CharactorData> action)
         {
-            // tru tien 
-            // update data
-            if(index < 0) return;
-            if(!upgradeData.HaveData(index)) return;
+            if (useAds)
+            {
+                data.upgrade.AddAds(upgradeData.type, id);
+                if (upgradeData.EnoughAds(id, data.upgrade.GetNumberAds(upgradeData.type, id)))
+                {
+                    Upgrade(upgradeData, id);
+                }
+            }
 
-            if(!useAds) PayForUpgrade(upgradeData.GetPriceUpgrade(index));
-            ObserverEventManager.Instance.Publish<SoundType>(EventObserverName.PlaySfx.ToString(), SoundType.UpgradeSuccess);
-            eventTutorial?.Invoke(TypeActionTutorial.Upgrade);
+            if (!useAds)
+            {
+                if(upgradeData.GetPriceUpgrade(id) <= data.GetCoin)
+                {
+                    PayForUpgrade(upgradeData.GetPriceUpgrade(id));
+                    Upgrade(upgradeData, id);
+                }
+                else
+                {
+                    ObserverEventManager.Instance.Publish<SoundType>(EventObserverName.PlaySfx.ToString(), SoundType.BuyFall);
+                }
 
-            data.CUpdate(upgradeData.type,index);
-            SetDataUpgrade(upgradeData,index);
+
+            }
+            action?.Invoke(data);
         }
 
-        public void SetDataUpgrade(UpgradeDataSO upgradeData, int index)
+        void Upgrade(UpgradeDataSO upgradeData, string id)
         {
-            float set = 0;
-            if (index >= 0 && upgradeData.HaveData(index)) set = upgradeData.GetPrecent(index);
+            ObserverEventManager.Instance.Publish<SoundType>(EventObserverName.PlaySfx.ToString(), SoundType.UpgradeSuccess); 
+            data.CUpdate(upgradeData.type,id);
+            eventTutorial?.Invoke(TypeActionTutorial.Upgrade);
+            SetDataUpgrade(upgradeData);
+        }
 
+        public void SetDataUpgrade(UpgradeDataSO upgradeData)
+        {
+            float set = GetMultiSpeedBuyTreamill();
+            if (upgradeData != null)
+            {
+                List<string> listUpdated = data.upgrade.GetDicUpgraded(upgradeData.type);
+                foreach (var u in listUpdated)
+                {
+                    set += upgradeData.GetPrecent(u);
+                }
+            }
             switch (upgradeData.type)
             {
                 case TypeUpgrade.Speed:
@@ -503,6 +535,11 @@ namespace Raccoon.Controller
             MainUiControl.instance.UpdateInforPlayerUpgrade(upgradeData.type, set);
         }
 
+
+        float GetMultiSpeedBuyTreamill()
+        {
+            return data.multybuytreaMill;
+        }
         #region HandleUI
 
         public void OnResetItem()

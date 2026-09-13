@@ -11,28 +11,24 @@ public class ItemPopupUpgrade : MonoBehaviour
     public Button buyAds;
     public TMP_Text txtName;
     public TMP_Text txtPrecent;
+    public TMP_Text txtNumberAds;
     public Image icon;
     public Image bgicon;
     public TMP_Text txtPrice;
 
     public UpgradeDataSO upgradeData;
 
-    int index;
-    public int GetIndex => index;
+    string id;
+    public string GetId => id;
 
     UnityAction<ItemPopupUpgrade,bool> actionClick;
-    int numberAds;
-    int currentAds;
-    private void Start()
+    public void Init(UpgradeDataSO dataSO, string id,Sprite icon ,Sprite bg, UnityAction<ItemPopupUpgrade, bool> actionClick)
     {
-        currentAds = 0;
-    }
-    public void Init(UpgradeDataSO dataSO, UnityAction<ItemPopupUpgrade, bool> actionClick)
-    {
+        this.id = id;
         upgradeData = dataSO;
-        bgicon.sprite = dataSO.bgIcon;
+        bgicon.sprite = bg;
         txtName.text = dataSO.type.ToString();
-        icon.sprite = dataSO.icon;
+        this.icon.sprite = icon;
         this.actionClick = actionClick; 
     } 
 
@@ -42,12 +38,7 @@ public class ItemPopupUpgrade : MonoBehaviour
     }
     public void ClickButtonAds()
     {
-        currentAds++;   
-        if(currentAds == numberAds)
-        {
-            currentAds = 0;
-            Buy(true);
-        }
+        Buy(true);
     }
 
     public void Buy(bool useAds)
@@ -55,48 +46,12 @@ public class ItemPopupUpgrade : MonoBehaviour
         actionClick?.Invoke(this,useAds);
     }
 
-    public void SetData(int index)
+    public void SetData(float precent, long price, int playerNumberads, int totalAds)
     {
-        if (upgradeData == null)
-        {
-            TurnOffButtonBuy();
-            return;
-        }
-        this.index = index;
-        if(!upgradeData.HaveData(index))
-        {
-            TurnOffButtonBuy();
-            return;
-        }
-        
-        UpdateUI(index);
+        txtPrecent.text = "x" + precent.ToString();
+        txtPrice.text = price.ConvertCurrencyToString();
+        txtNumberAds.text = $" {playerNumberads}/{totalAds}";
     }
 
-    public void SetCoinEnough(int index,  long coin)
-    {
-        if(upgradeData.GetPriceUpgrade(index) > coin)
-        {
-            txtPrice.color = Color.red;
-        }
-        else
-        {
-            txtPrice.color = Color.white;
-        }
-    }
 
-    void TurnOffButtonBuy()
-    {
-        buy.gameObject.SetActive(false);
-        buyAds.gameObject.SetActive(false);
-        txtPrecent.gameObject.SetActive(false);
-    }
-
-    void UpdateUI(int index)
-    {
-        buy.gameObject.SetActive(true);
-        //buyAds.gameObject.SetActive(true);
-        txtPrecent.gameObject.SetActive(true);
-        txtPrecent.text = "+" + upgradeData.GetPrecent(index).ToString();
-        txtPrice.text = upgradeData.GetPriceUpgrade(index).ConvertCurrencyToString();
-    }
 }

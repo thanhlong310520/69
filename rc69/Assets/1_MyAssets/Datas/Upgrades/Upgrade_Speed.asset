@@ -13,10 +13,65 @@ MonoBehaviour:
   m_Name: Upgrade_Speed
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeDataSO
   type: 0
-  icon: {fileID: 1785774420, guid: 1a238b428eaf1aa46926f1b442fbb380, type: 3}
-  bgIcon: {fileID: 21300000, guid: b67bbe24171e50848998d0631e9f3fb8, type: 3}
-  data: []
-  isDynamicData: 1
-  basePrice: 283
-  r: 2
+  data:
+  - id: tr1
+    icon: {fileID: 0}
+    bgIcon: {fileID: 0}
+    numberAds: 2
+    price: 1
+    precent: 1
+  - id: tr2
+    icon: {fileID: 0}
+    bgIcon: {fileID: 0}
+    numberAds: 2
+    price: 2
+    precent: 1
+  - id: tr3
+    icon: {fileID: 0}
+    bgIcon: {fileID: 0}
+    numberAds: 3
+    price: 20
+    precent: 10
+  - id: tr4
+    icon: {fileID: 0}
+    bgIcon: {fileID: 0}
+    numberAds: 3
+    price: 20
+    precent: 10
+  - id: tr5
+    icon: {fileID: 0}
+    bgIcon: {fileID: 0}
+    numberAds: 3
+    price: 20
+    precent: 10
+  - id: tr6
+    icon: {fileID: 0}
+    bgIcon: {fileID: 0}
+    numberAds: 3
+    price: 20
+    precent: 10
+  - id: tr7
+    icon: {fileID: 0}
+    bgIcon: {fileID: 0}
+    numberAds: 3
+    price: 20
+    precent: 10
+  - id: tr8
+    icon: {fileID: 0}
+    bgIcon: {fileID: 0}
+    numberAds: 3
+    price: 20
+    precent: 10
+  - id: tr9
+    icon: {fileID: 0}
+    bgIcon: {fileID: 0}
+    numberAds: 3
+    price: 20
+    precent: 10
+  - id: tr10
+    icon: {fileID: 0}
+    bgIcon: {fileID: 0}
+    numberAds: 3
+    price: 20
+    precent: 10
   maxData: 50

@@ -257,21 +257,11 @@ namespace Raccoon.Controller
         {
             return fashionDataSOs.FirstOrDefault(so => so.GetId.Equals(id));
         }
-
-        public float GetUpgradeValue(TypeUpgrade type, int index)
-        {
-            float result = 0;
-            var upgradeData = upgradeDataSOs.FirstOrDefault(u => u.type == type);
-            if (upgradeData != null)
-            {
-                if(index >= 0 && index < upgradeData.data.Count) result = upgradeData.GetPrecent(index);
-            }
-            return result;
-        }
         public UpgradeDataSO GetUpgradeDataByType(TypeUpgrade type)
         {
             return upgradeDataSOs.FirstOrDefault(u => u.type == type);
         }
+
 
         public Sprite GetBgByColorType(ColorType type)
         {

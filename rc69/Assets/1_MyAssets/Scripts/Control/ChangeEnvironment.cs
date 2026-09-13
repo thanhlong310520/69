@@ -193,7 +193,7 @@ public class ChangeEnvironment : MonoBehaviour
 
     void ChangeMatRender(Renderer rd , List<Material> mats)
     {
-        rd.materials = mats.ToArray();
+        //rd.materials = mats.ToArray();
     }
 
     void SpawnVfx(GameObject prefab)

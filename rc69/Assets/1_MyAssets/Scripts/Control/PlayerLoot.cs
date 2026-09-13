@@ -36,6 +36,7 @@ public class PlayerLoot : MonoBehaviour
         isLooting = false;
         currentTimeLoot = 0f;
         itemLoots = new List<ItemCtr>();
+        numberLoot = 1;
     }
     public void SetNumberLoot(float set)
     {

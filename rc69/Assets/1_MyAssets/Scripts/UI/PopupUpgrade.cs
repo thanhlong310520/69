@@ -1,6 +1,7 @@
 using DG.Tweening;
 using Raccoon;
 using Raccoon.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -22,54 +23,64 @@ public class PopupUpgrade : PopupCanvas
         {
             upgradeDataSOs = GamePlayControl.instance.GetUpgradeDataSOs;
         }
-        if(items == null) items = new List<ItemPopupUpgrade>();
-
+        if (items == null) LoadItem();
+        if (items.Count <= 0) LoadItem();
         ShowDataUpgrade((CharactorData)obj);
     }
+    void LoadItem()
+    {
+        items = new List<ItemPopupUpgrade>();
+        foreach (var u in upgradeDataSOs)
+        {
+            foreach (var ud in u.data)
+            {
 
+                ItemPopupUpgrade it = Instantiate(itemPrefab, holderItem);
+                it.gameObject.SetActive(false);
+                it.Init(u,ud.id,ud.icon,ud.bgIcon, Buy);
+                items.Add(it);
+            }
+        }
+    }
     void ShowDataUpgrade(CharactorData data)
     {
         if (data == null) return;
         foreach (var dt in upgradeDataSOs)
         {
-            var it = items.FirstOrDefault(i => i.upgradeData == dt);
-            if (it == null)
+            foreach (var ud in dt.data)
             {
-                it = Instantiate(itemPrefab, holderItem);
-                it.gameObject.SetActive(true);
-                items.Add(it);
+                var listUd  = data.upgrade.GetDicUpgraded(dt.type);
+                var item = GetItemPopupUpgrade(dt.type,ud.id);
+                if (item == null) continue;
+
+                if (listUd.Contains(ud.id))
+                {
+                    item.gameObject.SetActive(false);
+
+                }
+                else
+                {
+                    item.SetData(ud.precent, ud.price, data.upgrade.GetNumberAds(dt.type, ud.id), ud.numberAds);
+                    item.gameObject.SetActive(true);
+                }
             }
-            it.Init(dt, Buy);
-            int index = data.upgrade.GetDicUpgraded(dt.type) + 1;
-            it.SetData(index);
-            it.SetCoinEnough(index, data.GetCoin);
         }
 
     }
 
+    ItemPopupUpgrade GetItemPopupUpgrade(TypeUpgrade type, string id)
+    {
+        foreach (var item in items)
+        {
+            if(item.upgradeData.type == type && item.GetId.Equals(id)) return item;
+        }
+        return null;
+    }
+
     void Buy(ItemPopupUpgrade item, bool useAds)
     {
-        bool enoughCoin = false;
-        if (PlayerController.instance.GetCharactorData.GetCoin >= item.upgradeData.GetPriceUpgrade(item.GetIndex)) enoughCoin = true;
-        if (useAds) enoughCoin = true;
-        if (!enoughCoin)
-        {
-            // show not enough coin 
-            ObserverEventManager.Instance.Publish<SoundType>(EventObserverName.PlaySfx.ToString(), SoundType.BuyFall);
-
-            //notiNotEnough.gameObject.SetActive(true);
-            //notiNotEnough.DOKill();
-            //notiNotEnough.localScale = Vector3.zero;
-            //notiNotEnough.DOScale(Vector3.one, 2).OnComplete(() =>
-            //{
-            //    notiNotEnough.transform.SetActive(false);
-            //});
-            return;
-        }
-        PlayerController.instance.Upgrade(item.upgradeData, item.GetIndex, useAds);
-        int index = PlayerController.instance.GetCharactorData.upgrade.GetDicUpgraded(item.upgradeData.type) + 1;
-        item.SetData(index);
-        item.SetCoinEnough(index, PlayerController.instance.GetCharactorData.GetCoin);
+        PlayerController.instance.CheckUpgrade(item.upgradeData, item.GetId, useAds,ShowDataUpgrade);
+        // Reset data 
 
     }
 
