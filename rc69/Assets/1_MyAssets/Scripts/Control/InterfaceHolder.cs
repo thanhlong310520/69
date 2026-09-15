@@ -29,5 +29,6 @@ namespace Raccoon.Controller
         void ContactShop(TypeShop type);
         void ContactWave();
         void Stealed(SlotController slot);
+        void NotifyBossChase();
     }
 }

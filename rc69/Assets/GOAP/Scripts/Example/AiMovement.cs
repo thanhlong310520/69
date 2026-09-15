@@ -5,7 +5,12 @@ using UnityEngine.AI;
 public class AiMovement : MonoBehaviour
 {
     public NavMeshAgent agent;
-
+    public void SetSpeed(float speed)
+    {
+        agent.speed = speed;
+        agent.angularSpeed = Mathf.Max(720f, speed * 40f);
+        agent.acceleration = Mathf.Max(20f, speed * 4f);
+    }
     public bool MoveToTarget(Vector3 pos)
     {
         Vector3 newpos = pos;

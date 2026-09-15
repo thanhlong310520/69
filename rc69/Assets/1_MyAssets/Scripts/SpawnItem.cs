@@ -9,9 +9,11 @@ using UnityEngine;
 public class SpawnItem : MonoBehaviour
 {
     [SerializeField]List<DataSpawnEgg> datas;
-    [SerializeField] BossController boss;
+    [SerializeField] BossDataSO bossSO;
     [SerializeField] Transform bossStay;
     public List<ItemCtr> listItemSpawn;
+
+    BossController boss;
     
     #region init
 
@@ -21,7 +23,10 @@ public class SpawnItem : MonoBehaviour
     }
     public void Init()
     {
-        boss.Init(bossStay);
+        var bossGO = Instantiate(bossSO.prefab, GamePlayControl.instance.bossHolder);
+        bossGO.transform.position = bossStay.position;
+        boss = bossGO.GetComponent<BossController>();
+        boss.Init(bossSO,bossStay);
         foreach (var dt in datas)
         {
             Spawn(dt.so, dt.holderEgg);
@@ -35,9 +40,9 @@ public class SpawnItem : MonoBehaviour
         GameObject item = GamePlayControl.instance.SpawnItem(itemData.prefab);
         item.transform.parent = transform;
         item.SetActive(true);
-        item.transform.localPosition = holder.position;
+        item.transform.localPosition = holder.localPosition;
         item.transform.localScale = Vector3.one;
-        item.transform.localRotation = holder.rotation;
+        item.transform.localRotation = holder.localRotation;
         item.gameObject.SetActive(true);
         var itemCtr = item.GetComponent<ItemCtr>();
 

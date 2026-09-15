@@ -1,13 +1,20 @@
+using Raccoon.Controller;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ActionChaseStealer : GoapAction
 {
     [SerializeField] private AiMovement movement;
     [SerializeField] private BossController controller;
+    [SerializeField] private float startDelay = 1f;
+
+    public UnityEvent<Transform> startPerformEvent;
 
     private Transform target;
     private bool done = false;
+    private bool started = false;
+    private float startTime;
 
     void Awake()
     {
@@ -41,6 +48,18 @@ public class ActionChaseStealer : GoapAction
             return true;
         }
 
+        if (!started)
+        {
+            started = true;
+            startTime = Time.time;
+            target.GetComponent<ICharactor>()?.NotifyBossChase();
+        }
+
+        if (Time.time - startTime < startDelay)
+        {
+            return true;
+        }
+
         movement.MoveToTarget(target.position);
         return true;
     }
@@ -57,5 +76,6 @@ public class ActionChaseStealer : GoapAction
     {
         done = false;
         target = null;
+        started = false;
     }
 }

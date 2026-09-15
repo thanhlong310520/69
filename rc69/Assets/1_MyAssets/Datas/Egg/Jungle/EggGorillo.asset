@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345e040f4d98102449b189c99b6ebcfe, type: 3}
+  m_Name: EggGorillo
+  m_EditorClassIdentifier: Assembly-CSharp::EggDataSO
+  id: 
+  itemName: Gorillo
+  priority: 0
+  itemType: 6
+  spriteIcon: {fileID: 0}
+  prefab: {fileID: 6391901793701519687, guid: 4777a92dd1a94526b9f4c6928105eab4, type: 3}
+  rarityType: 1
+  colorType: 3
+  spriteIconLock: {fileID: 0}
+  cost: 9000
+  monsterSO: {fileID: 11400000, guid: 260d7649eb90e7c4b9f9dc732c41847c, type: 2}
+  growTime:
+    hours: 0
+    minutes: 0
+    seconds: 30

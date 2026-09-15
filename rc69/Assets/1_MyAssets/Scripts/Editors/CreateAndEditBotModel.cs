@@ -306,12 +306,12 @@ namespace Raccoon.EditorTool
                 BotDataSO botData = AssetDatabase.LoadAssetAtPath<BotDataSO>(soPath);
                 if (!int.TryParse(botData.name.Split(' ')[1], out int dtId)) continue;
                 var pathSprite = $"{iconBotPathNew}/base";
-                if (botData.colorType == ColorType.Golden)
-                    pathSprite = $"{iconBotPathNew}/gold";
-                if (botData.colorType == ColorType.Diamond)
-                    pathSprite = $"{iconBotPathNew}/diamond";
-                if (botData.colorType == ColorType.Rainbow)
-                    pathSprite = $"{iconBotPathNew}/base";
+                //if (botData.colorType == ZoneType.Golden)
+                //    pathSprite = $"{iconBotPathNew}/gold";
+                //if (botData.colorType == ZoneType.Diamond)
+                //    pathSprite = $"{iconBotPathNew}/diamond";
+                //if (botData.colorType == ZoneType.Rainbow)
+                //    pathSprite = $"{iconBotPathNew}/base";
 
                 // look for sprite with the same name
                 string[] spriteGuids = AssetDatabase.FindAssets($"t:Sprite", new[] { pathSprite });

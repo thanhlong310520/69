@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345e040f4d98102449b189c99b6ebcfe, type: 3}
+  m_Name: EggMammothCocofanto
+  m_EditorClassIdentifier: Assembly-CSharp::EggDataSO
+  id: 
+  itemName: Mammoth Cocofanto
+  priority: 0
+  itemType: 6
+  spriteIcon: {fileID: 0}
+  prefab: {fileID: 3046632976292927, guid: ed73fedabc234f6f9d4ad62c169714ca, type: 3}
+  rarityType: 4
+  colorType: 4
+  spriteIconLock: {fileID: 0}
+  cost: 4200000
+  monsterSO: {fileID: 11400000, guid: e7a0be2e08d3c4348b51867fc401e538, type: 2}
+  growTime:
+    hours: 0
+    minutes: 5
+    seconds: 0

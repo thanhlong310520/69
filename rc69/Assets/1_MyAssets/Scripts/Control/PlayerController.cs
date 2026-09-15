@@ -205,6 +205,12 @@ namespace Raccoon.Controller
         {
             data.RemoveBotInSlot(slot.id);
         }
+
+
+        public void NotifyBossChase()
+        {
+            GamePlayControl.instance.ShowUIBossChase();
+        }
         #endregion
         private void OnDisable()
         {
@@ -470,14 +476,28 @@ namespace Raccoon.Controller
         {
             if (useAds)
             {
-                data.upgrade.AddAds(upgradeData.type, id);
-                if (upgradeData.EnoughAds(id, data.upgrade.GetNumberAds(upgradeData.type, id)))
+
+                if(upgradeData.GetData(id).numberAds <= 0)
                 {
                     Upgrade(upgradeData, id);
                 }
+
+
+                //Watch Ads
+                AdsActionManager.instance.ShowRewardAds((success) =>
+                {
+                    if (success)
+                    {
+                        data.upgrade.AddAds(upgradeData.type, id);
+                        if (upgradeData.EnoughAds(id, data.upgrade.GetNumberAds(upgradeData.type, id)))
+                        {
+                            Upgrade(upgradeData, id);
+                        }
+                    }
+                });
             }
 
-            if (!useAds)
+            else
             {
                 if(upgradeData.GetPriceUpgrade(id) <= data.GetCoin)
                 {
@@ -776,6 +796,7 @@ namespace Raccoon.Controller
             Dead();
             StartCoroutine(ResetAfterDead(false));
         }
+
     }
 
     public enum EPlayerState

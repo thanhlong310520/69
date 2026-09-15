@@ -42,6 +42,7 @@ public class MainUiControl : MonoBehaviour
     public Image iconAvatar;
     public GameObject buttonAttack;
     public UIWarning uiWarning;
+    public UIWarning uiWarningBossChase;
     public TMP_Text textWaitAds;
     [SerializeField] List<InforUiPlayerUpgrade> inforUiPlayerUpgrade;
     PopupBackPack backPack;
@@ -208,6 +209,11 @@ public class MainUiControl : MonoBehaviour
     public void EnableTextWaitAds(bool isEnable)
     {
         textWaitAds.gameObject.SetActive(isEnable);
+    }
+
+    public void ShowUIBotChase()
+    {
+        uiWarningBossChase?.StartWarning();
     }
 
     [System.Serializable]

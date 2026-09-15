@@ -41,6 +41,7 @@ public enum TypeUpgrade
 [System.Serializable] public struct DataUpgrade
 {
     public string id;
+    public string name;
     public Sprite icon;
     public Sprite bgIcon;
     public int numberAds;

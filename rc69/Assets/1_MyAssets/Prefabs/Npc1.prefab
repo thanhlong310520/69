@@ -133,6 +133,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  replanCooldown: 0.3
 --- !u!114 &8648396422892672720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,6 +647,7 @@ MonoBehaviour:
     name: 
     coin: 0
     currentFashion: 
+    multybuytreaMill: 0
     listBotUnlock: []
     listSlotGate2Unlock: []
     indexRebirth: 0
@@ -669,7 +671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bbf9b2c5fbf3044abc2bfc8fd6d33d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NpcMove
-  baseSpeed: 3.5
+  baseSpeed: 5
   agent: {fileID: 3567480037340719129}
   actionAnimMove:
     m_PersistentCalls:

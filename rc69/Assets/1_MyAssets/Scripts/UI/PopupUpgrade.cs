@@ -37,7 +37,7 @@ public class PopupUpgrade : PopupCanvas
 
                 ItemPopupUpgrade it = Instantiate(itemPrefab, holderItem);
                 it.gameObject.SetActive(false);
-                it.Init(u,ud.id,ud.icon,ud.bgIcon, Buy);
+                it.Init(u,ud.id,ud.name,ud.icon,ud.bgIcon, Buy);
                 items.Add(it);
             }
         }

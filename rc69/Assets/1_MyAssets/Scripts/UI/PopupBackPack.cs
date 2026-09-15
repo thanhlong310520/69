@@ -14,9 +14,9 @@ public class PopupBackPack : AbstractPopup
     public ScrollRect scrollRect;
 
     TabColorUI currentTab;
-    ColorType colorType = ColorType.Normal;
+    ZoneType colorType = ZoneType.Forest;
 
-    Dictionary<ColorType, List<DataItemShow>> dicDataItem;
+    Dictionary<ZoneType, List<DataItemShow>> dicDataItem;
 
     private void Start()
     {
@@ -43,8 +43,8 @@ public class PopupBackPack : AbstractPopup
     }
     void InitDic()
     {
-        dicDataItem = new Dictionary<ColorType, List<DataItemShow>>();
-        foreach (ColorType type in Enum.GetValues(typeof(ColorType)))
+        dicDataItem = new Dictionary<ZoneType, List<DataItemShow>>();
+        foreach (ZoneType type in Enum.GetValues(typeof(ZoneType)))
         {
             dicDataItem[type] = new List<DataItemShow>();
         }

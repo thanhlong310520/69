@@ -47,23 +47,17 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
 
     public void SetSpeed()
     {
-        int rand = UnityEngine.Random.Range(0, 2);
-        if (rand == 0) move.SetMultiSpeed(0);
-        else 
+        float set = 0;
+        if (upgradeDataSOs != null)
         {
-
-            float set = 0;
-            if(upgradeDataSOs != null)
+            List<string> listUpdated = data.upgrade.GetDicUpgraded(TypeUpgrade.Speed);
+            var us = upgradeDataSOs.FirstOrDefault(u => u.type == TypeUpgrade.Speed);
+            foreach (var u in listUpdated)
             {
-                List<string> listUpdated = data.upgrade.GetDicUpgraded(TypeUpgrade.Speed);
-                var us = upgradeDataSOs.FirstOrDefault(u => u.type == TypeUpgrade.Speed);
-                foreach (var u in listUpdated)
-                {
-                    set += us.GetPrecent(u);
-                }
+                set += us.GetPrecent(u);
             }
-            move.SetMultiSpeed(set);
         }
+        move.SetMultiSpeed(set);
     }
     public void ChangeModel()
     {
@@ -456,6 +450,9 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
 
     public void ContactWave()
     {
+        VfxCtrl.instance.SpawnRandomVfx(TypeVFX.Blood, transform.position + Vector3.up * 1.5f);
+        Dead();
+        StartCoroutine(ResetAfterDead(true));
     }
 
     public void Stealed(SlotController slot)
@@ -531,6 +528,11 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
         move.ResetMove();
         capsule.enabled = true;
         stateHandle.ChangeState(EPlayerState.Normal);
+    }
+
+    public void NotifyBossChase()
+    {
+        
     }
     #endregion
 }

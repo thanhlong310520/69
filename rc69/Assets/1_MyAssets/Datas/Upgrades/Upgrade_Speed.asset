@@ -15,63 +15,73 @@ MonoBehaviour:
   type: 0
   data:
   - id: tr1
-    icon: {fileID: 0}
+    name: Common
+    icon: {fileID: 21300000, guid: b9aa2ca891edbf9419a254f24dd987d5, type: 3}
     bgIcon: {fileID: 0}
-    numberAds: 2
-    price: 1
-    precent: 1
+    numberAds: 0
+    price: 100
+    precent: 1.5
   - id: tr2
-    icon: {fileID: 0}
+    name: Uncommon
+    icon: {fileID: 21300000, guid: 976823e8eec93c148bf6c0337a1fc1cc, type: 3}
     bgIcon: {fileID: 0}
-    numberAds: 2
-    price: 2
-    precent: 1
+    numberAds: 5
+    price: 5000
+    precent: 2
   - id: tr3
-    icon: {fileID: 0}
+    name: Rare
+    icon: {fileID: 21300000, guid: 91e7701f9b8a22e4aa6cebd496974245, type: 3}
     bgIcon: {fileID: 0}
-    numberAds: 3
-    price: 20
-    precent: 10
+    numberAds: 10
+    price: 75000
+    precent: 2.5
   - id: tr4
-    icon: {fileID: 0}
+    name: Epic
+    icon: {fileID: 21300000, guid: 90052871d1c0e38498eb394499937bbf, type: 3}
     bgIcon: {fileID: 0}
-    numberAds: 3
-    price: 20
-    precent: 10
+    numberAds: 15
+    price: 1500000
+    precent: 3
   - id: tr5
-    icon: {fileID: 0}
+    name: Legendary
+    icon: {fileID: 21300000, guid: 67cb3cfcdc6c1d64285d6ffc250066b5, type: 3}
     bgIcon: {fileID: 0}
-    numberAds: 3
-    price: 20
-    precent: 10
+    numberAds: 20
+    price: 30000000
+    precent: 3.5
   - id: tr6
-    icon: {fileID: 0}
+    name: Mythic
+    icon: {fileID: 21300000, guid: e8da0d8bab89dbe468c459f703c3a179, type: 3}
     bgIcon: {fileID: 0}
-    numberAds: 3
-    price: 20
-    precent: 10
+    numberAds: 25
+    price: 750000000
+    precent: 4
   - id: tr7
-    icon: {fileID: 0}
+    name: Cosmic
+    icon: {fileID: 21300000, guid: bec34d5ae98988146b3efe9724eca8aa, type: 3}
     bgIcon: {fileID: 0}
-    numberAds: 3
-    price: 20
-    precent: 10
+    numberAds: 30
+    price: 20000000000
+    precent: 5
   - id: tr8
-    icon: {fileID: 0}
+    name: Secret
+    icon: {fileID: 21300000, guid: d4009ce46cc7965418f27c88617cac80, type: 3}
     bgIcon: {fileID: 0}
-    numberAds: 3
-    price: 20
-    precent: 10
+    numberAds: 45
+    price: 500000000000
+    precent: 7
   - id: tr9
-    icon: {fileID: 0}
+    name: Eternal
+    icon: {fileID: 21300000, guid: 11e507fcbac65e542b02ae43eea98648, type: 3}
     bgIcon: {fileID: 0}
-    numberAds: 3
-    price: 20
+    numberAds: 40
+    price: 12500000000000
     precent: 10
   - id: tr10
-    icon: {fileID: 0}
+    name: Divine
+    icon: {fileID: 21300000, guid: d7b128629f6873849b1f8c9400887630, type: 3}
     bgIcon: {fileID: 0}
-    numberAds: 3
-    price: 20
-    precent: 10
+    numberAds: 50
+    price: 300000000000000
+    precent: 14
   maxData: 50

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0094d0ae2727c4c53aec92387256922b, type: 3}
+  m_Name: MonsterCerberus
+  m_EditorClassIdentifier: Assembly-CSharp::Raccoon.Data.BotDataSO
+  id: 
+  itemName: Cerberus
+  priority: 0
+  itemType: 2
+  spriteIcon: {fileID: 0}
+  prefab: {fileID: 1013749665817417609, guid: 6a54a8796f2bed74eb3e312ca73062a0, type: 3}
+  rarityType: 0
+  colorType: 5
+  spriteIconLock: {fileID: 0}
+  cost: 0
+  income: 0
+  audioClip: {fileID: 0}
+  health: 0

@@ -6,14 +6,15 @@ public class BossController : MonoBehaviour
     public BossDataSO data;
     public GoapAgent goapAgent;
     public WorldState worldState;
-
+    public AiMovement aiMove; 
     public BossHandle bosshandle;
 
-    public void Init(Transform stayTransform)
+    public void Init(BossDataSO data, Transform stayTransform)
     {
+        this.data = data;
         bosshandle = new BossHandle(stayTransform,goapAgent,SetWorldStateData);
         goapAgent.SetStart(true);
-        
+        aiMove.SetSpeed(data.speed);
     }
 
     

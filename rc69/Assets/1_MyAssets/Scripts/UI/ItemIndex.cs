@@ -14,7 +14,6 @@ public class ItemIndex : MonoBehaviour
     public TMP_Text textIncome;
     public Image bg;
     public GameObject goLock;
-    Image iconRainbow;
     public void Init(ItemDataSO so)
     {
         data = so;
@@ -27,17 +26,7 @@ public class ItemIndex : MonoBehaviour
     void SetIcon(ItemDataSO data)
     {
         icon.sprite = data.spriteIcon;
-        if (data.colorType != ColorType.Rainbow)
-        {
-            if (iconRainbow != null)
-                iconRainbow.gameObject.SetActive(false);
-            return;
-        }
-        if (iconRainbow == null)
-            iconRainbow = Instantiate(icon, icon.transform.parent);
-        iconRainbow.sprite = data.spriteIconLock;
-        iconRainbow.material = GamePlayControl.instance.matColorRainbowUI;
-        iconRainbow.gameObject.SetActive(true);
+        
     }
     public void SetUnlock()
     {

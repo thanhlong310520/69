@@ -22,12 +22,12 @@ public class ItemPopupUpgrade : MonoBehaviour
     public string GetId => id;
 
     UnityAction<ItemPopupUpgrade,bool> actionClick;
-    public void Init(UpgradeDataSO dataSO, string id,Sprite icon ,Sprite bg, UnityAction<ItemPopupUpgrade, bool> actionClick)
+    public void Init(UpgradeDataSO dataSO, string id,string nameUpgrade,Sprite icon ,Sprite bg, UnityAction<ItemPopupUpgrade, bool> actionClick)
     {
         this.id = id;
         upgradeData = dataSO;
-        bgicon.sprite = bg;
-        txtName.text = dataSO.type.ToString();
+        //bgicon.sprite = bg;
+        txtName.text = nameUpgrade;
         this.icon.sprite = icon;
         this.actionClick = actionClick; 
     } 
@@ -50,7 +50,15 @@ public class ItemPopupUpgrade : MonoBehaviour
     {
         txtPrecent.text = "x" + precent.ToString();
         txtPrice.text = price.ConvertCurrencyToString();
-        txtNumberAds.text = $" {playerNumberads}/{totalAds}";
+        if(totalAds > 0)
+        {
+            txtNumberAds.text = $" {playerNumberads}/{totalAds}";
+        }
+        else
+        {
+            txtNumberAds.text = $"Free";
+
+        }
     }
 
 

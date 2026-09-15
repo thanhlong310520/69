@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345e040f4d98102449b189c99b6ebcfe, type: 3}
+  m_Name: EggLavaFrog
+  m_EditorClassIdentifier: Assembly-CSharp::EggDataSO
+  id: 
+  itemName: Lava Frog
+  priority: 0
+  itemType: 6
+  spriteIcon: {fileID: 0}
+  prefab: {fileID: 7170189748597419, guid: c49d3cc21b034045aede947bc647a695, type: 3}
+  rarityType: 2
+  colorType: 5
+  spriteIconLock: {fileID: 0}
+  cost: 85000
+  monsterSO: {fileID: 11400000, guid: b3d603b2f4a372b449725c3a774958b9, type: 2}
+  growTime:
+    hours: 0
+    minutes: 1
+    seconds: 30

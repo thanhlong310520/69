@@ -15,8 +15,6 @@ public class ItemInventory : MonoBehaviour
     public ItemConfig itemConfig;
     public TMP_Text numberTxt;
     protected UnityAction<ItemInventory> clickAciton;
-    int number;
-    Image iconRainbow;
 
     public void SetEventClick(UnityAction<ItemInventory> aciton)
     {
@@ -26,7 +24,6 @@ public class ItemInventory : MonoBehaviour
     {
         this.data = data;
         this.itemConfig = config;
-        this.number = number;
         SetIcon(data);
         if (number > 1) numberTxt.text = number.ToString();
         else numberTxt.text = ""; 
@@ -34,17 +31,6 @@ public class ItemInventory : MonoBehaviour
     void SetIcon(ItemDataSO data)
     {
         icon.sprite = data.spriteIcon;
-        if (data.colorType != ColorType.Rainbow)
-        {
-            if (iconRainbow != null)
-                iconRainbow.gameObject.SetActive(false);
-            return;
-        }
-        if (iconRainbow == null)
-            iconRainbow = Instantiate(icon, icon.transform.parent);
-        iconRainbow.sprite = data.spriteIconLock;
-        iconRainbow.material = GamePlayControl.instance.matColorRainbowUI;
-        iconRainbow.gameObject.SetActive(true);
     }
     public virtual void SetSelected(bool selected)
     {

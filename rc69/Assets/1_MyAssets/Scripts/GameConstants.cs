@@ -184,14 +184,14 @@ namespace Raccoon.Utils
             }
         }
 
-        public static Color GetColorByColorType(ColorType colorType)
+        public static Color GetColorByColorType(ZoneType colorType)
         {
-            if (colorType == ColorType.Golden)
-                return Color.yellow;
-            if (colorType == ColorType.Diamond)
-                return new Color(0f, 1f, 1f);
-            if (colorType == ColorType.Rainbow)
-                return new Color(1f, 0.5f, 0f);
+        //    if (colorType == ZoneType.Golden)
+        //        return Color.yellow;
+        //    if (colorType == ZoneType.Diamond)
+        //        return new Color(0f, 1f, 1f);
+        //    if (colorType == ZoneType.Rainbow)
+        //        return new Color(1f, 0.5f, 0f);
             return Color.white;
         }
 

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345e040f4d98102449b189c99b6ebcfe, type: 3}
+  m_Name: EggMosasau
+  m_EditorClassIdentifier: Assembly-CSharp::EggDataSO
+  id: 
+  itemName: Mosasau
+  priority: 0
+  itemType: 6
+  spriteIcon: {fileID: 0}
+  prefab: {fileID: 6432920898046773, guid: 76530e1fee274d0d8c3913e41e255b00, type: 3}
+  rarityType: 9
+  colorType: 7
+  spriteIconLock: {fileID: 0}
+  cost: 18000000000
+  monsterSO: {fileID: 11400000, guid: 409d3d336ce372f419cd7d673f7d8099, type: 2}
+  growTime:
+    hours: 6
+    minutes: 0
+    seconds: 0

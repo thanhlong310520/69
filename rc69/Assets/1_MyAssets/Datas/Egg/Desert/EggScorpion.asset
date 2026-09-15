@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345e040f4d98102449b189c99b6ebcfe, type: 3}
+  m_Name: EggScorpion
+  m_EditorClassIdentifier: Assembly-CSharp::EggDataSO
+  id: 
+  itemName: Scorpion
+  priority: 0
+  itemType: 6
+  spriteIcon: {fileID: 0}
+  prefab: {fileID: 5882395027316343057, guid: 9f12ba4ada7d494c933205d307b4459d, type: 3}
+  rarityType: 4
+  colorType: 2
+  spriteIconLock: {fileID: 0}
+  cost: 3000000
+  monsterSO: {fileID: 11400000, guid: e772077368655644c90d672a82a590b6, type: 2}
+  growTime:
+    hours: 0
+    minutes: 5
+    seconds: 0

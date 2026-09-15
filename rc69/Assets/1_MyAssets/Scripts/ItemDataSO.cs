@@ -23,7 +23,7 @@ namespace Raccoon.Data
         public Sprite spriteIcon;
         public GameObject prefab;
         public RarityType rarityType;
-        public ColorType colorType;
+        public ZoneType colorType;
         public Sprite spriteIconLock;
         public long cost;
     }
@@ -48,15 +48,25 @@ namespace Raccoon.Data
         Mythic,
         Godly,
         Secret,
+        Uncommon,
+        Cosmic,
+        Eternal,
 
         Limited = 20,
     }
 
-    public enum ColorType
+    public enum ZoneType
     {
-        Normal = 0,
-        Golden,
-        Diamond,
-        Rainbow
+        Forest,
+        Lake,
+        Desert,
+        Jungle,
+        Snow,
+        Volcano,
+        AbyssOcean,
+        Prehistoric,
+        Cosmic,
+        CherryBlossom,
+        TitanTemple
     }
 }

@@ -14,9 +14,9 @@ public class PopupIndex : PopupCanvas
     public Transform content;
     public ScrollRect scrollRect;
     TabColorUI currentTab;
-    ColorType colorType = ColorType.Normal;
+    ZoneType colorType = ZoneType.Forest;
 
-    Dictionary<ColorType, List<ItemIndex>> dicDataItem;
+    Dictionary<ZoneType, List<ItemIndex>> dicDataItem;
 
     private void Start()
     {
@@ -42,8 +42,8 @@ public class PopupIndex : PopupCanvas
     }
     void InitDic()
     {
-        dicDataItem = new Dictionary<ColorType, List<ItemIndex>>();
-        foreach (ColorType type in Enum.GetValues(typeof(ColorType)))
+        dicDataItem = new Dictionary<ZoneType, List<ItemIndex>>();
+        foreach (ZoneType type in Enum.GetValues(typeof(ZoneType)))
         {
             dicDataItem[type] = new List<ItemIndex>();
         }

@@ -57,6 +57,8 @@ namespace Raccoon.Controller
         public EnvironmentType currentEnvironmentType = EnvironmentType.Normal;
 
         public float timeDelayShowInter = 5f;
+
+        public Transform bossHolder;
         private void Start()
         {
             if (PlayerController.instance != null)
@@ -237,6 +239,10 @@ namespace Raccoon.Controller
             return result;
         }
 
+        public void ShowUIBossChase()
+        {
+            MainUiControl.instance.ShowUIBotChase();
+        }
         #endregion
 
         #region Data
@@ -263,7 +269,7 @@ namespace Raccoon.Controller
         }
 
 
-        public Sprite GetBgByColorType(ColorType type)
+        public Sprite GetBgByColorType(ZoneType type)
         {
             DataColorType dt = dataColorTypes.FirstOrDefault(d => d.type == type);
             return dt.bg;
@@ -365,7 +371,7 @@ namespace Raccoon.Controller
     }
     [System.Serializable] struct DataColorType
     {
-        public ColorType type;
+        public ZoneType type;
         public Sprite bg;
     }
 }

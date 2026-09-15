@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TabColorUI : MonoBehaviour
 {
-    public ColorType type;
+    public ZoneType type;
     public GameObject select;
     public GameObject unselect;
     Button button;

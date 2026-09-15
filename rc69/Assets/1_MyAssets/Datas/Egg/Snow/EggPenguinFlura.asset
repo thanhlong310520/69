@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345e040f4d98102449b189c99b6ebcfe, type: 3}
+  m_Name: EggPenguinFlura
+  m_EditorClassIdentifier: Assembly-CSharp::EggDataSO
+  id: 
+  itemName: Penguin Flura
+  priority: 0
+  itemType: 6
+  spriteIcon: {fileID: 0}
+  prefab: {fileID: 7700569472601902, guid: e456be0b2b514edc809d6fbbcd714078, type: 3}
+  rarityType: 1
+  colorType: 4
+  spriteIconLock: {fileID: 0}
+  cost: 14000
+  monsterSO: {fileID: 11400000, guid: f846b86c1708a7b44817cb4c66612e8f, type: 2}
+  growTime:
+    hours: 0
+    minutes: 0
+    seconds: 45
