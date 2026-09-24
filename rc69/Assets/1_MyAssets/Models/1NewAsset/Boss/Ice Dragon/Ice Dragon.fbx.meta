@@ -3,7 +3,17 @@ guid: 72197a76480dbcc4eaa2f54288450c51
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Canh
+    second: {fileID: 2100000, guid: 1197113afb793b043834f71a87a7cf76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Than
+    second: {fileID: 2100000, guid: f9876f62dbbbf4b4196a9b19bf07003b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -91,7 +101,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.089999996
+    globalScale: 9
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

@@ -97,6 +97,7 @@ namespace Raccoon.Controller
             }
             this.data.onChangeItem += UpdateUIWhenChangeItem;
             this.data.onChangeCoin += UpdateUIWhenChangeCoin;
+            this.data.onAddBotUnlock += UpdateItemIndexUnlock;
 
             ChangeModelWhenClickItemFashion(data.currentFashion);
             UpdateUIWhenChangeItem(data.itemConfigs);
@@ -106,10 +107,12 @@ namespace Raccoon.Controller
                 var so = GamePlayControl.instance.GetItemDataSO(cf.id);
                 UpdateItemBackPack(so, cf, true);
             }
-            foreach (var id in data.listBotUnlock)
+            foreach (var botunlock in data.listBotUnlock)
             {
-                var so = GamePlayControl.instance.GetBotDataSOs().Find(i => i.GetId == id);
-                UpdateItemIndexUnlock(so);
+                foreach (var id in botunlock.Value.listUnlock)
+                {
+                    UpdateItemIndexUnlock(id);
+                }
             }
 
             HandleEventWhenChangeData();
@@ -164,6 +167,7 @@ namespace Raccoon.Controller
             var config = item.GetItemConfig;
             if (config == null) return;
             data.AddItem(config, null);
+            AddItemUnlock(item.data);
             UpdateItemBackPack(item, true);
             stateHandle.ChangeItem(config);
             UpdateSelectAfterSaveLoot(config);
@@ -456,11 +460,7 @@ namespace Raccoon.Controller
             foreach (var item in listItem)
             {
                 UpdateItemBackPack(item, true);
-                BotDataSO bd = item.data as BotDataSO;
-                if(bd != null)
-                {
-                    if (data.AddItemUnlock(bd.GetId)) UpdateItemIndexUnlock(bd);
-                }        
+                       
             }
             var listSave = loot.SaveLoot(transform);
             data.AddListItemConfig(listSave);
@@ -524,7 +524,7 @@ namespace Raccoon.Controller
 
         public void SetDataUpgrade(UpgradeDataSO upgradeData)
         {
-            float set = GetMultiSpeedBuyTreamill();
+            float set = 0;
             if (upgradeData != null)
             {
                 List<string> listUpdated = data.upgrade.GetDicUpgraded(upgradeData.type);
@@ -537,6 +537,7 @@ namespace Raccoon.Controller
             {
                 case TypeUpgrade.Speed:
                     {
+                        set += GetMultiSpeedBuyTreamill();
                         movement.SetMultiSpeedRun(set);
                         break;
                     }
@@ -603,9 +604,11 @@ namespace Raccoon.Controller
         {
             MainUiControl.instance.UpdateItemForPopupBackPack(so, config, isAdd);
         }
-        void UpdateItemIndexUnlock(ItemDataSO so)
+        void UpdateItemIndexUnlock(string id)
         {
-            if(so == null) return;
+            var so = GamePlayControl.instance.GetItemDataStaySlotSOs().Find(i => i.GetId == id);
+            if (so == null) return;
+
             MainUiControl.instance.UpdateItemIndexUnlock(so);
         }
 
@@ -752,6 +755,31 @@ namespace Raccoon.Controller
                 Income(cost);
         }
 
+        public void SellItemByListItemConfig(List<ItemConfig> removeList)
+        {
+            if(stateHandle.GetCurrentItem != null)
+            {
+                if(removeList.Contains(stateHandle.GetCurrentItem.GetItemConfig)) stateHandle.ResetItem();
+            }
+
+            long cost = 0;
+            foreach (var rm in removeList)
+            {
+                if (!data.itemConfigs.Contains(rm)) continue;
+                var so = GamePlayControl.instance.GetItemDataSO(rm.id);
+                if (so != null)
+                {
+                    UpdateItemBackPack(so, rm, false);
+                    cost += so.cost;
+                }
+                data.RemoveItem(rm.id, rm.level);
+            }
+
+            if (cost > 0)
+                Income(cost);
+
+        }
+
         #endregion
 
         void HandleEventWhenChangeData()
@@ -797,6 +825,20 @@ namespace Raccoon.Controller
             StartCoroutine(ResetAfterDead(false));
         }
 
+        public void AddItemUnlock(ItemDataSO so)
+        {
+
+            if (data == null) return;
+
+            if (so.itemType != ItemType.Brainrot) return;
+
+            data.AddItemUnlock(so.colorType, so.GetId);
+        }
+
+        public CharactorData Getdata()
+        {
+            return data;
+        }
     }
 
     public enum EPlayerState

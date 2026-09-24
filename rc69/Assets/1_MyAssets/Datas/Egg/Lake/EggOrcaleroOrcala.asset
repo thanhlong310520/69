@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Orcalero Orcala
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: ba51b7f45181e754596208b4b1eec67b, type: 3}
   prefab: {fileID: 5883359943678131602, guid: f616e8a4ab6a4878b152ee36a302d666, type: 3}
   rarityType: 8
   colorType: 1

@@ -16,12 +16,12 @@ MonoBehaviour:
   itemName: Duckling
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: f8f75814c89838e4682328eba92c7abf, type: 3}
   prefab: {fileID: 936977826386781083, guid: f6240cc7c471f6642821221353247bfb, type: 3}
   rarityType: 0
   colorType: 1
   spriteIconLock: {fileID: 0}
-  cost: 0
-  income: 0
+  cost: 400
+  income: 4
   audioClip: {fileID: 0}
   health: 0

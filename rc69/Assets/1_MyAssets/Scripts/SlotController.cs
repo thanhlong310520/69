@@ -116,12 +116,13 @@ namespace Raccoon.Building
         private void SetModel()
         {
             if (itemAtSlot == null) return;
+            itemAtSlot.PutToSlot(EggHatching);
+
             itemAtSlot.SetTarget(null);
             itemAtSlot.gameObject.SetActive(true);
             itemAtSlot.transform.SetParent(container);
             itemAtSlot.transform.localEulerAngles = Vector3.zero;
             itemAtSlot.transform.localPosition = Vector3.zero;
-            itemAtSlot.PutToSlot(PutItem);
             ReinitializeHighlight();
         }
 
@@ -143,6 +144,13 @@ namespace Raccoon.Building
             HandleData();
             count_1_Time.OnCaclulate();
             SetStateSlot(Slot_state.HaveItem);
+        }
+        public void EggHatching(ItemCanStaySlot item)
+        {
+            Debug.Log("Egg Hatching");
+            PutItem(item);
+            user.GetComponent<ICharactor>()?.AddItemUnlock(item.data);
+            user.GetComponent<ICharactor>()?.Getdata()?.AddBotInSlot(id,item.GetItemConfig);
         }
 
         void HandleData()

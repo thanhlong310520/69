@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Boss 7 AbyssOcean
   m_EditorClassIdentifier: Assembly-CSharp::BossDataSO
   prefab: {fileID: 4699352749919349746, guid: b6e3d53057620394fa7ba4961012899a, type: 3}
-  speed: 300
+  speed: 40

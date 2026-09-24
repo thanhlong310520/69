@@ -15,6 +15,7 @@ public class PopupInterBonus : PopupCanvas
 
     public ShowLoadingAds showLoadingAds;
     public Button getButton;
+    bool clamed;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,6 +33,7 @@ public class PopupInterBonus : PopupCanvas
         base.Show(p, afterPopup, obj);
         listInfor[currentBonus].toggle.isOn = true;
         getButton.interactable = false;
+        clamed = false;
     }
     public override void DoneShow()
     {
@@ -54,6 +56,8 @@ public class PopupInterBonus : PopupCanvas
     }
     public void OnClaimBonus()
     {
+        if (clamed) return;
+        clamed = true;
         var bonus = listInfor[currentBonus].bonus;
         //var startAnim = togglesBonus[currentBonus];
         PlayerController.instance.Income(bonus);

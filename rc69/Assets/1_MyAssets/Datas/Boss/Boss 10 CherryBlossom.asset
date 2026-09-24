@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Boss 10 CherryBlossom
   m_EditorClassIdentifier: Assembly-CSharp::BossDataSO
   prefab: {fileID: 0}
-  speed: 300
+  speed: 80

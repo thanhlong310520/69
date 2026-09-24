@@ -3,7 +3,87 @@ guid: 289783c960129524398a3c0898087ea4
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oni_lambert40
+    second: {fileID: 2100000, guid: b1bb62eaf03d3064cae75647a8e3d9ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oni_lambert41
+    second: {fileID: 2100000, guid: fef3f7fae2308c549bfaac37cd17af2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oni_lambert42
+    second: {fileID: 2100000, guid: 1fa3eb11a1cf338409ffb25a447b0d48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oni_lambert43
+    second: {fileID: 2100000, guid: d8faef702aab3ff4eb6522f98d81e32b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oni_lambert44
+    second: {fileID: 2100000, guid: 4168e56712cc17e41a0db18f70b07f5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oni_lambert45
+    second: {fileID: 2100000, guid: 49befc0fa290edb46a30a9d77fb2cdb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oni_lambert46
+    second: {fileID: 2100000, guid: 4907a0d7f8a9b2c4ab90cb9b3946ae35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oni_lambert47
+    second: {fileID: 2100000, guid: 9105f7aef2537324da0760402dbe39aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert16
+    second: {fileID: 2100000, guid: b1bb62eaf03d3064cae75647a8e3d9ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert17
+    second: {fileID: 2100000, guid: fef3f7fae2308c549bfaac37cd17af2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert18
+    second: {fileID: 2100000, guid: 1fa3eb11a1cf338409ffb25a447b0d48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert19
+    second: {fileID: 2100000, guid: d8faef702aab3ff4eb6522f98d81e32b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert20
+    second: {fileID: 2100000, guid: 4168e56712cc17e41a0db18f70b07f5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert21
+    second: {fileID: 2100000, guid: 49befc0fa290edb46a30a9d77fb2cdb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert22
+    second: {fileID: 2100000, guid: 4907a0d7f8a9b2c4ab90cb9b3946ae35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert23
+    second: {fileID: 2100000, guid: 9105f7aef2537324da0760402dbe39aa, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -91,7 +171,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.089999996
+    globalScale: 9
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

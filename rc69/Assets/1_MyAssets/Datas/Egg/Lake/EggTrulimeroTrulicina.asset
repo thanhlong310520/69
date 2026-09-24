@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Trulimero Trulicina
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: b3e6b87f70eb8f242b218cac6cbd9147, type: 3}
   prefab: {fileID: 5884899902842518545, guid: f1cda3a996d14bf58570ce98ccfc2ce3, type: 3}
   rarityType: 2
   colorType: 1

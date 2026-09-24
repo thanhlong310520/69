@@ -48,9 +48,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2136542735469834768, guid: 9d0e9a2e8007c4598a98619a73d49d1e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283776458837870341, guid: 9d0e9a2e8007c4598a98619a73d49d1e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5889864012332952007, guid: 9d0e9a2e8007c4598a98619a73d49d1e, type: 3}
       propertyPath: m_Name
       value: MonsterTrippiTroppi
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784215123345060765, guid: 9d0e9a2e8007c4598a98619a73d49d1e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8049198573018261440, guid: 9d0e9a2e8007c4598a98619a73d49d1e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356773950852969731, guid: 9d0e9a2e8007c4598a98619a73d49d1e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372073881452507251, guid: 9d0e9a2e8007c4598a98619a73d49d1e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9073550771969927365, guid: 9d0e9a2e8007c4598a98619a73d49d1e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -113,9 +141,77 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8420491264423809273, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -6399646381457944500, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -5628793211135107049, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -5444430392962530454, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -4675673793275154647, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -2273179166626613782, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -104337198454343911, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
       propertyPath: m_Name
       value: TrippiTroppi@Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527114888925006409, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2204625769110881375, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739745566248644093, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100364042438304910, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3125230335623403755, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053221160362720662, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254325764305327108, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7744663850234770140, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112002019139270916, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -125,7 +221,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1977944678263028}
   m_SourcePrefab: {fileID: 100100000, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
---- !u!1 &2067446807157228 stripped
+--- !u!4 &3546072815743809927 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
+  m_PrefabInstance: {fileID: 3944193457314684524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4214805050232693565 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
   m_PrefabInstance: {fileID: 3944193457314684524}
@@ -137,7 +238,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067446807157228}
+  m_GameObject: {fileID: 4214805050232693565}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 22100000, guid: eadd2dfd39b4e9d4695ef28b50036041, type: 2}
@@ -152,8 +253,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!4 &3546072815743809927 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e43e1c17025a95542ab2639c68cbd641, type: 3}
-  m_PrefabInstance: {fileID: 3944193457314684524}
-  m_PrefabAsset: {fileID: 0}

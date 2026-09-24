@@ -6,11 +6,15 @@ using Raccoon.EnumHolder;
 using Raccoon.Item;
 using Raccoon.Utils;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EggControl : ItemCanStaySlot
 {
     bool canAdd = true;
     EggDataSO eggData;
+    UnityAction<EggControl> resetTransformAction;
+    CountTime countTime;
+    float timeReset = 60f;
     public override void Init(ItemDataSO data, ItemConfig config, ItemState state, Transform user = null)
     {
         base.Init(data, config, state, user);
@@ -21,10 +25,43 @@ public class EggControl : ItemCanStaySlot
         {
             moreTxt = eggData.growTime.ToSeconds().FormatTimeSecond(true);
         }
-
-        infor.SetActiveInfoInSlot();
-        infor.ShowMoreText(moreTxt);
+        if(GetIsSave)
+        {
+            infor.ShowTextEggSave();
+            infor.ShowMoreText(moreTxt);
+        }
+        else
+        {
+            infor.ShowTextEggSpawn();
+        }
         canAdd = true;
+    }
+
+    public void SetEventReset(UnityAction<EggControl> resetTransformAction)
+    {
+        this.resetTransformAction = resetTransformAction;
+        InitCountTime();
+    }
+
+    void InitCountTime()
+    {
+        if(countTime == null) countTime = gameObject.GetComponent<CountTime>();
+        if(countTime == null) countTime = gameObject.AddComponent<CountTime>();
+        countTime.Init(timeReset, ActionShowTime, ActionDoneShow);
+        countTime.SetCanCount(false);
+    }
+
+    void ActionShowTime(float time)
+    {
+        infor.ShowTextCountEgg(time);
+    }
+
+    void ActionDoneShow()
+    {
+        if (GetIsSave) return;
+        resetTransformAction?.Invoke(this);
+        InitCountTime();
+        infor.SetActiveTxtCountTime(false);
     }
     public override void AddTimeInSlot(float time)
     {
@@ -62,5 +99,21 @@ public class EggControl : ItemCanStaySlot
 
         actionChangeItem?.Invoke(itemCtr as ItemCanStaySlot);
     }
+
+
+    public override void Stealed(Transform target, Transform stealer)
+    {
+        base.Stealed(target, stealer);
+        countTime?.SetCanCount(false);
+        infor.SetActiveTxtCountTime(false);
+    }
+
+    public override void StealFail(Transform stealer)
+    {
+        base.StealFail(stealer);
+        countTime?.SetCanCount(true);
+        infor.SetActiveTxtCountTime(true);
+    }
+
 
 }

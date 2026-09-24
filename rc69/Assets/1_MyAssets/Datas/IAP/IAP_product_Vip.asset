@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b078a077796b24f7f9b14638dffb257e, type: 3}
   m_Name: IAP_product_Vip
   m_EditorClassIdentifier: Assembly-CSharp::Raccoon.Purchase.IAPProductData
-  id: vip_weekly
+  id: sub_vip
   productType: 2
   price_default: 2
   subscribe_Reward_Time: 0

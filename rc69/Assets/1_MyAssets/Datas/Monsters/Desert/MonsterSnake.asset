@@ -16,12 +16,12 @@ MonoBehaviour:
   itemName: Snake
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: b09ab36fa0fa77d409096c12d1777035, type: 3}
   prefab: {fileID: 5343365350687940119, guid: 9503f750ff813c646818d3065f7aa04b, type: 3}
-  rarityType: 0
+  rarityType: 3
   colorType: 2
   spriteIconLock: {fileID: 0}
-  cost: 0
-  income: 0
+  cost: 360000
+  income: 3600
   audioClip: {fileID: 0}
   health: 0

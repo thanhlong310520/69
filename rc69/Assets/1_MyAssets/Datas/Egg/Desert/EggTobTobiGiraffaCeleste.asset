@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Tob Tobi Giraffa Celeste
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 975c2882620806e419fca00b822c8eb0, type: 3}
   prefab: {fileID: 5885408632306590820, guid: 9e38ef5ecf044882b21f2003c9724b4f, type: 3}
   rarityType: 2
   colorType: 2

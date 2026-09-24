@@ -16,12 +16,12 @@ MonoBehaviour:
   itemName: Jerboa
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 42922e1a516841a4682e635e9bd1989f, type: 3}
   prefab: {fileID: 5493428503448239915, guid: d762e8ab73cc6ba46bb14913461a6f87, type: 3}
   rarityType: 0
   colorType: 2
   spriteIconLock: {fileID: 0}
-  cost: 0
-  income: 0
+  cost: 600
+  income: 6
   audioClip: {fileID: 0}
   health: 0

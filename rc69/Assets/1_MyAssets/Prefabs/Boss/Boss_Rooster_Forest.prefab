@@ -55,13 +55,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2890a4b32b2486c499354e4bdfb336ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8676667369142423963}
   m_SourcePrefab: {fileID: 100100000, guid: 2890a4b32b2486c499354e4bdfb336ff, type: 3}
 --- !u!4 &2560778064995975611 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2890a4b32b2486c499354e4bdfb336ff, type: 3}
   m_PrefabInstance: {fileID: 2594934751224653392}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2937022854874716929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2890a4b32b2486c499354e4bdfb336ff, type: 3}
+  m_PrefabInstance: {fileID: 2594934751224653392}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8676667369142423963
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937022854874716929}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: bd753a91649ff184cbb784f6e18a1180, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &8233395372569297747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72,7 +102,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3708029389878077601, guid: 56d64010dab12fb4e91027959962b14f, type: 3}
       propertyPath: m_Name
-      value: Boss_Rooster_Forest Variant
+      value: Boss_Rooster_Forest
       objectReference: {fileID: 0}
     - target: {fileID: 4829876536119000155, guid: 56d64010dab12fb4e91027959962b14f, type: 3}
       propertyPath: m_Height

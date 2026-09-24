@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Scorpion
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 35df1c40050bf5e4b93c135e41e4e743, type: 3}
   prefab: {fileID: 5882395027316343057, guid: 9f12ba4ada7d494c933205d307b4459d, type: 3}
   rarityType: 4
   colorType: 2

@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -283,17 +283,17 @@ Light:
   m_Enabled: 1
   serializedVersion: 12
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.6
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -751,12 +751,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 820534581}
-  - component: {fileID: 820534580}
   - component: {fileID: 820534579}
   - component: {fileID: 820534578}
-  - component: {fileID: 820534582}
   - component: {fileID: 820534585}
   - component: {fileID: 820534584}
+  - component: {fileID: 820534586}
   m_Layer: 0
   m_Name: GameAds
   m_TagString: Untagged
@@ -789,18 +788,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68036c27bd8f5fa41ac312c52f5f554b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RCKit.Ads.GameAds
---- !u!114 &820534580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820534577}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3f57cc21d5c84f5ea94f5c53ac73b27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Bacon.UMP
 --- !u!4 &820534581
 Transform:
   m_ObjectHideFlags: 0
@@ -818,19 +805,6 @@ Transform:
   - {fileID: 933260896}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &820534582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 820534577}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8613c37c7aebe954096156230c79335f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Nami.UnityMainThreadDispatcher
-  dontDestroyOnLoad: 1
 --- !u!114 &820534584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -843,6 +817,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd40bfdf488664eeeb838bdcf9746a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: RCKit.Ads.Main::RCKit.Ads.Main.RaccoonAdsManager
+  adsData: {fileID: 11400000, guid: 5f93ea5a7280b2b449f26e3ff080afac, type: 2}
+  _useAllNative: 1
+  _creativeMode: 0
+  testDeviceIds: []
+  _rectBannerNative: {fileID: 0}
+  _rectBannerCollapseNative: {fileID: 0}
+  _bannerPosition: 0
+  _bannerType: 0
+  _adTypeAppOpen: 70
 --- !u!114 &820534585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -855,6 +838,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f212936bf9a4e7bab25cbc76699a94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: RCKit.Ads.Main::RCKit.Ads.Main.AdLoadingGate
+  loadingPanel: {fileID: 933260895}
+  _useWatchdog: 0
+--- !u!114 &820534586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820534577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8219f3b512e00449b86336949c49e69b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: RCKit.Ads.Appsflyer::Raccoon.GameAppsFlyer
+  devKey: Qhno4yJY6KHmZp9uS9DRe4
+  appID: com.RC69.monster.eggs.steal.run
+  enableAppsFlyerPurchase: 0
+  isDebug: 0
+  isSandbox: 0
 --- !u!1 &889408765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,7 +1105,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 76bd3c38fbcde484fa41376b1d171878, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e537e663f742a0f4eaccdf6b1dcd9540, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1413,7 +1415,7 @@ PrefabInstance:
     - target: {fileID: 7464444386356523436, guid: cc0fa74a05fa4e5469b439adf59ca3a8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 76bd3c38fbcde484fa41376b1d171878, type: 3}
+      objectReference: {fileID: 21300000, guid: e537e663f742a0f4eaccdf6b1dcd9540, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

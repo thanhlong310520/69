@@ -4,48 +4,69 @@ using Raccoon.Data;
 using Raccoon.Utils;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ItemIndex : MonoBehaviour
 {
     ItemDataSO data;
     public Image icon;
-    public Image iconLock;
-    public TMP_Text textIncome;
+    public TMP_Text nametxt;
     public Image bg;
-    public GameObject goLock;
-    public void Init(ItemDataSO so)
+    public Button btn;
+    public GameObject selectedObj;
+    UnityAction<ItemIndex> onClick;
+    public bool IsUnlock { get; private set; }
+    public void Init(ItemDataSO so, UnityAction<ItemIndex> onClick = null)
     {
         data = so;
-        goLock.SetActive(true);
+        this.onClick = onClick;
+        if (btn != null)
+        {
+            btn.onClick.RemoveListener(OnClick);
+            btn.onClick.AddListener(OnClick);
+        }
         SetIcon(data);
-        textIncome.text = "?????";
-        iconLock.sprite = data.spriteIconLock;
+        nametxt.text = "?????";
+        icon.color = Color.black;
+        IsUnlock = false;
+        SetSelected(false);
     }
 
     void SetIcon(ItemDataSO data)
     {
         icon.sprite = data.spriteIcon;
-        
+
     }
     public void SetUnlock()
     {
-        goLock.SetActive(false);
-        //textIncome.text = data.income.ConvertCurrencyToString() + "/s";
+        icon.color = Color.white;
+        IsUnlock = true;
+        nametxt.text = data.itemName;
     }
 
-    private void OnEnable()
-    {
-        if (PlayerData.Get.isVipIAP)
-        {
-            SetUnlock();
-        }
-    }
+    //private void OnEnable()
+    //{
+    //    if (PlayerData.Get.isVipIAP)
+    //    {
+    //        SetUnlock();
+    //    }
+    //}
     public void ChangeBg(Sprite bg)
     {
         this.bg.sprite = bg;
     }
     public ItemDataSO GetData => data;
+
+    public void SetSelected(bool selected)
+    {
+        if (selectedObj != null) selectedObj.SetActive(selected);
+    }
+
+    public void OnClick()
+    {
+        onClick?.Invoke(this);
+    }
 
 
 }

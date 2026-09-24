@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Boss 1 Forest
   m_EditorClassIdentifier: Assembly-CSharp::BossDataSO
   prefab: {fileID: 4699352749919349746, guid: 5ac038766a8140c4b9b60a6c7e838a18, type: 3}
-  speed: 300
+  speed: 10

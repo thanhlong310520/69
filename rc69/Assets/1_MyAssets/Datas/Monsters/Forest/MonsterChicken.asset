@@ -16,12 +16,12 @@ MonoBehaviour:
   itemName: Chicken
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: f5fb3831eaaea5542a5717b0f832b045, type: 3}
   prefab: {fileID: 5197823175844236964, guid: 20fdd1f497f53cf428f0cb842487afb7, type: 3}
   rarityType: 0
   colorType: 0
   spriteIconLock: {fileID: 0}
-  cost: 0
-  income: 0
+  cost: 200
+  income: 1
   audioClip: {fileID: 0}
   health: 0

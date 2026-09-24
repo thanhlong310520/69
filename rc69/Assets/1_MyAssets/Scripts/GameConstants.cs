@@ -195,6 +195,15 @@ namespace Raccoon.Utils
             return Color.white;
         }
 
+        public static float ScaleSize(RarityType rarity)
+        {
+            if (rarity == RarityType.Common || rarity == RarityType.Uncommon || rarity == RarityType.Rare) return 1;
+            if (rarity == RarityType.Epic || rarity == RarityType.Legendary || rarity == RarityType.Mythic) return 2;
+            if (rarity == RarityType.Godly || rarity == RarityType.Secret) return 4;
+            if (rarity == RarityType.Limited || rarity == RarityType.Mythic) return 6;
+            return 1;
+        }
+
         public static Color ApplyColorTint(Color baseColor, Color tint, float bias = 0.65f)
         {
             var a = baseColor.a;

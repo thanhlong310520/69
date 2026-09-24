@@ -16,12 +16,12 @@ MonoBehaviour:
   itemName: Owl
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 0ca4b3b656a80c446aeb91a257bbc585, type: 3}
   prefab: {fileID: 1140137268094821791, guid: 74d62e2d95a46b54fbb7c663f0ab294a, type: 3}
-  rarityType: 0
+  rarityType: 1
   colorType: 0
   spriteIconLock: {fileID: 0}
-  cost: 0
-  income: 0
+  cost: 3500
+  income: 35
   audioClip: {fileID: 0}
   health: 0

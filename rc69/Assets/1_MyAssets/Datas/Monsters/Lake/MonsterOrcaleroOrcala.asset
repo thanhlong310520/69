@@ -16,12 +16,12 @@ MonoBehaviour:
   itemName: Orcalero Orcala
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: c7cc33c1c552bde4c8a20d1173599a14, type: 3}
   prefab: {fileID: 6483567062375186393, guid: 302e62c59e83ac943a782c78455e7b98, type: 3}
-  rarityType: 0
+  rarityType: 8
   colorType: 1
   spriteIconLock: {fileID: 0}
-  cost: 0
-  income: 0
+  cost: 22000000
+  income: 220000
   audioClip: {fileID: 0}
   health: 0

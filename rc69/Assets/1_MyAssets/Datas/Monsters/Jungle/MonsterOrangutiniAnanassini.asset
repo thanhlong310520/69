@@ -16,12 +16,12 @@ MonoBehaviour:
   itemName: Orangutini Ananassini
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: ead4d55859a456d4683573c8336d5f9a, type: 3}
   prefab: {fileID: 6639841244713566591, guid: 1423bf5ed35288748a8789381b8f688f, type: 3}
-  rarityType: 0
+  rarityType: 3
   colorType: 3
   spriteIconLock: {fileID: 0}
-  cost: 0
-  income: 0
+  cost: 550000
+  income: 5500
   audioClip: {fileID: 0}
   health: 0

@@ -47,7 +47,9 @@ public class ActionBackTohome : GoapAction
         if (Vector3.Distance(transform.position, target.position) < threshold)
         {
             upgradeEvent.Invoke();
-
+            movement.StopMove();
+            controller.SetBoolAnimator("IsRun", false);
+            controller.colli.SetActive(false);
         }
         return true;
     }

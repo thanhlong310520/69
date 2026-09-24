@@ -1,4 +1,5 @@
 using Raccoon.Building;
+using Raccoon.Data;
 using Raccoon.EnumHolder;
 using Raccoon.Item;
 using UnityEngine;
@@ -30,5 +31,7 @@ namespace Raccoon.Controller
         void ContactWave();
         void Stealed(SlotController slot);
         void NotifyBossChase();
+        void AddItemUnlock(ItemDataSO so);
+        CharactorData Getdata();
     }
 }

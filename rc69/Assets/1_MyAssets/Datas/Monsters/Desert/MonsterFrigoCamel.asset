@@ -16,12 +16,12 @@ MonoBehaviour:
   itemName: Frigo Camel
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 023cfc0008cca034ebf7d022186b9ebe, type: 3}
   prefab: {fileID: 827516812373080361, guid: d4cfb361213e0ec429ced33e21fc521e, type: 3}
-  rarityType: 0
+  rarityType: 1
   colorType: 2
   spriteIconLock: {fileID: 0}
-  cost: 0
-  income: 0
+  cost: 7500
+  income: 75
   audioClip: {fileID: 0}
   health: 0

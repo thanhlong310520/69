@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Swan
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 1bdfa4f618ecf1448b685ba59f3abed4, type: 3}
   prefab: {fileID: 5888060188468607700, guid: 4105363242744f119c017634f12ad292, type: 3}
   rarityType: 2
   colorType: 1

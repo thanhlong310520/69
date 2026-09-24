@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Brr Brr Patapim
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 0e8fb4f7c97b4ee41a195bbec25aaec0, type: 3}
   prefab: {fileID: 5882145065430469610, guid: aeb321f2fe4a4fcea502a5af230ec970, type: 3}
   rarityType: 3
   colorType: 0

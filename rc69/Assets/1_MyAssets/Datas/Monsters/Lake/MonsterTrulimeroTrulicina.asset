@@ -16,12 +16,12 @@ MonoBehaviour:
   itemName: Trulimero Trulicina
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 8c59b883c93f14b4aa3b549e1c3415dc, type: 3}
   prefab: {fileID: 2596597748774039312, guid: 318f6f8c2b88cd349b484fcf002749f0, type: 3}
-  rarityType: 0
+  rarityType: 2
   colorType: 1
   spriteIconLock: {fileID: 0}
-  cost: 0
-  income: 0
+  cost: 26000
+  income: 260
   audioClip: {fileID: 0}
   health: 0

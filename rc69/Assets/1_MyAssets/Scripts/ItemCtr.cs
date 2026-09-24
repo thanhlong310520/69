@@ -1,6 +1,7 @@
 using Raccoon.Controller;
 using Raccoon.Data;
 using Raccoon.EnumHolder;
+using Raccoon.Utils;
 using System.Drawing;
 using UnityEngine;
 using UnityEngine.Events;
@@ -24,6 +25,7 @@ namespace Raccoon.Item
 
         public Collider colli;
 
+        public Transform holderModel;
         public Collider GetCollider{
             get
             {
@@ -34,9 +36,10 @@ namespace Raccoon.Item
         }
         bool isSave;
         public bool GetIsSave => isSave;
-
         public virtual void Init(ItemDataSO data, ItemConfig config, ItemState state, Transform user = null)
         {
+            float scale = GameUtils.ScaleSize(data.rarityType);
+            if(holderModel != null) holderModel.localScale = Vector3.one * scale;
             this.data = data;
             this.config = config;
             this.user = user;

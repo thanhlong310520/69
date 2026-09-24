@@ -9,11 +9,11 @@ public class CountTimeShowPopupVip : MonoBehaviour
 
     public void StartCountShow()
     {
-        //if (PlayerData.Get.isVipIAP) return;
+        if (PlayerData.Get.isVipIAP) return;
 
-        //if (ct == null) ct = GetComponent<CountTime>();
-        //if (ct == null) ct = gameObject.AddComponent<CountTime>();
-        //ct.Init(timeShow, null, Show);
+        if (ct == null) ct = GetComponent<CountTime>();
+        if (ct == null) ct = gameObject.AddComponent<CountTime>();
+        ct.Init(timeShow, null, Show);
     }
 
     public void Show()

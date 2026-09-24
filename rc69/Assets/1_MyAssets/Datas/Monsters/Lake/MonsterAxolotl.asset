@@ -16,12 +16,12 @@ MonoBehaviour:
   itemName: Axolotl
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: e0f686d90abf553499fea435dd2bff9f, type: 3}
   prefab: {fileID: 7433084106440722855, guid: a436a658c16c12a4fa47302e29b3f694, type: 3}
-  rarityType: 0
+  rarityType: 3
   colorType: 1
   spriteIconLock: {fileID: 0}
-  cost: 0
-  income: 0
+  cost: 280000
+  income: 2800
   audioClip: {fileID: 0}
   health: 0

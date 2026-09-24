@@ -48,9 +48,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2136542735469834768, guid: 9d0e9a2e8007c4598a98619a73d49d1e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4283776458837870341, guid: 9d0e9a2e8007c4598a98619a73d49d1e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5889864012332952007, guid: 9d0e9a2e8007c4598a98619a73d49d1e, type: 3}
       propertyPath: m_Name
       value: MonsterAxolotl
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784215123345060765, guid: 9d0e9a2e8007c4598a98619a73d49d1e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8049198573018261440, guid: 9d0e9a2e8007c4598a98619a73d49d1e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356773950852969731, guid: 9d0e9a2e8007c4598a98619a73d49d1e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372073881452507251, guid: 9d0e9a2e8007c4598a98619a73d49d1e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9073550771969927365, guid: 9d0e9a2e8007c4598a98619a73d49d1e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -73,6 +101,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6373504153609251915}
     m_Modifications:
+    - target: {fileID: -8897786538621705542, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8702390347816663040, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -113,9 +149,105 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6751130676154093010, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -6693810828666342690, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -6095086430936496480, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -5569368562113114960, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -5261033548911580191, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -4641594055172734554, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -4103972662856834218, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -3175960827715383952, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -2332539434063659427, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -306712487125592625, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
       propertyPath: m_Name
       value: AxolotlBombondino@Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 934276941163954086, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488047621247731815, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1910321354128337981, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809899677897166775, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560437225148338557, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669115309579059842, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5455687651647994287, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7090019657269632471, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8201566611396001825, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362995147050402756, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459515982321026899, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751029044686452852, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8938378057827076175, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -125,7 +257,7 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2773478830743272}
   m_SourcePrefab: {fileID: 100100000, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
---- !u!1 &3247369403996348 stripped
+--- !u!1 &5105163973326555157 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2bb8a7e4a18d8c84eba202f65748474f, type: 3}
   m_PrefabInstance: {fileID: 5339094617097598276}
@@ -137,7 +269,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3247369403996348}
+  m_GameObject: {fileID: 5105163973326555157}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 22100000, guid: f15414bc30739ca4b8198b2570c96a06, type: 2}

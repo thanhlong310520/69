@@ -16,12 +16,12 @@ MonoBehaviour:
   itemName: Mammoth Cocofanto
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 700e645e27123374199c864305234838, type: 3}
   prefab: {fileID: 599511651700069641, guid: bb571f0412f451343bd9302e2918eda0, type: 3}
-  rarityType: 0
+  rarityType: 4
   colorType: 4
   spriteIconLock: {fileID: 0}
-  cost: 0
-  income: 0
+  cost: 4200000
+  income: 42000
   audioClip: {fileID: 0}
   health: 0

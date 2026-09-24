@@ -159,7 +159,8 @@ public class PopupCanvas : MonoBehaviour
         SupAds,
         EventMachine,
         VipSub,
-        RemoveAds
+        RemoveAds,
+        SellShop
     }
 
     public enum PopupAnimation

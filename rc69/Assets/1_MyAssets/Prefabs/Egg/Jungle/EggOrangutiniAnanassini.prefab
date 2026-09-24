@@ -12,13 +12,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: EggOrangutiniAnanassini
       objectReference: {fileID: 0}
+    - target: {fileID: 8128949284451522664, guid: 752da6ed53e413244992884c76cdbae7, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 4420
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 752da6ed53e413244992884c76cdbae7, type: 3}
---- !u!1 &6563515308109817 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5889864012332952007, guid: 752da6ed53e413244992884c76cdbae7, type: 3}
-  m_PrefabInstance: {fileID: 7972635791921812}
-  m_PrefabAsset: {fileID: 0}

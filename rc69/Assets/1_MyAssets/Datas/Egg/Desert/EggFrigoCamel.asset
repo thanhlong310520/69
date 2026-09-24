@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Frigo Camel
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 88f4a3cdeaa9a6f42a0b45704be00d5c, type: 3}
   prefab: {fileID: 5887956657918243680, guid: 237edda37bfa4e3498f4cca6981d446d, type: 3}
   rarityType: 1
   colorType: 2

@@ -17,7 +17,7 @@ public class CharactorData
     public float multybuytreaMill;
     public CharactorUpgrade upgrade;
     public Dictionary<string, DataItemSlot> dicBotInSlots;
-    public List<string> listBotUnlock;
+    public Dictionary<ZoneType,BotUnlock> listBotUnlock;
     public List<string> listSlotGate2Unlock;
     public int indexRebirth = -1;
     public List<ItemConfig> itemConfigs;
@@ -30,6 +30,11 @@ public class CharactorData
     [NonSerialized]
     [IgnoreMember]
     public Action<List<ItemConfig>> onChangeItem;
+
+
+    [NonSerialized]
+    [IgnoreMember]
+    public Action<string> onAddBotUnlock;
 
     public CharactorUpgrade GetUpgrade()
     {
@@ -55,7 +60,7 @@ public class CharactorData
         itemConfigs.Add(new ItemConfig("default", 10));
         currentFashion = "FashionData_Brain";
         dicBotInSlots = new Dictionary<string, DataItemSlot>();
-        listBotUnlock = new List<string>();
+        listBotUnlock = new Dictionary<ZoneType, BotUnlock>();
         listSlotGate2Unlock = new List<string>();
     }
     #region itemInvetory
@@ -145,11 +150,16 @@ public class CharactorData
     }
     #endregion
 
-    public bool AddItemUnlock(string id)
+    public bool AddItemUnlock(ZoneType zoneType, string id)
     {
-        if(listBotUnlock.Contains(id)) return false;
-        listBotUnlock.Add(id);
-        return true;
+        if (!listBotUnlock.ContainsKey(zoneType)) listBotUnlock.Add(zoneType, new BotUnlock());
+        if (listBotUnlock[zoneType] == null) listBotUnlock[zoneType] = new BotUnlock();
+
+        bool addSuccess = listBotUnlock[zoneType].AddBotUnlock(id);
+
+        if(addSuccess)
+            onAddBotUnlock?.Invoke(id);
+        return addSuccess;
     }
 
     public void ChangeFashion(string id)
@@ -279,5 +289,30 @@ public class DataItemSlot
     public void ChangeIncome(long income)
     {
         this.income = income;
+    }
+}
+
+
+[MessagePackObject(keyAsPropertyName: true)]
+[System.Serializable]
+public class BotUnlock
+{
+    public List<string> listUnlock;
+    public bool claim;
+    public BotUnlock()
+    {
+        this.listUnlock = new List<string>();
+        claim = false;
+    }
+    public bool AddBotUnlock(string idBot)
+    {
+        if (listUnlock.Contains(idBot)) return false;
+        listUnlock.Add(idBot);
+        return true;
+    }
+
+    public void Claim()
+    {
+        claim = true;
     }
 }

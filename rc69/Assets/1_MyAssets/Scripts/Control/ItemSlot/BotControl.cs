@@ -23,7 +23,7 @@ namespace Raccoon.Bot
 
             var incomeReward = Mathf.RoundToInt(income);
             string moreTxt = $"{GameUtils.ConvertCurrencyToString(incomeReward)}/s";
-            infor.SetActiveInfoInSlot();
+            infor.ShowTextBot();
             infor.ShowMoreText(moreTxt);
         }
         public override void AddTimeInSlot(float time)

@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Owl
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 37417c4c9bb02f945b08f2f57d1df26a, type: 3}
   prefab: {fileID: 5889536059986830239, guid: 4a204d80b27c40b0a1ca5e8a91e8ec78, type: 3}
   rarityType: 1
   colorType: 0

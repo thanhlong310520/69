@@ -16,12 +16,12 @@ MonoBehaviour:
   itemName: Penguin Flura
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 9087df05c47d7ae48b4668fb684d3715, type: 3}
   prefab: {fileID: 5674782978358029841, guid: 7b48b410e97b9d74cb2bc13e7cfd6968, type: 3}
-  rarityType: 0
+  rarityType: 1
   colorType: 4
   spriteIconLock: {fileID: 0}
-  cost: 0
-  income: 0
+  cost: 14000
+  income: 140
   audioClip: {fileID: 0}
   health: 0

@@ -43,6 +43,11 @@ public class ItemInventory : MonoBehaviour
     }
     public void ChangeBg(Sprite bg)
     {
-        this.bg.sprite = bg;    
+        //this.bg.sprite = bg;    
+    }
+
+    public void ShowNumber(string value)
+    {
+        numberTxt.text = value;
     }
 }

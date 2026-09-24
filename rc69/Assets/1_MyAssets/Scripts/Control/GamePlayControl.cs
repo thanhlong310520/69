@@ -30,6 +30,9 @@ namespace Raccoon.Controller
         [SerializeField] private List<FashionDataSO> fashionDataSOs;
         [SerializeField] private List<ShowModelInMap> showFashion;
         [SerializeField] private List<ItemDataSO> itemCanStaySlotDataSOs;
+        [SerializeField] private List<ItemDataSO> eggDataSOs;
+        [SerializeField] public List<ItemDataSO> botDataSOs;
+        [SerializeField] public List<IndexRewardData> indexRewardDataSOs;
         [SerializeField] private List<UpgradeDataSO> upgradeDataSOs;
         [SerializeField] private List<DataColorType> dataColorTypes;
         [SerializeField] private List<SpawnItem> spawnItems;
@@ -61,6 +64,9 @@ namespace Raccoon.Controller
         public Transform bossHolder;
         private void Start()
         {
+            itemCanStaySlotDataSOs = new List<ItemDataSO>();
+            itemCanStaySlotDataSOs.AddRange(eggDataSOs);
+            itemCanStaySlotDataSOs.AddRange(botDataSOs);
             if (PlayerController.instance != null)
             {
                 PlayerController.instance.eventShowUIPickupItem.AddListener(ShowButtonPickup);
@@ -76,11 +82,11 @@ namespace Raccoon.Controller
             rebirthCam.enabled = false;
 
             GameData.Get.CheckSubscribe();
-            //if (!PlayerData.Get.isVipIAP)
-            //{
-            //    ShowPopup(PopupCanvas.PopupType.VipSub);
-            //    GameData.Get.isShowVip = true;
-            //}
+            if (!PlayerData.Get.isVipIAP)
+            {
+                ShowPopup(PopupCanvas.PopupType.VipSub);
+                GameData.Get.isShowVip = true;
+            }
 
             StartCoroutine(DelayShowInterOpen());
         }
@@ -91,7 +97,7 @@ namespace Raccoon.Controller
                 yield return null;
             }
             yield return new WaitForSeconds(timeDelayShowInter);
-            //AdsActionManager.instance.ShowInterOpenAd();
+            AdsActionManager.instance.ShowInterOpenAd();
         }
         IEnumerator DelayChangeMap()
         {
@@ -159,12 +165,7 @@ namespace Raccoon.Controller
             canShowPopup = false;
             ShowPopup(PopupCanvas.PopupType.InterBonus, ResetAfterHidePopupInterBonus);
 
-            //MainUiControl.instance.showLoadingAds.Show(() => {
-            //    AdsActionManager.instance.ShowInterstitialAd(() =>
-            //    {
-            //        ShowPopup(PopupCanvas.PopupType.InterBonus, ResetAfterHidePopupInterBonus);
-            //    });
-            //});
+            
         }
 
         void ResetAfterHidePopupInterBonus()
@@ -251,7 +252,7 @@ namespace Raccoon.Controller
             return itemDataSOs.Find(i => i.GetId == id);
         }
 
-        public List<ItemDataSO> GetBotDataSOs()
+        public List<ItemDataSO> GetItemDataStaySlotSOs()
         {
             return itemCanStaySlotDataSOs;
         }
@@ -267,6 +268,10 @@ namespace Raccoon.Controller
         {
             return upgradeDataSOs.FirstOrDefault(u => u.type == type);
         }
+        public IndexRewardData GetIndexRewardByZone(ZoneType type)
+        {
+            return indexRewardDataSOs.FirstOrDefault(r => r.zone == type);
+        }
 
 
         public Sprite GetBgByColorType(ZoneType type)
@@ -274,7 +279,10 @@ namespace Raccoon.Controller
             DataColorType dt = dataColorTypes.FirstOrDefault(d => d.type == type);
             return dt.bg;
         }
-
+        public List<ItemDataSO> GetBotDataInZone(ZoneType type)
+        {
+            return botDataSOs.Where(b => b.colorType == type).ToList();
+        }
         #endregion
         #region Spawner
 

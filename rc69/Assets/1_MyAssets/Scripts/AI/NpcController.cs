@@ -405,7 +405,7 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
         SetSlot();
 
         upgradeDataSOs = GamePlayControl.instance.GetUpgradeDataSOs;
-        var botso = GamePlayControl.instance.GetBotDataSOs();
+        var botso = GamePlayControl.instance.GetItemDataStaySlotSOs();
         foreach (var cf in data.itemConfigs)
         {
             ItemDataSO so = botso.Find(i => i.GetId == cf.id);
@@ -425,8 +425,11 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
 
         StartCoroutine(DelayStartGoap());
     }
+    public void AddItemUnlock(ItemDataSO so)
+    {
 
-    IEnumerator DelayStartGoap()
+    }
+IEnumerator DelayStartGoap()
     {
         yield return new WaitForSeconds(1f);
         if(data.itemConfigs.Count > 0) stateHandle.ChangeItem(data.itemConfigs[0]);
@@ -534,6 +537,12 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
     {
         
     }
+
+    public CharactorData Getdata()
+    {
+        return data;
+    }
+
     #endregion
 }
 

@@ -7,7 +7,7 @@ using Raccoon;
 using Raccoon.Ads;
 using Raccoon.Controller;
 using Raccoon.Purchase;
-//using RCKit.Ads.Main;
+using RCKit.Ads.Main;
 
 public class LoadingScene : MonoBehaviour
 {
@@ -26,11 +26,6 @@ public class LoadingScene : MonoBehaviour
         sliderLoading.value = 0;
         StartCoroutine(LoadSceneAsync());
         StartCoroutine(WaitInterOpenAd());
-    }
-
-    private IEnumerator CheckSub()
-    {
-        yield return null;
     }
 
     private IEnumerator LoadSceneAsync()
@@ -60,13 +55,13 @@ public class LoadingScene : MonoBehaviour
         }
 
         StopCoroutine(WaitInterOpenAd());
-        //RaccoonAdsManager.Instance.StopLoadingAd(AD_TYPE.OPEN_AD_FIRST_NATIVE);
+        RaccoonAdsManager.Instance.StopLoadingAd(AD_TYPE.OPEN_AD_FIRST_NATIVE);
         sliderLoading.value = 1f;
         Debug.Log("Load Complete");
         yield return wait;
-        //AdsActionManager.instance?.Init();
+
         SceneManager.UnloadSceneAsync("Loading");
-        //RaccoonAdsManager.Instance.OnLoadingSceneLoaded();
+        RaccoonAdsManager.Instance.OnLoadingSceneLoaded();
         GameData.Get.checkLoadingScene = true;  
     }
 
@@ -77,17 +72,12 @@ public class LoadingScene : MonoBehaviour
         while (true)
         {
             yield return wait;
-            //if (GameData.Get.creative_mode)
-            //{
-            //    multi_speed = 30f;
-            //    break;
-            //}
 
-            //if (!(RaccoonAdsManager.Instance?.AdsIsReady(AD_TYPE.OPEN_AD_FIRST_NATIVE) ?? false)) continue;
-            //yield return wait;
-            //RaccoonAdsManager.Instance.ShowAdUntilLoaded(AD_TYPE.OPEN_AD_FIRST_NATIVE, false);
-            //multi_speed = 10f;
-            //yield return wait;
+            if (!(RaccoonAdsManager.Instance?.AdsIsReady(AD_TYPE.OPEN_AD_FIRST_NATIVE) ?? false)) continue;
+            yield return wait;
+            RaccoonAdsManager.Instance.ShowAdUntilLoaded(AD_TYPE.OPEN_AD_FIRST_NATIVE, false);
+            multi_speed = 10f;
+            yield return wait;
             break;
         }
     }

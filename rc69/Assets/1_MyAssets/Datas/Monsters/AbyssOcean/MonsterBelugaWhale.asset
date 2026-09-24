@@ -18,10 +18,10 @@ MonoBehaviour:
   itemType: 2
   spriteIcon: {fileID: 0}
   prefab: {fileID: 8690893660907732939, guid: dba3d600ac63e1d44a53eb60aaa2343c, type: 3}
-  rarityType: 0
+  rarityType: 8
   colorType: 6
   spriteIconLock: {fileID: 0}
-  cost: 0
-  income: 0
+  cost: 85000000
+  income: 850000
   audioClip: {fileID: 0}
   health: 0

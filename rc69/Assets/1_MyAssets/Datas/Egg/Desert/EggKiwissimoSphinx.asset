@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Kiwissimo Sphinx
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 1ceadcafe8146d44fbecbdeba3409cde, type: 3}
   prefab: {fileID: 5887320088693638542, guid: 2630b6fa93c7488e9fcd96d337d04ddd, type: 3}
   rarityType: 8
   colorType: 2

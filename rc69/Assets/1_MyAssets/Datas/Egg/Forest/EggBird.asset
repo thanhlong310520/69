@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Bird
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: e3415529a75eadb45b23e98cb382441b, type: 3}
   prefab: {fileID: 5882134651462016116, guid: 3a37860a53744d28badaed5a1b0c48f3, type: 3}
   rarityType: 7
   colorType: 0

@@ -44,7 +44,7 @@ namespace Raccoon
         {
             foreach (var sub in GameStoreController.Get.lstProduct)
             {
-                //if (sub.productType != UnityEngine.Purchasing.ProductType.Subscription) continue;
+                if (sub.productType != UnityEngine.Purchasing.ProductType.Subscription) continue;
                 GameStoreController.Get.CheckRestoreProductById(sub.id, (restore, id) =>
                 {
                     if (restore)

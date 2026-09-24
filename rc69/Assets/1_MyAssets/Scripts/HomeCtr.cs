@@ -61,9 +61,9 @@ public class HomeCtr : MonoBehaviour
             {
                 Debug.Log("dataBrainInSlot.config.id " + dataBrainInSlot.config.id);
 
-                Debug.Log("list so " + GamePlayControl.instance.GetBotDataSOs().Count);
+                Debug.Log("list so " + GamePlayControl.instance.GetItemDataStaySlotSOs().Count);
 
-                ItemDataSO itemData = GamePlayControl.instance.GetBotDataSOs().Find(i => i.GetId == dataBrainInSlot.config.id);
+                ItemDataSO itemData = GamePlayControl.instance.GetItemDataStaySlotSOs().Find(i => i.GetId == dataBrainInSlot.config.id);
                 Debug.Log("so " +  itemData);
                 var botGO = GamePlayControl.instance.SpawnItem(itemData.prefab);
                 if(botGO  != null)

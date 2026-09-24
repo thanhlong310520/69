@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Raccoon
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 68319d29a436d3f479f2d32ab99e7d32, type: 3}
   prefab: {fileID: 5889450850602140922, guid: ac0144c89b7e4fd59b62979353e7ceb2, type: 3}
   rarityType: 1
   colorType: 0

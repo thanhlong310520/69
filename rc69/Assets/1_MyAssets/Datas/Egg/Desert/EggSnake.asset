@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Snake
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 8561ad37b16573245aabea6a9933d75d, type: 3}
   prefab: {fileID: 5887454817620982944, guid: 7173f02ae31446f78d882c5e6f41ec0c, type: 3}
   rarityType: 3
   colorType: 2

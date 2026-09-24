@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Axolotl Bombondino
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 870d7a5f8c8b2ce43829b13a5ebfdeeb, type: 3}
   prefab: {fileID: 5887477303561428125, guid: 0bc4064de2e342ed87f3d9adbbbda0e1, type: 3}
   rarityType: 3
   colorType: 1

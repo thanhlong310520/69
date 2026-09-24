@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Boss 5 Snow
   m_EditorClassIdentifier: Assembly-CSharp::BossDataSO
   prefab: {fileID: 4699352749919349746, guid: 4c09e787812c9b04f973c2324a830537, type: 3}
-  speed: 300
+  speed: 25

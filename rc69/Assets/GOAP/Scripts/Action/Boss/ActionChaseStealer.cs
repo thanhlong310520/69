@@ -1,4 +1,5 @@
 using Raccoon.Controller;
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
@@ -53,6 +54,8 @@ public class ActionChaseStealer : GoapAction
             started = true;
             startTime = Time.time;
             target.GetComponent<ICharactor>()?.NotifyBossChase();
+            controller.colli.SetActive(true);
+            StartCoroutine(DelayPlayAnimRun(startDelay));
         }
 
         if (Time.time - startTime < startDelay)
@@ -69,6 +72,12 @@ public class ActionChaseStealer : GoapAction
         if (controller.GetListChase() == null) return null;
         if (controller.GetListChase().Count <= 0) return null;
         return controller.GetListChase()[0];
+    }
+
+    IEnumerator DelayPlayAnimRun(float time)
+    {
+        yield return new WaitForSeconds(time);
+        controller.SetBoolAnimator("IsRun", true);
     }
 
     public override bool IsDone() => done;

@@ -16,12 +16,12 @@ MonoBehaviour:
   itemName: Crocodile
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: c850b394c3bef5b4192572b1bcab976c, type: 3}
   prefab: {fileID: 5216650929827994765, guid: fa69141a55871f44691ee7d0b1e2345a, type: 3}
-  rarityType: 0
+  rarityType: 2
   colorType: 3
   spriteIconLock: {fileID: 0}
-  cost: 0
-  income: 0
+  cost: 42000
+  income: 420
   audioClip: {fileID: 0}
   health: 0

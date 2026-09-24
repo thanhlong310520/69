@@ -65,8 +65,8 @@ namespace Raccoon.Data
         Volcano,
         AbyssOcean,
         Prehistoric,
-        Cosmic,
-        CherryBlossom,
-        TitanTemple
+        //Cosmic,
+        //CherryBlossom,
+        //TitanTemple
     }
 }

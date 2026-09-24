@@ -22,6 +22,7 @@ public class InventoryUI : MonoBehaviour
         foreach (var slot in slots)
         {
             slot.SetEventClick(OnSlotClicked);
+            slot.SetSelected(false);
         }
     }
 

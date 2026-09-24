@@ -47,23 +47,46 @@ namespace Raccoon.UI
             txtCountTime.gameObject.SetActive(isActive);
         }
 
-        public void SetActiveInfoInSlot()
+        public void ShowMoreText(string infor)
         {
-            txtCost.gameObject.SetActive(true);
+            txtMoreInfor.text = infor;
+        }
+
+        public void ShowTextBot()
+        {
             txtMoreInfor.gameObject.SetActive(true);
+            txtRarity.gameObject.SetActive(true);
+            txtName.gameObject.SetActive(true);
+
+            txtCost.gameObject.SetActive(false);
+            txtRainbow.gameObject.SetActive(false);
+            SetActiveTxtCountTime(false);
+        }
+
+        public void ShowTextEggSpawn()
+        {
+            txtCost.gameObject.SetActive(false);
+            txtMoreInfor.gameObject.SetActive(false);
             txtRarity.gameObject.SetActive(true);
             txtName.gameObject.SetActive(true);
             txtRainbow.gameObject.SetActive(false);
             SetActiveTxtCountTime(false);
         }
 
-
-        public void ShowMoreText(string infor)
+        public void ShowTextEggSave()
         {
-            txtMoreInfor.text = infor;
-
+            txtCost.gameObject.SetActive(false);
+            txtMoreInfor.gameObject.SetActive(true);
+            txtRarity.gameObject.SetActive(false);
+            txtName.gameObject.SetActive(true);
+            txtRainbow.gameObject.SetActive(false);
+            SetActiveTxtCountTime(false);
         }
 
+        public void ShowTextCountEgg(float time)
+        {
+            txtCountTime.text =  time.FormatTimeSecond(false);
+        }
 
 
     }

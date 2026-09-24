@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Fox
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: da442a3fa1ab52a448b8affdb5054d3f, type: 3}
   prefab: {fileID: 5886887296879955251, guid: bcb8b4c3d4ee46ff8808db01ccf26e97, type: 3}
   rarityType: 2
   colorType: 0

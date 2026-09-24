@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Boss 11 TitanTemple
   m_EditorClassIdentifier: Assembly-CSharp::BossDataSO
   prefab: {fileID: 0}
-  speed: 300
+  speed: 100

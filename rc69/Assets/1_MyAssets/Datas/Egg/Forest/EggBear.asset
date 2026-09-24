@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Bear
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 2f107193bec73ae4c853c7d5ede06d54, type: 3}
   prefab: {fileID: 5882709897367131696, guid: 4b3b6948a6b54ea7a882615aba000907, type: 3}
   rarityType: 2
   colorType: 0

@@ -25,6 +25,7 @@ public class SpawnItem : MonoBehaviour
     {
         var bossGO = Instantiate(bossSO.prefab, GamePlayControl.instance.bossHolder);
         bossGO.transform.position = bossStay.position;
+        bossGO.transform.rotation = bossStay.rotation;
         boss = bossGO.GetComponent<BossController>();
         boss.Init(bossSO,bossStay);
         foreach (var dt in datas)
@@ -48,12 +49,40 @@ public class SpawnItem : MonoBehaviour
 
         itemCtr.Init(itemData, new ItemConfig(itemData.GetId, itemData.priority), Raccoon.EnumHolder.ItemState.Normal);
         itemCtr.Spawned(RemoveItem,Stealed,StealFail);
+        var eg = itemCtr.GetComponent<EggControl>();
+        eg.SetEventReset(ResetEggToTransform);
         itemCtr.ChangeEnvironment(GamePlayControl.instance.currentEnvironmentType);
 
         listItemSpawn.Add(itemCtr);
     }
     
+    void ResetEggToTransform(EggControl egg)
+    {
+        var trans = GetTransformEgg(egg.data);
+        if(trans == null)
+        {
+            RemoveItem(egg, null);
+            Destroy(egg.gameObject);
+        }
+        else
+        {
+            egg.transform.localPosition = trans.localPosition;
+            egg.transform.localScale = Vector3.one;
+            egg.transform.localRotation = trans.localRotation;
+        }
+    }
     
+    public Transform GetTransformEgg(ItemDataSO so)
+    {
+        foreach (var item in datas)
+        {
+            if(item.so.GetId == so.GetId)
+            {
+                return item.holderEgg;
+            }
+        }
+        return null;
+    }
     #endregion
 
     #region Remove 

@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Fennec
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 5e85172af21f19b41a70a95264ede040, type: 3}
   prefab: {fileID: 5887642292611600780, guid: 1d1836bcfc124d0a98f621b08e8f0168, type: 3}
   rarityType: 7
   colorType: 2
