@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Polar Bear
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: c3ae331473a5cdd4cb228321d1de7746, type: 3}
   prefab: {fileID: 1677619852135019670, guid: 59f9236748e4e8b4a8d46964bd2d5bfe, type: 3}
   rarityType: 3
   colorType: 4

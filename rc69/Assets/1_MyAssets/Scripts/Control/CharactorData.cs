@@ -20,6 +20,7 @@ public class CharactorData
     public Dictionary<ZoneType,BotUnlock> listBotUnlock;
     public List<string> listSlotGate2Unlock;
     public int indexRebirth = -1;
+    public int indexTreamill = 0;
     public List<ItemConfig> itemConfigs;
 
 
@@ -54,6 +55,7 @@ public class CharactorData
         this.name = name;
         coin = 0;
         indexRebirth = -1;
+        indexTreamill = 0;
         multybuytreaMill = 0;
         upgrade = new CharactorUpgrade();
         itemConfigs = new List<ItemConfig>();
@@ -187,6 +189,15 @@ public class CharactorData
     public void UpdateIndexRebirth()
     {
         indexRebirth++;
+    }
+
+    public int GetIndexTreamill()
+    {
+        return indexTreamill;
+    }
+    public void UpdateIndexTreamill()
+    {
+        indexTreamill++;
     }
 
 }

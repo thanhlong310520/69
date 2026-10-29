@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Doddo
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 36a2f5f37dff76a49a5385420074db93, type: 3}
   prefab: {fileID: 7509736289378104093, guid: be74d9f969a7a744da83ad918ad6c278, type: 3}
   rarityType: 1
   colorType: 7

@@ -16,8 +16,8 @@ MonoBehaviour:
   itemName: Pterodactyl
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
-  prefab: {fileID: 7282079930548593, guid: e9d4872ea31b485f84cb7da7db2790e0, type: 3}
+  spriteIcon: {fileID: 21300000, guid: 55078d8bce7174e439f8a441fb87cb43, type: 3}
+  prefab: {fileID: 5881903197830379671, guid: e9d4872ea31b485f84cb7da7db2790e0, type: 3}
   rarityType: 3
   colorType: 7
   spriteIconLock: {fileID: 0}

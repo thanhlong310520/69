@@ -33,5 +33,7 @@ namespace Raccoon.Controller
         void NotifyBossChase();
         void AddItemUnlock(ItemDataSO so);
         CharactorData Getdata();
+
+        void ContactTreamill(Treamill treamill);
     }
 }

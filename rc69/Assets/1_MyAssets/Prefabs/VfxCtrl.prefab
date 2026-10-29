@@ -45,18 +45,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VfxCtrl
   vfxBrainrots:
-  - typeColor: 0
-    vfxPrefab: {fileID: 0}
-  - typeColor: 1
-    vfxPrefab: {fileID: 106434, guid: 0b420644f160bda4481af637ea55222d, type: 3}
-  - typeColor: 2
-    vfxPrefab: {fileID: 114600, guid: dd4146804371bd8458d05a995cb787bf, type: 3}
-  - typeColor: 3
+  - type: 0
     vfxPrefab: {fileID: 176436, guid: 4f0d9de25214db940a2f09ecb09cb120, type: 3}
-  - typeColor: 4
-    vfxPrefab: {fileID: 155142, guid: 558ec2cbac11b904488a13a8517bb768, type: 3}
-  - typeColor: 5
+    vfxPrefabEgg: {fileID: 245581523800709616, guid: 9442d241d2d8ecc47b49f256b55325c6, type: 3}
+  - type: 7
+    vfxPrefab: {fileID: 176436, guid: 4f0d9de25214db940a2f09ecb09cb120, type: 3}
+    vfxPrefabEgg: {fileID: 245581523800709616, guid: 9442d241d2d8ecc47b49f256b55325c6, type: 3}
+  - type: 1
+    vfxPrefab: {fileID: 114600, guid: dd4146804371bd8458d05a995cb787bf, type: 3}
+    vfxPrefabEgg: {fileID: 245581523800709616, guid: 9442d241d2d8ecc47b49f256b55325c6, type: 3}
+  - type: 2
+    vfxPrefab: {fileID: 114600, guid: dd4146804371bd8458d05a995cb787bf, type: 3}
+    vfxPrefabEgg: {fileID: 245581523800709616, guid: 9442d241d2d8ecc47b49f256b55325c6, type: 3}
+  - type: 3
+    vfxPrefab: {fileID: 168092, guid: 9a12b9f4e8341c34ba356de0548af70c, type: 3}
+    vfxPrefabEgg: {fileID: 7938384439400024403, guid: b6e54acc881a03c4a9719b161a25a3e3, type: 3}
+  - type: 4
+    vfxPrefab: {fileID: 168092, guid: 9a12b9f4e8341c34ba356de0548af70c, type: 3}
+    vfxPrefabEgg: {fileID: 7938384439400024403, guid: b6e54acc881a03c4a9719b161a25a3e3, type: 3}
+  - type: 5
     vfxPrefab: {fileID: 150380, guid: e764bee8f24dddd40a9ba6cdcfaa9ea0, type: 3}
+    vfxPrefabEgg: {fileID: 4109064841345302812, guid: 2a409ab125c5216449bc5f005ec045f0, type: 3}
+  - type: 6
+    vfxPrefab: {fileID: 150380, guid: e764bee8f24dddd40a9ba6cdcfaa9ea0, type: 3}
+    vfxPrefabEgg: {fileID: 4109064841345302812, guid: 2a409ab125c5216449bc5f005ec045f0, type: 3}
+  - type: 20
+    vfxPrefab: {fileID: 106434, guid: 0b420644f160bda4481af637ea55222d, type: 3}
+    vfxPrefabEgg: {fileID: 4109064841345302812, guid: 2a409ab125c5216449bc5f005ec045f0, type: 3}
+  - type: 8
+    vfxPrefab: {fileID: 155142, guid: 558ec2cbac11b904488a13a8517bb768, type: 3}
+    vfxPrefabEgg: {fileID: 4109064841345302812, guid: 2a409ab125c5216449bc5f005ec045f0, type: 3}
+  - type: 9
+    vfxPrefab: {fileID: 106434, guid: 0b420644f160bda4481af637ea55222d, type: 3}
+    vfxPrefabEgg: {fileID: 7938384439400024403, guid: b6e54acc881a03c4a9719b161a25a3e3, type: 3}
   vfxs:
   - type: 0
     vfxPrefabs:

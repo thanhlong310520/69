@@ -28,11 +28,17 @@ public class VfxCtrl : MonoBehaviour
     [SerializeField] List<Vfx> vfxs;
 
 
-    public GameObject GetVfxBrainrot(ColorEffect typeColor)
+    public GameObject GetVfxBrainrot(RarityType type)
     {
-        var vfxdata = vfxBrainrots.FirstOrDefault(v=> v.typeColor == typeColor);
+        var vfxdata = vfxBrainrots.FirstOrDefault(v=> v.type == type);
 
         return vfxdata.vfxPrefab;
+    }
+    public GameObject GetVfxEgg(RarityType type)
+    {
+        var vfxdata = vfxBrainrots.FirstOrDefault(v => v.type == type);
+
+        return vfxdata.vfxPrefabEgg;
     }
 
     public GameObject GetVfxByType(TypeVFX type)
@@ -65,8 +71,9 @@ public class VfxCtrl : MonoBehaviour
 [System.Serializable]
 struct VfxBrainrot
 {
-    public ColorEffect typeColor;
+    public RarityType type;
     public GameObject vfxPrefab;
+    public GameObject vfxPrefabEgg;
 }
 
 [System.Serializable]

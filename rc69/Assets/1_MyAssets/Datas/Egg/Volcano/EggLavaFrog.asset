@@ -16,8 +16,8 @@ MonoBehaviour:
   itemName: Lava Frog
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
-  prefab: {fileID: 7170189748597419, guid: c49d3cc21b034045aede947bc647a695, type: 3}
+  spriteIcon: {fileID: 21300000, guid: 23b4ff0216954724aaee0f7eccb6008a, type: 3}
+  prefab: {fileID: 5887559289300672064, guid: c49d3cc21b034045aede947bc647a695, type: 3}
   rarityType: 2
   colorType: 5
   spriteIconLock: {fileID: 0}

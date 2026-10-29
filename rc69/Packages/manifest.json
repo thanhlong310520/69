@@ -1,12 +1,24 @@
 {
   "dependencies": {
+    "appsflyer-unity-plugin": "https://github.com/AppsFlyerSDK/appsflyer-unity-plugin.git#v6.18.1",
     "com.github-glitchenzo.nugetforunity": "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity",
+    "com.google.ads.mobile": "11.5.0",
+    "com.google.ads.mobile.mediation.metaaudiencenetwork": "3.20.1",
+    "com.google.firebase.analytics": "https://github.com/namtuoc91/unity-firebase-upm.git#release/analytics",
+    "com.google.firebase.app": "https://github.com/namtuoc91/unity-firebase-upm.git#release/app",
+    "com.google.firebase.crashlytics": "https://github.com/namtuoc91/unity-firebase-upm.git#release/crashlytics",
+    "com.google.firebase.remote-config": "https://github.com/namtuoc91/unity-firebase-upm.git#release/remote-config",
+    "com.raccoon.adpack": "https://github.com/raccoon-studio-tripglobal/raccoon-ads-kit.git#release",
+    "com.raccoon.jnativeads": "https://github.com/raccoon-studio-tripglobal/jnativeadsplugin.git#release",
+    "com.unity.2d.sprite": "1.0.0",
     "com.unity.ai.navigation": "2.0.10",
     "com.unity.collab-proxy": "2.11.3",
     "com.unity.ide.rider": "3.0.39",
     "com.unity.ide.visualstudio": "2.0.26",
     "com.unity.inputsystem": "1.18.0",
+    "com.unity.mobile.android-logcat": "1.4.7",
     "com.unity.multiplayer.center": "1.0.1",
+    "com.unity.purchasing": "5.2.1",
     "com.unity.test-framework": "1.6.0",
     "com.unity.timeline": "1.8.10",
     "com.unity.ugui": "2.0.0",
@@ -45,5 +57,24 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.google",
+        "com.google.external-dependency-manager"
+      ]
+    },
+    {
+      "name": "AppLovin MAX Unity",
+      "url": "https://unity.packages.applovin.com/",
+      "scopes": [
+        "com.applovin.mediation.ads",
+        "com.applovin.mediation.adapters",
+        "com.applovin.mediation.dsp"
+      ]
+    }
+  ]
 }

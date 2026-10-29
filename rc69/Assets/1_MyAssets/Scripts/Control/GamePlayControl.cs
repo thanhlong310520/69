@@ -34,6 +34,7 @@ namespace Raccoon.Controller
         [SerializeField] public List<ItemDataSO> botDataSOs;
         [SerializeField] public List<IndexRewardData> indexRewardDataSOs;
         [SerializeField] private List<UpgradeDataSO> upgradeDataSOs;
+        [SerializeField] private List<TreamillDataSO> treamillDataSOs;
         [SerializeField] private List<DataColorType> dataColorTypes;
         [SerializeField] private List<SpawnItem> spawnItems;
         [SerializeField] private Transform sellShop;
@@ -52,6 +53,7 @@ namespace Raccoon.Controller
         public long incomeHaveEffect = 200;
 
         public List<UpgradeDataSO> GetUpgradeDataSOs => upgradeDataSOs;
+        public List<TreamillDataSO> GetTreamillDataSOs => treamillDataSOs;
 
         bool canAction = false;
 
@@ -153,7 +155,8 @@ namespace Raccoon.Controller
             timeCountAdsInter += Time.deltaTime;
             if (timeCountAdsInter >= timeShowInter)
             {
-                ShowInterBonus();
+                if(!PlayerController.instance.loot.IsHaveItemLoot())
+                    ShowInterBonus();
             }
         }
 

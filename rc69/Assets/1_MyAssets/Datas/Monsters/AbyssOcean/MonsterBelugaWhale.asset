@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Beluga Whale
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 6833e23c375f0cc4e8f7c211bf513a40, type: 3}
   prefab: {fileID: 8690893660907732939, guid: dba3d600ac63e1d44a53eb60aaa2343c, type: 3}
   rarityType: 8
   colorType: 6

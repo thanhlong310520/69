@@ -16,8 +16,8 @@ MonoBehaviour:
   itemName: Mammoth Cocofanto
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
-  prefab: {fileID: 3046632976292927, guid: ed73fedabc234f6f9d4ad62c169714ca, type: 3}
+  spriteIcon: {fileID: 21300000, guid: cd76275b93770c24ca2c84a031be1b8b, type: 3}
+  prefab: {fileID: 5887569997637502634, guid: ed73fedabc234f6f9d4ad62c169714ca, type: 3}
   rarityType: 4
   colorType: 4
   spriteIconLock: {fileID: 0}

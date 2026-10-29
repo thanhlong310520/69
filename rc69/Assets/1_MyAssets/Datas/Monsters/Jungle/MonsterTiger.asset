@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Tiger
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: a30aee50ebd0ec44e95d0a4069f0e9bf, type: 3}
   prefab: {fileID: 7763067742242251273, guid: ae301efbeca10ff41b660947d842f646, type: 3}
   rarityType: 4
   colorType: 3

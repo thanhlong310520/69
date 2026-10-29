@@ -16,8 +16,8 @@ MonoBehaviour:
   itemName: Trippi Troppi
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
-  prefab: {fileID: 5027104833972606976, guid: 54aab4b68346458f9a1bf168bb0379ba, type: 3}
+  spriteIcon: {fileID: 21300000, guid: 75c3c0d9b049baa479c19a08c8ceee58, type: 3}
+  prefab: {fileID: 7752692515883195847, guid: 54aab4b68346458f9a1bf168bb0379ba, type: 3}
   rarityType: 8
   colorType: 6
   spriteIconLock: {fileID: 0}

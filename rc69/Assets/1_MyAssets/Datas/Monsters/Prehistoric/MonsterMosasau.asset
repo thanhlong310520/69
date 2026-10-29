@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Mosasau
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 5df1650da0181ce4591c1750c94122c7, type: 3}
   prefab: {fileID: 7425319618047280097, guid: e801f39e409ec5d42b7f78588161138f, type: 3}
   rarityType: 9
   colorType: 7

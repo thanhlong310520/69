@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BossPhoenix
+  m_Controller: {fileID: 9100000, guid: 6d7602e0b4d9e5f42a00ee4ee5b6b6d3, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -3516490668913636064, guid: 213520703b296294a9800c7b9f5bf05f, type: 3}
+    m_OverrideClip: {fileID: 3957338349241898299, guid: b4994df1f5e48a143b98ea6a9eba9b92, type: 3}
+  - m_OriginalClip: {fileID: -2927745538188483378, guid: 748d851ab2fb60e4f8c05b932ec4baa2, type: 3}
+    m_OverrideClip: {fileID: -3506421634334241628, guid: c028e066d56220244a8c1351b7a1a745, type: 3}

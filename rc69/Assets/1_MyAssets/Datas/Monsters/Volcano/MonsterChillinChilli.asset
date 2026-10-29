@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Chillin Chilli
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: a4b3969f7fa32d94c89b4aa9b78f3232, type: 3}
   prefab: {fileID: 1627435622857107368, guid: 112bc6c81ea3eab4ea882513bfa93d8b, type: 3}
   rarityType: 4
   colorType: 5

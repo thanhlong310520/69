@@ -82,16 +82,16 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
     void AddBotData(ItemDataSO so, ItemConfig cf)
     {
         if(so == null) return;
-        if (so.itemType == ItemType.Brainrot)
+        if (so.itemType == ItemType.Brainrot || so.itemType == ItemType.Egg)
         {
-            BotData bd = new BotData(cf, so as BotDataSO);
+            BotData bd = new BotData(cf, so);
             dataSOs.Add(bd);
         }
     }
     void RemoveBotData(ItemDataSO so, ItemConfig cf)
     {
         if (so == null) return;
-        if (so.itemType == ItemType.Brainrot)
+        if (so.itemType == ItemType.Brainrot || so.itemType == ItemType.Egg)
         {
             var bd = dataSOs.FirstOrDefault(b => b.so == so && b.config == cf);
             dataSOs.Remove(bd);
@@ -133,7 +133,7 @@ public class NpcController : MonoBehaviour, ICharactor, IReceive
     public void PushToSlot(SlotController slot)
     {
         if (stateHandle.GetCurrentItem == null) return;
-        if(stateHandle.GetCurrentItem.data.itemType != ItemType.Brainrot) return;
+        if(stateHandle.GetCurrentItem.data.itemType != ItemType.Brainrot && stateHandle.GetCurrentItem.data.itemType != ItemType.Egg) return;
         stateHandle.HandleSlot(slot, TypeHandleSlot.PutBot);
     }
 
@@ -543,6 +543,11 @@ IEnumerator DelayStartGoap()
         return data;
     }
 
+    public void ContactTreamill(Treamill treamill)
+    {
+
+    }
+
     #endregion
 }
 
@@ -550,9 +555,9 @@ IEnumerator DelayStartGoap()
 class BotData
 {
     public ItemConfig config;
-    public BotDataSO so;
+    public ItemDataSO so;
 
-    public BotData(ItemConfig cf,  BotDataSO so)
+    public BotData(ItemConfig cf,  ItemDataSO so)
     {
         this.config = cf;
         this.so = so;

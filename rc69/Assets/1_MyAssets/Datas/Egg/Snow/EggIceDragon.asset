@@ -16,8 +16,8 @@ MonoBehaviour:
   itemName: Ice Dragon
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
-  prefab: {fileID: 5753573553987581, guid: f7d5514b3fdb46c28bebfd408c62a0b8, type: 3}
+  spriteIcon: {fileID: 21300000, guid: 01dcb033c2123d74c898550341805cb8, type: 3}
+  prefab: {fileID: 5887309552144453758, guid: f7d5514b3fdb46c28bebfd408c62a0b8, type: 3}
   rarityType: 9
   colorType: 4
   spriteIconLock: {fileID: 0}

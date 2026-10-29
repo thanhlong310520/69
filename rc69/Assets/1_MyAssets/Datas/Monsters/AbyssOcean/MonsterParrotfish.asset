@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Parrotfish
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 7443c046e2020034ebca52a139312077, type: 3}
   prefab: {fileID: 4660184321206264271, guid: 3d8c42ad9b6c24844a5baa78cd484436, type: 3}
   rarityType: 1
   colorType: 6

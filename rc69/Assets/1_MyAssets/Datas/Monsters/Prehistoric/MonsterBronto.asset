@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Bronto
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 706bd79fa7ff1414cb98291aa86ed103, type: 3}
   prefab: {fileID: 9034477186151163326, guid: 40276bec4a26b024794b5c6f84eb529e, type: 3}
   rarityType: 8
   colorType: 7

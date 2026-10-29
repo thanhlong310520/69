@@ -16,8 +16,8 @@ MonoBehaviour:
   itemName: King Elefanto Cocofanto
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
-  prefab: {fileID: 7017540520996572, guid: 8057dbb0bcc14864ad4eccc93396e5e6, type: 3}
+  spriteIcon: {fileID: 21300000, guid: 5051863d9c8573547bc7ff9de74119b5, type: 3}
+  prefab: {fileID: 5886176948859386838, guid: 8057dbb0bcc14864ad4eccc93396e5e6, type: 3}
   rarityType: 8
   colorType: 4
   spriteIconLock: {fileID: 0}

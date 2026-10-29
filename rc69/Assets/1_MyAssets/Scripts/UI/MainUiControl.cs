@@ -44,6 +44,9 @@ public class MainUiControl : MonoBehaviour
     public UIWarning uiWarning;
     public UIWarning uiWarningBossChase;
     public TMP_Text textWaitAds;
+
+    public GameObject waittoupdate;
+    public Image amountWait;
     [SerializeField] List<InforUiPlayerUpgrade> inforUiPlayerUpgrade;
     PopupBackPack backPack;
     PopupIndex pIndex;
@@ -52,6 +55,7 @@ public class MainUiControl : MonoBehaviour
     private void Start()
     {
         textWaitAds.gameObject.SetActive(false);
+        ShowWaitToUpdate(false);
     }
 
     public void OnButtonPickup(bool state)
@@ -214,6 +218,15 @@ public class MainUiControl : MonoBehaviour
     public void ShowUIBotChase()
     {
         uiWarningBossChase?.StartWarning();
+    }
+
+    public void ShowWaitToUpdate(bool isOn)
+    {
+        waittoupdate.SetActive(isOn);
+    }
+    public void ShowAmountWait(float amount)
+    {
+        amountWait.fillAmount = amount;
     }
 
     [System.Serializable]

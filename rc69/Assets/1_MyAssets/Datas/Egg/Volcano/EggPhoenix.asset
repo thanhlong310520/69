@@ -16,8 +16,8 @@ MonoBehaviour:
   itemName: Phoenix
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
-  prefab: {fileID: 1702188659786335, guid: 7541fd07728f43d18ef3d74b0bc91d60, type: 3}
+  spriteIcon: {fileID: 21300000, guid: 25bd77a7e77dfdb49ab7e9c89813f9c0, type: 3}
+  prefab: {fileID: 5889147438262091616, guid: 7541fd07728f43d18ef3d74b0bc91d60, type: 3}
   rarityType: 9
   colorType: 5
   spriteIconLock: {fileID: 0}

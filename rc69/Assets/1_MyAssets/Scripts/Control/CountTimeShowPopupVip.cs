@@ -19,6 +19,7 @@ public class CountTimeShowPopupVip : MonoBehaviour
     public void Show()
     {
         if (PlayerData.Get.isVipIAP) return;
+        if (PlayerController.instance.loot.IsHaveItemLoot()) return;
         GameData.Get.isShowVip = true;
         GamePlayControl.instance.ShowPopup(PopupCanvas.PopupType.VipSub);
     }

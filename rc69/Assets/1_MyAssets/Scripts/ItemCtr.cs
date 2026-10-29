@@ -26,6 +26,10 @@ namespace Raccoon.Item
         public Collider colli;
 
         public Transform holderModel;
+
+        public LayerMask layerGround = ~0;
+        public float groundCheckHeight = 1f;
+        public float groundCheckDistance = 20f;
         public Collider GetCollider{
             get
             {
@@ -85,7 +89,37 @@ namespace Raccoon.Item
             actionStealFail?.Invoke(this, stealer);
             SetTarget(null);
             SetState(ItemState.Normal);
+            PlaceOnGround(stealer);
             GetCollider.enabled = true;
+        }
+
+        public virtual void StartConttact()
+        {
+
+        }
+        public void PlaceOnGround(Transform ignoreRoot = null)
+        {
+            Vector3 origin = transform.position + Vector3.up * groundCheckHeight;
+            var hits = Physics.RaycastAll(origin, Vector3.down, groundCheckDistance, layerGround, QueryTriggerInteraction.Ignore);
+            float minDistance = float.MaxValue;
+            bool found = false;
+            Vector3 groundPoint = Vector3.zero;
+            foreach (var hit in hits)
+            {
+                if (hit.transform.IsChildOf(transform)) continue;
+                if (ignoreRoot != null && hit.transform.IsChildOf(ignoreRoot)) continue;
+                if (hit.distance < minDistance)
+                {
+                    minDistance = hit.distance;
+                    groundPoint = hit.point;
+                    found = true;
+                }
+            }
+            if (!found) return;
+
+            //float angle = transform.rotation.eulerAngles.y;
+            //transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
+            transform.position = groundPoint;
         }
         public virtual void Spawned(UnityAction<ItemCtr, Transform> actionRemove, UnityAction<ItemCtr, Transform> actionSteal, UnityAction<ItemCtr, Transform> actionStealFail)
         {

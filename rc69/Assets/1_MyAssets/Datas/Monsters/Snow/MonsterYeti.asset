@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Yeti
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 641a8b6ad13eebe4096524dec611c10d, type: 3}
   prefab: {fileID: 7634787977810612144, guid: 98a20c49ada3258498ad690c3ba172a0, type: 3}
   rarityType: 6
   colorType: 4

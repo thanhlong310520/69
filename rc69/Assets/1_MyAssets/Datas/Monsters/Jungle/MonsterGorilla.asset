@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Gorilla
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: c6219f19092c9aa489ea0b46bcf81fca, type: 3}
   prefab: {fileID: 2208320646583490942, guid: 1b72b0760e7eae04cbd6d9470185b898, type: 3}
   rarityType: 3
   colorType: 3

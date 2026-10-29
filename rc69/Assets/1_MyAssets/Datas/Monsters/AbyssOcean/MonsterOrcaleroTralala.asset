@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Orcalero Tralala
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: c2745fd07e441444498c23aa803191f5, type: 3}
   prefab: {fileID: 8896628392465444002, guid: 345b8689914f57a4d989fcda6883b5f9, type: 3}
   rarityType: 4
   colorType: 6

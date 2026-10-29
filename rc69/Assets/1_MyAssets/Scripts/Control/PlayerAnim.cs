@@ -123,6 +123,21 @@ namespace Raccoon.Player
             SetBoolAnimator("Attacking", false);
         }
 
+        public void PlayAnimatorTreamill()
+        {
+            if (animator == null) return;
+            if (attacking) DoneAnimAttack();
+            SetFloatAnimator("Forward", 0);
+            SetFloatAnimator("Turn", 0);
+            SetBoolAnimator("OnGround", true);
+            animator.CrossFade("Treamill", 0.1f, 0);
+        }
+        public void EndAnimTreamill()
+        {
+            if (animator == null) return;
+            animator.CrossFade("Grounded", 0.1f, 0);
+        }
+
         public void SetApplyRootMotion(bool applyRootMotion)
         {
             animator.applyRootMotion = applyRootMotion;

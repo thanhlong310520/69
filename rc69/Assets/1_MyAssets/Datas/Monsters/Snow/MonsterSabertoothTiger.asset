@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Sabertooth Tiger
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 02516edc2d1bdc240a789b8c6691d66f, type: 3}
   prefab: {fileID: 3944411297955019504, guid: b21a45b5bdf9bd9458e965f0264d59e5, type: 3}
   rarityType: 4
   colorType: 4

@@ -14,11 +14,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7992097975271492651, guid: 752da6ed53e413244992884c76cdbae7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4081052844850346842}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 752da6ed53e413244992884c76cdbae7, type: 3}
---- !u!1 &5417837634882238464 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5889864012332952007, guid: 752da6ed53e413244992884c76cdbae7, type: 3}
+--- !u!4 &5505319021870708267 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7992097975271492651, guid: 752da6ed53e413244992884c76cdbae7, type: 3}
   m_PrefabInstance: {fileID: 2490333058224421376}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4551017775050235057
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5505319021870708267}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a49e9ea1ccc969947a4ecbba90614e3f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a49e9ea1ccc969947a4ecbba90614e3f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a49e9ea1ccc969947a4ecbba90614e3f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a49e9ea1ccc969947a4ecbba90614e3f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a49e9ea1ccc969947a4ecbba90614e3f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a49e9ea1ccc969947a4ecbba90614e3f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a49e9ea1ccc969947a4ecbba90614e3f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a49e9ea1ccc969947a4ecbba90614e3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a49e9ea1ccc969947a4ecbba90614e3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a49e9ea1ccc969947a4ecbba90614e3f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a49e9ea1ccc969947a4ecbba90614e3f, type: 3}
+      propertyPath: m_Name
+      value: 55.Blueberrinni Octopussini
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a49e9ea1ccc969947a4ecbba90614e3f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a49e9ea1ccc969947a4ecbba90614e3f, type: 3}
+--- !u!4 &4081052844850346842 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a49e9ea1ccc969947a4ecbba90614e3f, type: 3}
+  m_PrefabInstance: {fileID: 4551017775050235057}
   m_PrefabAsset: {fileID: 0}

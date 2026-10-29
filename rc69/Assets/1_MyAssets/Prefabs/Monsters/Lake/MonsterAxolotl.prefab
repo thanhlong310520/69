@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 8094621439443331771, guid: 9d0e9a2e8007c4598a98619a73d49d1e, type: 3}
+      propertyPath: layerGround.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 8356773950852969731, guid: 9d0e9a2e8007c4598a98619a73d49d1e, type: 3}
       propertyPath: m_Layer
       value: 8

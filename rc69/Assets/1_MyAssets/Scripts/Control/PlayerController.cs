@@ -36,6 +36,7 @@ namespace Raccoon.Controller
         public PlayerMovement movement;
         public PlayerLoot loot;
         public PlayerShield shield;
+        public PlayerTreamill playerTreamill;
 
         public PlayerSoundFootStep sfs;
 
@@ -215,6 +216,77 @@ namespace Raccoon.Controller
         {
             GamePlayControl.instance.ShowUIBossChase();
         }
+
+
+        Treamill tm;
+        bool inTreamill;
+        public void ContactTreamill(Treamill treamill)
+        {
+            tm = treamill;
+            movement.SetCanMove(false);
+            if(tm != null)
+            {
+                rb.position = treamill.holderPos.position;
+                rb.rotation = treamill.holderPos.rotation;
+                rb.useGravity = false;
+            }
+            inTreamill = true;
+            stateHandle.playerAnim.PlayAnimatorTreamill();
+            if (playerTreamill == null) playerTreamill = gameObject.AddComponent<PlayerTreamill>();
+            playerTreamill.StartRun(tm, data, RefreshSpeed);
+        }
+
+        void RefreshSpeed()
+        {
+            var speedUpgrade = GamePlayControl.instance.GetUpgradeDataByType(TypeUpgrade.Speed);
+            if (speedUpgrade != null) SetDataUpgrade(speedUpgrade);
+        }
+
+        void EndTreamill()
+        {
+            if(tm != null) rb.position = tm.endPos.position;
+            rb.useGravity = true;
+            movement.SetCanMove(true);
+            inTreamill = false;
+            tm = null;
+            stateHandle.playerAnim.EndAnimTreamill();
+            if (playerTreamill != null) playerTreamill.StopRun();
+        }
+
+        public bool CanUpdateTreamill()
+        {
+            var listTreamill = GamePlayControl.instance.GetTreamillDataSOs;
+            if (listTreamill == null) return false;
+            return data.GetIndexTreamill() + 1 < listTreamill.Count;
+        }
+
+        public bool EnoughCoinUpdateTreamill()
+        {
+            if (!CanUpdateTreamill()) return false;
+            TreamillDataSO nextTreamill = GamePlayControl.instance.GetTreamillDataSOs[data.GetIndexTreamill() + 1];
+            return nextTreamill.price <= data.GetCoin;
+        }
+
+        public void UpdateTreamill(UnityAction<CharactorData> action = null)
+        {
+            if (!CanUpdateTreamill()) return;
+
+            TreamillDataSO nextTreamill = GamePlayControl.instance.GetTreamillDataSOs[data.GetIndexTreamill() + 1];
+            if (nextTreamill.price > data.GetCoin)
+            {
+                ObserverEventManager.Instance.Publish<SoundType>(EventObserverName.PlaySfx.ToString(), SoundType.BuyFall);
+                return;
+            }
+
+            PayForUpgrade(nextTreamill.price);
+            data.UpdateIndexTreamill();
+            ObserverEventManager.Instance.Publish<SoundType>(EventObserverName.PlaySfx.ToString(), SoundType.UpgradeSuccess);
+
+            Home home = HomeCtr.instance.GetHomeByUser(transform);
+            home?.SetDataTreamill(data);
+
+            action?.Invoke(data);
+        }
         #endregion
         private void OnDisable()
         {
@@ -286,9 +358,16 @@ namespace Raccoon.Controller
                 }
                 value.isDropBox = false;
             }
-
+            if (value.isJump)
+            {
+                if (inTreamill)
+                {
+                    EndTreamill();
+                }
+            }
 
         }
+
         bool CheckAttack()
         {
             if(loot.IsLooting) return false;
@@ -349,6 +428,7 @@ namespace Raccoon.Controller
             if (itemContact != contact.ItemContact)
             {
                 itemContact = contact.ItemContact;
+                if(itemContact != null) itemContact.StartConttact();
             }
 
             bool onUIPickup = false;
@@ -669,6 +749,7 @@ namespace Raccoon.Controller
             {
                 Transform startPos = HomeCtr.instance.GetStartPos(transform);
                 SetStartPoint(startPos.position);
+                VfxCtrl.instance.SpawnRandomVfx(TypeVFX.BackBase, startPos.position);
             }
             rb.isKinematic = false;
             capsule.enabled = true;
@@ -839,6 +920,8 @@ namespace Raccoon.Controller
         {
             return data;
         }
+
+        
     }
 
     public enum EPlayerState

@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: T Rex
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 2b03edf673c6f0f46bc1d750f8dd6d9f, type: 3}
   prefab: {fileID: 1205068031237625211, guid: f717fa0c27b130c44acd6a3d11568cce, type: 3}
   rarityType: 6
   colorType: 7

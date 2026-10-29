@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Ankylosaurus
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 149697810cb05a349823fb2ba38bf326, type: 3}
   prefab: {fileID: 5480387765524123604, guid: bd8d9b3ddcbc6d344b081b6e6a788304, type: 3}
   rarityType: 4
   colorType: 7

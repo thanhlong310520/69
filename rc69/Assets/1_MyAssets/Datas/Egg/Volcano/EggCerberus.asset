@@ -16,8 +16,8 @@ MonoBehaviour:
   itemName: Cerberus
   priority: 0
   itemType: 6
-  spriteIcon: {fileID: 0}
-  prefab: {fileID: 2801386454050144, guid: 155854963de942dd899f623c0bd5a2c4, type: 3}
+  spriteIcon: {fileID: 21300000, guid: 4d0cea2e7c1751e4891effb78a054484, type: 3}
+  prefab: {fileID: 5881894477393043554, guid: 155854963de942dd899f623c0bd5a2c4, type: 3}
   rarityType: 6
   colorType: 5
   spriteIconLock: {fileID: 0}

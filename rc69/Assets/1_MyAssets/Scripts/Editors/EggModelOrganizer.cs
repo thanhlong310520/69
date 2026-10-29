@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 
@@ -65,6 +66,66 @@ namespace Raccoon.EditorTool
             AssetDatabase.Refresh();
 
             Debug.Log($"[EggModelOrganizer] Done. Attached: {attached}. Skipped (no matching prefab): {skipped.Count} [{string.Join(", ", skipped)}]");
+        }
+
+        // Models already sorted into 1NewAsset/Egg/<Zone>/N.Name.fbx: match within the same zone,
+        // ignoring the "N." index prefix. Prefabs whose HolderModel already has a child are skipped.
+        [MenuItem("Raccoon/Egg/Attach Models From Zone Folders")]
+        public static void AttachFromZoneFolders()
+        {
+            var prefabLookup = BuildPrefabLookup();
+            int attached = 0, alreadyHasModel = 0;
+            var noPrefab = new List<string>();
+            var matched = new HashSet<string>();
+
+            foreach (var zoneDir in AssetDatabase.GetSubFolders(ModelsRoot))
+            {
+                var zone = Zones.FirstOrDefault(z => Normalize(z) == Normalize(Path.GetFileName(zoneDir)));
+                if (zone == null) continue;
+
+                foreach (var fbxPath in Directory.GetFiles(zoneDir, "*.fbx", SearchOption.TopDirectoryOnly))
+                {
+                    var assetPath = fbxPath.Replace("\\", "/");
+                    var fbxName = Path.GetFileNameWithoutExtension(assetPath);
+                    var key = Normalize(Regex.Replace(fbxName, @"^\d+\.", ""));
+                    if (Aliases.TryGetValue(key, out var aliasKey)) key = aliasKey;
+
+                    if (!prefabLookup.TryGetValue(key, out var info) || info.zone != zone)
+                    {
+                        noPrefab.Add(assetPath);
+                        continue;
+                    }
+                    matched.Add(info.prefabPath);
+
+                    var fbxAsset = AssetDatabase.LoadAssetAtPath<GameObject>(assetPath);
+                    if (fbxAsset == null)
+                    {
+                        Debug.LogError($"[EggModelOrganizer] Could not load model asset at {assetPath}");
+                        continue;
+                    }
+
+                    var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(info.prefabPath);
+                    var holder = prefab != null ? prefab.transform.Find("HolderModel") : null;
+                    if (holder != null && holder.childCount > 0)
+                    {
+                        alreadyHasModel++;
+                        continue;
+                    }
+
+                    AttachModelToPrefab(info.prefabPath, fbxAsset);
+                    attached++;
+                    Debug.Log($"[EggModelOrganizer] {assetPath} -> {info.prefabPath}");
+                }
+            }
+
+            AssetDatabase.SaveAssets();
+
+            foreach (var p in noPrefab)
+                Debug.LogWarning($"[EggModelOrganizer] No matching egg prefab for {p}");
+            foreach (var p in prefabLookup.Values.Select(v => v.prefabPath).Where(p => !matched.Contains(p)))
+                Debug.LogWarning($"[EggModelOrganizer] No model found for {p}");
+            Debug.Log($"[EggModelOrganizer] Attached: {attached}. Already had model: {alreadyHasModel}. " +
+                      $"Models without prefab: {noPrefab.Count}.");
         }
 
         private static Dictionary<string, (string zone, string prefabPath)> BuildPrefabLookup()
@@ -146,6 +207,7 @@ namespace Raccoon.EditorTool
                 instance.transform.localPosition = Vector3.zero;
                 instance.transform.localRotation = Quaternion.identity;
                 instance.transform.localScale = Vector3.one;
+                SetLayerRecursive(instance.transform, root.layer);
 
                 PrefabUtility.SaveAsPrefabAsset(root, prefabPath);
             }
@@ -153,6 +215,13 @@ namespace Raccoon.EditorTool
             {
                 PrefabUtility.UnloadPrefabContents(root);
             }
+        }
+
+        private static void SetLayerRecursive(Transform t, int layer)
+        {
+            t.gameObject.layer = layer;
+            foreach (Transform child in t)
+                SetLayerRecursive(child, layer);
         }
 
         private static string Normalize(string s)

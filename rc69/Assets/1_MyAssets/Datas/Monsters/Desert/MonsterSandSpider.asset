@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Sand Spider
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: b1859ce15dc110043aa5590fa3a65858, type: 3}
   prefab: {fileID: 5310931658724578598, guid: a40cee81d4c76784dbd3917dfc756a6f, type: 3}
   rarityType: 4
   colorType: 2

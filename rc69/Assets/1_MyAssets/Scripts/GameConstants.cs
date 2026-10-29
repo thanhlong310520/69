@@ -123,41 +123,18 @@ namespace Raccoon.Utils
         {
             if (text == null) return;
             text.enableVertexGradient = false;
-            switch (rarity)
+
+            text.text = rarity.ToString();
+            switch(rarity)
             {
-                case RarityType.Common:
-                    text.text = "Common";
-                    text.color = Color.white;
-                    break;
-
-                case RarityType.Rare:
-                    text.text = "Rare";
-                    text.color = new Color(0.2f, 0.6f, 1f); // blue
-                    break;
-
-                case RarityType.Epic:
-                    text.text = "Epic";
-                    text.color = new Color(0.9f, 0.9f, 0f); // yellow
-                    break;
-
-                case RarityType.Legendary:
-                    text.text = "Legendary";
-                    text.color = new Color(1f, 0.6f, 0.2f); // orange
-                    break;
-
-                case RarityType.Mythic:
-                    text.text = "Mythic";
-                    text.color = new Color(0.6f, 0.2f, 1f); // purple
-                    break;
-                case RarityType.Godly:
-                    text.text = "Godly";
-                    text.color = new Color(0.1f, 0.2f, 0.5f); // red
-                    break;
-                case RarityType.Secret:
-                    text.text = "Secret";
-                    text.color = new Color(0.5f, 0.5f, 0.5f); // gray
-                    break;
-            }
+                case RarityType.Rare: text.color = Color.blue; break;
+                case RarityType.Epic: text.color = Color.yellow; break;
+                case RarityType.Legendary: text.color = Color.orange; break;
+                case RarityType.Mythic: text.color = Color.purple; break;
+                case RarityType.Godly: text.color = Color.red; break;
+                case RarityType.Secret: text.color = Color.gray; break;
+                default: text.color = Color.white; break;
+            }    
         }
 
         public static Color GetColorRarity(RarityType rarity)
@@ -200,8 +177,8 @@ namespace Raccoon.Utils
             if (rarity == RarityType.Common || rarity == RarityType.Uncommon || rarity == RarityType.Rare) return 1;
             if (rarity == RarityType.Epic || rarity == RarityType.Legendary || rarity == RarityType.Mythic) return 2;
             if (rarity == RarityType.Godly || rarity == RarityType.Secret) return 4;
-            if (rarity == RarityType.Limited || rarity == RarityType.Mythic) return 6;
-            return 1;
+            if (rarity == RarityType.Limited || rarity == RarityType.Cosmic) return 8;
+            return 2;
         }
 
         public static Color ApplyColorTint(Color baseColor, Color tint, float bias = 0.65f)

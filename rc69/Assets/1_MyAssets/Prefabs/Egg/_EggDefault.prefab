@@ -209,6 +209,11 @@ MonoBehaviour:
   ftarget: {fileID: 5502082256216438563}
   colli: {fileID: 7026562428234671347}
   holderModel: {fileID: 7992097975271492651}
+  layerGround:
+    serializedVersion: 2
+    m_Bits: 64
+  groundCheckHeight: 1
+  groundCheckDistance: 20
   modelContainer: {fileID: 0}
   vfx: {fileID: 0}
   infor: {fileID: 2710340364647757826}

@@ -16,9 +16,9 @@ MonoBehaviour:
   itemName: King Snake
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 2e870a852368a3745860cea34451c328, type: 3}
   prefab: {fileID: 7342044136655632180, guid: fc00adc826480ff49b56a587577f785c, type: 3}
-  rarityType: 6
+  rarityType: 0
   colorType: 3
   spriteIconLock: {fileID: 0}
   cost: 350000000

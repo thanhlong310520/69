@@ -91,7 +91,6 @@ public class PlayerLoot : MonoBehaviour
             if (item != null)
             {
                 item.StealFail(control);
-                item.transform.position = transform.position;
             }
         }
         itemLoots.Clear();

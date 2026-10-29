@@ -819,6 +819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: RCKit.Ads.Main::RCKit.Ads.Main.RaccoonAdsManager
   adsData: {fileID: 11400000, guid: 5f93ea5a7280b2b449f26e3ff080afac, type: 2}
   _useAllNative: 1
+  _forceDelay1sWithAdPreload: 1
   _creativeMode: 0
   testDeviceIds: []
   _rectBannerNative: {fileID: 0}
@@ -854,7 +855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: RCKit.Ads.Appsflyer::Raccoon.GameAppsFlyer
   devKey: Qhno4yJY6KHmZp9uS9DRe4
   appID: com.RC69.monster.eggs.steal.run
-  enableAppsFlyerPurchase: 0
+  enableAppsFlyerPurchase: 1
   isDebug: 0
   isSandbox: 0
 --- !u!1 &889408765
@@ -1004,6 +1005,37 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 30000
   m_TargetDisplay: 0
+--- !u!1 &959700683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 959700684}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &959700684
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959700683}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.44756, y: 1.06617, z: -0.22292}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &962417084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,3 +1467,4 @@ SceneRoots:
   - {fileID: 820534581}
   - {fileID: 530997676}
   - {fileID: 146510287}
+  - {fileID: 959700684}

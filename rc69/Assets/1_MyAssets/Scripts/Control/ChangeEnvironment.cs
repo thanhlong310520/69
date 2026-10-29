@@ -8,10 +8,6 @@ using UnityEngine.Events;
 
 public class ChangeEnvironment : MonoBehaviour
 {
-    [SerializeField] List<Renderer> groundRds;
-    [SerializeField] Renderer wallRd;
-    [SerializeField] Renderer baseGround;
-    [SerializeField] Renderer adsGround;
     [SerializeField] List<EnvironmentData> datas = new List<EnvironmentData>();
 
     public UnityEvent<float> eventCountTime;
@@ -133,8 +129,7 @@ public class ChangeEnvironment : MonoBehaviour
     {
         currentTime = duration;
     }
-
-
+     
     public void ChangeByType(EnvironmentType startType)
     {
         EnvironmentData data = datas.FirstOrDefault(x => x.type == startType);
@@ -163,14 +158,7 @@ public class ChangeEnvironment : MonoBehaviour
         SetEnvironmentColor(currentEnvironment.color);
         SpawnVfx(currentEnvironment.vfx);
 
-        ChangeMatRender(wallRd, currentEnvironment.wallMaterials);
-        ChangeMatRender(baseGround, currentEnvironment.baseGroundMaterials);
-        ChangeMatRender(adsGround, currentEnvironment.adsMaterials);
-
-        foreach (var g in groundRds)
-        {
-            ChangeMatRender(g, currentEnvironment.groundMaterials);
-        }
+        currentEnvironment.ChangeMat();
 
         playShow.StartPlay(data.clip,data.vol);
 
@@ -191,10 +179,7 @@ public class ChangeEnvironment : MonoBehaviour
         DynamicGI.UpdateEnvironment();
     }
 
-    void ChangeMatRender(Renderer rd , List<Material> mats)
-    {
-        //rd.materials = mats.ToArray();
-    }
+    
 
     void SpawnVfx(GameObject prefab)
     {
@@ -225,9 +210,25 @@ public class ChangeEnvironment : MonoBehaviour
         public float vol;
         public Color color;
         public Material skyboxMaterial;
-        public List<Material> groundMaterials;
-        public List<Material> wallMaterials;
-        public List<Material> baseGroundMaterials;
-        public List<Material> adsMaterials;
+        [SerializeField] List<RenderAndMat> listRenderAndMat;
+
+        public void ChangeMat()
+        {
+            foreach (var rm in listRenderAndMat)
+            {
+                rm.ChangeMatRender();
+            }
+        }
+    }
+}
+
+[System.Serializable]
+class RenderAndMat
+{
+    public Renderer render;
+    public List<Material> materials;
+    public void ChangeMatRender()
+    {
+        render.materials = materials.ToArray();
     }
 }

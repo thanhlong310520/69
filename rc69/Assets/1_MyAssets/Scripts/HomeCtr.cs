@@ -171,6 +171,8 @@ public class Home
     public string nameHome;
     public Transform user;
     public Transform startPoint;
+    public Treamill treamill;
+    public UpdateTreamill updateTreamill;
     public List<SlotController> slots1;
     public List<SlotController> slots2;
 
@@ -182,11 +184,24 @@ public class Home
         allSlot = new List<SlotController>();
         allSlot.AddRange(slots1);
         allSlot.AddRange(slots2);
+        treamill?.Init(user);
+        if (updateTreamill != null) updateTreamill.Init(user);
+        SetDataTreamill(data);
         for(int i = 0;i  < allSlot.Count; i++)
         {
             allSlot[i].Init(user, i.ToString());
         }
         lockslots = new List<LockSlot>();
+    }
+
+    public void SetDataTreamill(CharactorData data)
+    {
+        if (updateTreamill != null) updateTreamill.SetPrice(data);
+        if (treamill == null || data == null) return;
+        var listTreamill = GamePlayControl.instance.GetTreamillDataSOs;
+        if (listTreamill == null || listTreamill.Count == 0) return;
+        int index = Mathf.Clamp(data.GetIndexTreamill(), 0, listTreamill.Count - 1);
+        treamill.SetData(listTreamill[index]);
     }
 
     public void SetLockSlot2(string id, GameObject rebirthgo)

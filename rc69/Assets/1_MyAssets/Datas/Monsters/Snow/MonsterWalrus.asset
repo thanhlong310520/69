@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Walrus
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: a80acffc16a6e0448aa0116a6abbb5aa, type: 3}
   prefab: {fileID: 7017866214906911654, guid: 473da84154c43644585b8e2263e06e88, type: 3}
   rarityType: 2
   colorType: 4

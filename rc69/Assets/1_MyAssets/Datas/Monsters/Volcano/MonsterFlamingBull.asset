@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Flaming Bull
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 8cd1de9780bfa9848982f6ec9ea701ab, type: 3}
   prefab: {fileID: 4365236417145196329, guid: 607afcdc4e795834cb4ee228934f2566, type: 3}
   rarityType: 3
   colorType: 5

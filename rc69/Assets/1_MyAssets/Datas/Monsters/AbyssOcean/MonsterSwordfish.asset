@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Swordfish
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 3f3957a47d7b25d4d9f08befa1e2ff73, type: 3}
   prefab: {fileID: 6209712672806250727, guid: 1f4246a8ead55dc4abf6b3f1612ed8b2, type: 3}
   rarityType: 2
   colorType: 6

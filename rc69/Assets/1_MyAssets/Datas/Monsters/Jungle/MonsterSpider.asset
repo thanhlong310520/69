@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Spider
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 4092c1c603a78ba46a37504eef726705, type: 3}
   prefab: {fileID: 1245055132983695886, guid: 98b4a5bc0e6147e45974f9d1c0fe7f5e, type: 3}
   rarityType: 4
   colorType: 3

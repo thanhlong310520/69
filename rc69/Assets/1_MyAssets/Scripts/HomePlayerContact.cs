@@ -27,7 +27,36 @@ public class HomePlayerContact : MonoBehaviour
     void CheckPlayerInHome(Transform contact,bool inHome)
     {
         if (contact == null) return;
-        if (contact.GetComponent<PlayerController>() != null) isPlayerInHome = inHome;
+        if (contact.GetComponent<PlayerController>() != null)
+        {
+            isPlayerInHome = inHome;
+
+            if (inHome)
+            {
+                OnCollectAllSlot();
+            }
+        }
+    }
+
+    void OnCollectAllSlot()
+    {
+        var playerHome = HomeCtr.instance.GetHomeByUser(PlayerController.instance.transform);
+        if (playerHome != null)
+        {
+            long income = 0;
+            foreach (var s in playerHome.AllSlots)
+            {
+                if (s.GetSlot_State == Raccoon.Building.Slot_state.HaveItem)
+                {
+                    if (s.calculateIncome != null)
+                    {
+                        income += s.calculateIncome.GetIncome();
+                        s.calculateIncome.OnCollectIncome();
+                    }
+                }
+            }
+            if (income > 0) PlayerController.instance.Income(income);
+        }
     }
 
     void CheckNpcInPlayerHome(Transform contact, bool inHome)

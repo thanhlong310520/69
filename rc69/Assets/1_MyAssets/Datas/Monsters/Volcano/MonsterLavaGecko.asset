@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Lava Gecko
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 056a0e1f33501ee4d81d27eefc99daf7, type: 3}
   prefab: {fileID: 7792585050097003834, guid: ac3476ae8d428824e8e72d052ba53eda, type: 3}
   rarityType: 2
   colorType: 5

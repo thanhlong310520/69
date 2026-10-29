@@ -13,6 +13,7 @@ public class PopupSellShop : AbstractPopup
     public Button buttonBrainrot;
     public TMP_Text txtTotalSelected;
 
+    public Button sellButton;
     CharactorData data;
     ItemType currentType = ItemType.Egg;
     List<ItemInventory> selectedItems = new List<ItemInventory>();
@@ -123,7 +124,10 @@ public class PopupSellShop : AbstractPopup
     void UpdateTotalSelected()
     {
         if (txtTotalSelected == null) return;
-        txtTotalSelected.text = GetTotalSelectedCost().ConvertCurrencyToString();
+        var total = GetTotalSelectedCost();
+        txtTotalSelected.text = total.ConvertCurrencyToString();
+        if (total <= 0) sellButton.interactable = false;
+        else sellButton.interactable = true;
     }
 
     void ApplySiblingOrder()

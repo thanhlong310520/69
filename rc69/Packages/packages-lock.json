@@ -1,11 +1,100 @@
 {
   "dependencies": {
+    "appsflyer-unity-plugin": {
+      "version": "https://github.com/AppsFlyerSDK/appsflyer-unity-plugin.git#v6.18.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "8adb2350ad1076de02a8acf63e2048efa07cf9ba"
+    },
     "com.github-glitchenzo.nugetforunity": {
       "version": "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "acc1c7bc9ea34c33b830e40316fca52553878d29"
+    },
+    "com.google.ads.mobile": {
+      "version": "11.5.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.google.external-dependency-manager": "1.2.187",
+        "com.unity.modules.androidjni": "1.0.0"
+      },
+      "url": "https://package.openupm.com"
+    },
+    "com.google.ads.mobile.mediation.metaaudiencenetwork": {
+      "version": "3.20.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.google.ads.mobile": "11.0.0"
+      },
+      "url": "https://package.openupm.com"
+    },
+    "com.google.external-dependency-manager": {
+      "version": "1.2.187",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
+    "com.google.firebase.analytics": {
+      "version": "https://github.com/namtuoc91/unity-firebase-upm.git#release/analytics",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.google.firebase.app": "13.15.0"
+      },
+      "hash": "c328a1834f4d7618fc6d8a80899d8651fb0ea787"
+    },
+    "com.google.firebase.app": {
+      "version": "https://github.com/namtuoc91/unity-firebase-upm.git#release/app",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.google.external-dependency-manager": "1.2.186"
+      },
+      "hash": "a809a1a9858dc726a4dd12f8823df06e260babe2"
+    },
+    "com.google.firebase.crashlytics": {
+      "version": "https://github.com/namtuoc91/unity-firebase-upm.git#release/crashlytics",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.google.firebase.app": "13.15.0"
+      },
+      "hash": "754c9b61e8bb42a8ca6dbe55ec1d8b01c80be2ab"
+    },
+    "com.google.firebase.remote-config": {
+      "version": "https://github.com/namtuoc91/unity-firebase-upm.git#release/remote-config",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.google.firebase.app": "13.15.0"
+      },
+      "hash": "8ff9a2e9f5822153b48ad4b0de9b07058662256f"
+    },
+    "com.raccoon.adpack": {
+      "version": "https://github.com/raccoon-studio-tripglobal/raccoon-ads-kit.git#release",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "92ede7fc9a3160598deb710ff01955910e24e60a"
+    },
+    "com.raccoon.jnativeads": {
+      "version": "https://github.com/raccoon-studio-tripglobal/jnativeadsplugin.git#release",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "e8cad71fd07d12843e529173bd79e330e55e7674"
+    },
+    "com.unity.2d.sprite": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
     },
     "com.unity.ai.navigation": {
       "version": "2.0.10",
@@ -56,6 +145,13 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.mobile.android-logcat": {
+      "version": "1.4.7",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.multiplayer.center": {
       "version": "1.0.1",
       "depth": 0,
@@ -63,6 +159,37 @@
       "dependencies": {
         "com.unity.modules.uielements": "1.0.0"
       }
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.2",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.purchasing": {
+      "version": "5.2.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0",
+        "com.unity.services.core": "1.14.0",
+        "com.unity.modules.androidjni": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0",
+        "com.unity.modules.unitywebrequest": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.services.core": {
+      "version": "1.16.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.androidjni": "1.0.0",
+        "com.unity.nuget.newtonsoft-json": "3.2.1",
+        "com.unity.modules.unitywebrequest": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
       "version": "1.6.0",

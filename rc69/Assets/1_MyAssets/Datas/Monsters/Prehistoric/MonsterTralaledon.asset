@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Tralaledon
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: b3bb5e7412fa8ae44a31cfd815947396, type: 3}
   prefab: {fileID: 1267277809996113837, guid: d129f9b34640c924fb2a851a2fdacc01, type: 3}
   rarityType: 6
   colorType: 7

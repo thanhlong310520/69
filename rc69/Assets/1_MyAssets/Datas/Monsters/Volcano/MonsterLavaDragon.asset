@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Lava Dragon
   priority: 0
   itemType: 2
-  spriteIcon: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: ec204298552d45645b011699f48ac3db, type: 3}
   prefab: {fileID: 3829017947615264874, guid: 44dec5c902e439c45b1747dac38f59bd, type: 3}
   rarityType: 9
   colorType: 5

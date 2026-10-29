@@ -115,6 +115,10 @@ namespace Raccoon.Player
             {
                 h = v = 0;
                 input.isJump = false;
+                forwardAmount = 0;
+                turnAmount = 0;
+                rb.linearVelocity = Vector3.zero;
+                return;
             }
             camForward = Vector3.Scale(dirForward, new Vector3(1, 0, 1)).normalized;
             moveDir = v * camForward + h * dirRight;
@@ -203,6 +207,7 @@ namespace Raccoon.Player
                 rb.position = curPos;
             }
         }
+
         protected virtual void CheckGroundStatus()
         {
             if (GroundCheck())
