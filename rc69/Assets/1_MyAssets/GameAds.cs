@@ -49,7 +49,7 @@ namespace RCKit.Ads
             RaccoonAdsManager.Instance.Initialize(() =>
             {
                 Debug.Log("Init Ads");
-                RaccoonAdsManager.Instance.PreloadAdsWaitShow(AD_TYPE.OPEN_AD_FIRST_NATIVE);
+                RaccoonAdsManager.Instance.PreloadAdsWaitShow(AD_TYPE.OPEN_AD_NATIVE);
                 if (!IsAdsEnabled)
                     RemoveAds();
             });
@@ -60,23 +60,23 @@ namespace RCKit.Ads
         }
         public void HideBanner()
         {
-            RaccoonAdsManager.Instance.HideBanner(AD_TYPE.BANNER_NATIVE);
+            RaccoonAdsManager.Instance.HideBanner(AD_TYPE.OPEN_AD_NATIVE);
         }
         public void ShowBanner()
         {
-            RaccoonAdsManager.Instance.ShowBanner(AD_TYPE.BANNER_NATIVE);
+            RaccoonAdsManager.Instance.ShowBanner(AD_TYPE.OPEN_AD_NATIVE);
         }
         public void ShowInter(System.Action<bool> onComplete = null)
         {
-            RaccoonAdsManager.Instance.ShowAd(AD_TYPE.INTER_FORCE_NATIVE, onComplete);
+            RaccoonAdsManager.Instance.ShowAd(AD_TYPE.OPEN_AD_NATIVE, onComplete);
         }
         public void ShowInterOpen(System.Action<bool> onComplete = null)
         {
-            RaccoonAdsManager.Instance.ShowAd(AD_TYPE.INTER_OPEN_NATIVE, onComplete);
+            RaccoonAdsManager.Instance.ShowAd(AD_TYPE.OPEN_AD_NATIVE, onComplete);
         }
         public void ShowReward(System.Action<bool> onComplete)
         {
-            RaccoonAdsManager.Instance.ShowAd(AD_TYPE.REWARD_ITEM_NATIVE, onComplete);
+            RaccoonAdsManager.Instance.ShowAd(AD_TYPE.OPEN_AD_NATIVE, onComplete);
         }
 
     }

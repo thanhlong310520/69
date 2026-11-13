@@ -55,7 +55,7 @@ public class LoadingScene : MonoBehaviour
         }
 
         StopCoroutine(WaitInterOpenAd());
-        RaccoonAdsManager.Instance.StopLoadingAd(AD_TYPE.OPEN_AD_FIRST_NATIVE);
+        RaccoonAdsManager.Instance.StopLoadingAd(AD_TYPE.OPEN_AD_NATIVE);
         sliderLoading.value = 1f;
         Debug.Log("Load Complete");
         yield return wait;
@@ -73,9 +73,9 @@ public class LoadingScene : MonoBehaviour
         {
             yield return wait;
 
-            if (!(RaccoonAdsManager.Instance?.AdsIsReady(AD_TYPE.OPEN_AD_FIRST_NATIVE) ?? false)) continue;
+            if (!(RaccoonAdsManager.Instance?.AdsIsReady(AD_TYPE.OPEN_AD_NATIVE) ?? false)) continue;
             yield return wait;
-            RaccoonAdsManager.Instance.ShowAdUntilLoaded(AD_TYPE.OPEN_AD_FIRST_NATIVE, false);
+            RaccoonAdsManager.Instance.ShowAdUntilLoaded(AD_TYPE.OPEN_AD_NATIVE, false);
             multi_speed = 10f;
             yield return wait;
             break;

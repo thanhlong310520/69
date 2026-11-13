@@ -51,14 +51,15 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.9f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Main\ATTrackingManager.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Main\AdsScriptableObj.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Main\AdLoadingGate.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Main\RaccoonAdsManager.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Main\RaccoonAdsManager.Init.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Main\ATTrackingManager.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Main\AdsScriptableObj.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Main\RaccoonAdsFirst.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Main\AdLoadingGate.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Main\RaccoonAdsManager.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Main\RaccoonAdsManager.Init.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Main\RCKit.Ads.Main.asmdef" />
+    <None Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Main\RCKit.Ads.Main.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

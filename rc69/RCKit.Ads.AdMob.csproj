@@ -51,18 +51,19 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.9f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\AdMob\GoogleAdsUnit.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\AdMob\GoogleAdsBanner.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\AdMob\GoogleAdsAppOpen.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\AdMob\GoogleUMPConsent.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\AdMob\GoogleAdsConfig.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\AdMob\GoogleAdsRewardedVideo.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\AdMob\GoogleAdsMediation.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\AdMob\GoogleAdsRewardedInterstitial.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\AdMob\GoogleAdsInterstitial.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\AdMob\GoogleAdsUnit.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\AdMob\GoogleAdsBanner.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\AdMob\GoogleAdsAppOpen.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\AdMob\GoogleUMPConsent.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\AdMob\UmpTcfConsent.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\AdMob\GoogleAdsConfig.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\AdMob\GoogleAdsRewardedVideo.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\AdMob\GoogleAdsMediation.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\AdMob\GoogleAdsRewardedInterstitial.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\AdMob\GoogleAdsInterstitial.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\AdMob\RCKit.Ads.AdMob.asmdef" />
+    <None Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\AdMob\RCKit.Ads.AdMob.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

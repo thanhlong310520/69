@@ -51,24 +51,24 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.9f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Runtime\IAdsRemovable.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Runtime\Raccoon\RaccoonAdsRewarded.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Runtime\IAdsInterstitial.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Runtime\IAppOpenAds.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Runtime\IAdsUnit.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Runtime\IAdsProvider.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Runtime\IAdsBanner.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Runtime\Raccoon\RaccoonAdsInterstitial.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Runtime\UnityMainThreadDispatcher.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Runtime\IConfigProvider.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Runtime\IMediationProvider.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Runtime\AdsManager.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Runtime\IConsentProvider.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Runtime\Raccoon\RaccoonAdsBanner.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Runtime\IAdsRewarded.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Runtime\IAdsRemovable.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Runtime\Raccoon\RaccoonAdsRewarded.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Runtime\IAdsInterstitial.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Runtime\IAppOpenAds.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Runtime\IAdsUnit.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Runtime\IAdsProvider.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Runtime\IAdsBanner.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Runtime\Raccoon\RaccoonAdsInterstitial.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Runtime\UnityMainThreadDispatcher.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Runtime\IConfigProvider.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Runtime\IMediationProvider.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Runtime\AdsManager.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Runtime\IConsentProvider.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Runtime\Raccoon\RaccoonAdsBanner.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Runtime\IAdsRewarded.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\Runtime\RCKit.Ads.asmdef" />
+    <None Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\Runtime\RCKit.Ads.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

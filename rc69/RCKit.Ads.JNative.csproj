@@ -51,14 +51,14 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.9f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\JNative\JNativeAdsBanner.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\JNative\JNativeAdsRewarded.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\JNative\JNativeAdsUnit.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\JNative\JNativeAdsInterstitial.cs" />
-    <Compile Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\JNative\JNativeAdsAppOpen.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\JNative\JNativeAdsBanner.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\JNative\JNativeAdsRewarded.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\JNative\JNativeAdsUnit.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\JNative\JNativeAdsInterstitial.cs" />
+    <Compile Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\JNative\JNativeAdsAppOpen.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.raccoon.adpack@92ede7fc9a31\JNative\RCKit.Ads.JNative.asmdef" />
+    <None Include="Library\PackageCache\com.raccoon.adpack@b4b6231436d1\JNative\RCKit.Ads.JNative.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -81,14 +81,14 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "92ede7fc9a3160598deb710ff01955910e24e60a"
+      "hash": "b4b6231436d17ff977483c16395c5d3b1ab62105"
     },
     "com.raccoon.jnativeads": {
       "version": "https://github.com/raccoon-studio-tripglobal/jnativeadsplugin.git#release",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "e8cad71fd07d12843e529173bd79e330e55e7674"
+      "hash": "2994273ca49af1437db5393196e9c46a359cf3f3"
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
