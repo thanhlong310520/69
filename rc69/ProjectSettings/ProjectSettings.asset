@@ -143,7 +143,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.2.1
+  bundleVersion: 0.2.2
   preloadedAssets:
   - {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   metroInputSource: 0
@@ -176,7 +176,7 @@ PlayerSettings:
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
-  AndroidBundleVersionCode: 12
+  AndroidBundleVersionCode: 13
   AndroidMinSdkVersion: 25
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -834,7 +834,7 @@ PlayerSettings:
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
-    Android: DOTWEEN;ENABLE_RACCOON_ADMOB;ENABLE_RACCOON_JNATIVE;USE_ADS;USE_FIREBASE;ENABLE_APPSFLYER;USE_PURCHASH;USE_PURCHASE
+    Android: DOTWEEN;ENABLE_RACCOON_ADMOB;ENABLE_RACCOON_JNATIVE;USE_ADS;USE_FIREBASE;ENABLE_APPSFLYER;USE_PURCHASH;USE_PURCHASE;JNATIVE_HAS_ADSOURCE;USING_INAPPREVIEW;RACCOON_PLAY_REVIEW
     EmbeddedLinux: DOTWEEN
     GameCoreScarlett: DOTWEEN
     GameCoreXboxOne: DOTWEEN
@@ -845,12 +845,12 @@ PlayerSettings:
     PS4: DOTWEEN
     PS5: DOTWEEN
     QNX: DOTWEEN
-    Standalone: DOTWEEN;ENABLE_RACCOON_ADMOB;ENABLE_RACCOON_JNATIVE;ENABLE_APPSFLYER
+    Standalone: DOTWEEN;ENABLE_RACCOON_ADMOB;ENABLE_RACCOON_JNATIVE;ENABLE_APPSFLYER;JNATIVE_HAS_ADSOURCE
     VisionOS: DOTWEEN
     WebGL: DOTWEEN
     Windows Store Apps: DOTWEEN
     XboxOne: DOTWEEN
-    iPhone: DOTWEEN;ENABLE_RACCOON_ADMOB;ENABLE_RACCOON_JNATIVE;ENABLE_APPSFLYER
+    iPhone: DOTWEEN;ENABLE_RACCOON_ADMOB;ENABLE_RACCOON_JNATIVE;ENABLE_APPSFLYER;JNATIVE_HAS_ADSOURCE
     tvOS: DOTWEEN
   additionalCompilerArguments: {}
   platformArchitecture: {}

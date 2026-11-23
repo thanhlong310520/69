@@ -1,6 +1,7 @@
 using Raccoon.Ads;
 using Raccoon.Data;
 using Raccoon.EnumHolder;
+using Raccoon.GameService;
 using Raccoon.Item;
 using System.Collections;
 using System.Collections.Generic;
@@ -89,8 +90,9 @@ namespace Raccoon.Controller
                 ShowPopup(PopupCanvas.PopupType.VipSub);
                 GameData.Get.isShowVip = true;
             }
+            StartCoroutine(ShowInappReviewDelayed());
 
-            StartCoroutine(DelayShowInterOpen());
+            //StartCoroutine(DelayShowInterOpen());
         }
         IEnumerator DelayShowInterOpen()
         {
@@ -100,6 +102,13 @@ namespace Raccoon.Controller
             }
             yield return new WaitForSeconds(timeDelayShowInter);
             AdsActionManager.instance.ShowInterOpenAd();
+        }
+        IEnumerator ShowInappReviewDelayed()
+        {
+            yield return new WaitForSeconds(20f);
+
+            if (GameInappReview.Instance != null)
+                GameInappReview.Instance.TryShowReviewFirstSession();
         }
         IEnumerator DelayChangeMap()
         {

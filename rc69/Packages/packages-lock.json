@@ -76,19 +76,54 @@
       },
       "hash": "8ff9a2e9f5822153b48ad4b0de9b07058662256f"
     },
+    "com.google.play.common": {
+      "version": "1.9.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
+    "com.google.play.core": {
+      "version": "1.8.6",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.google.external-dependency-manager": "1.2.185"
+      },
+      "url": "https://package.openupm.com"
+    },
+    "com.google.play.review": {
+      "version": "1.8.4",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.google.play.common": "1.9.2",
+        "com.google.play.core": "1.8.6"
+      },
+      "url": "https://package.openupm.com"
+    },
     "com.raccoon.adpack": {
-      "version": "https://github.com/raccoon-studio-tripglobal/raccoon-ads-kit.git#release",
+      "version": "https://github.com/raccoon-studio-tripglobal/raccoon-ads-kit.git#beta_test",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "b4b6231436d17ff977483c16395c5d3b1ab62105"
+      "hash": "5e4d3f6a71e281c4ac5d7183ed5b3980d8d0538d"
+    },
+    "com.raccoon.game-kit": {
+      "version": "https://github.com/namtuoc91/unity_kit_upm.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.ugui": "2.0.0"
+      },
+      "hash": "59be92793c74cd7f2dcd0c8cbe9cc34dcc548eaa"
     },
     "com.raccoon.jnativeads": {
-      "version": "https://github.com/raccoon-studio-tripglobal/jnativeadsplugin.git#release",
+      "version": "https://github.com/raccoon-studio-tripglobal/jnativeadsplugin.git#alpha_test",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "2994273ca49af1437db5393196e9c46a359cf3f3"
+      "hash": "d0379274069801791d47fdf958e6ee0d2c36c7bb"
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",

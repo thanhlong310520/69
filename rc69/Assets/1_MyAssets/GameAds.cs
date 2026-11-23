@@ -24,12 +24,15 @@ using RCKit.Ads.Main;
 using RCKit.Ads.AdMob;
 #endif
 
+#if USING_INAPPREVIEW
+using Raccoon.GameService;
+#endif
 namespace RCKit.Ads
 {
     public class GameAds : MonoBehaviour
     {
         public bool IsInterstitialForceNativeAvailable =>
-            IsAdsEnabled && RaccoonAdsManager.Instance.AdsIsReady(AD_TYPE.INTER_FORCE_NATIVE);
+            IsAdsEnabled && RaccoonAdsManager.Instance.AdsIsReady(AD_TYPE.OPEN_AD_NATIVE);
 
         public static GameAds Get { get; private set; }
         public static bool IsAdsEnabled => PlayerData.Get == null || (PlayerData.Get.isOnAds && !PlayerData.Get.isVipIAP);
@@ -53,6 +56,8 @@ namespace RCKit.Ads
                 if (!IsAdsEnabled)
                     RemoveAds();
             });
+            SetEventInappReview();
+
         }
         public void RemoveAds()
         {
@@ -78,6 +83,15 @@ namespace RCKit.Ads
         {
             RaccoonAdsManager.Instance.ShowAd(AD_TYPE.OPEN_AD_NATIVE, onComplete);
         }
+        void SetEventInappReview()
+        {
+#if USING_INAPPREVIEW
+            GameInappReview.OnBeforeShowReview += () =>
+            {
+                RaccoonAdsManager.Instance.SetStopTrackingPaused();
+            };
+#endif
 
+        }
     }
 }

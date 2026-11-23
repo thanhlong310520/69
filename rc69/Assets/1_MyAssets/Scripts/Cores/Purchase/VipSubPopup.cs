@@ -1,3 +1,4 @@
+using Raccoon.Ads;
 using Raccoon.Controller;
 using Raccoon.Store;
 using TMPro;
@@ -21,9 +22,11 @@ namespace Raccoon.Purchase
         public string remainText;
 
         public TextMeshProUGUI txtPolicy;
+        bool showSecondDone = false;
 
         void Start()
         {
+            showSecondDone = false;
             btnBack.onClick.AddListener(() => Hide());
             
             txtPrice.text = $"Only {SetPriceStore()} / week";
@@ -103,6 +106,15 @@ namespace Raccoon.Purchase
             GamePlayControl.instance.ctsv.StartCountShow();
             GameData.Get.isShowVip = false;
             //GameAds.Get.ShowBanner();
+            ShowSecond();
+
+        }
+
+        void ShowSecond()
+        {
+            if (showSecondDone) return;
+            AdsActionManager.instance.ShowInterOpenAd();
+            showSecondDone = false;
         }
 
     }
