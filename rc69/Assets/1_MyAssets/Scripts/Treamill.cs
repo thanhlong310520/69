@@ -16,7 +16,7 @@ public class Treamill : GoContact
     public void SetData(TreamillDataSO data)
     {
         this.data = data;
-
+        if(modelHolder.childCount > 0) currentModel = modelHolder.GetChild(0).gameObject;
         if (currentModel != null) Destroy(currentModel);
         currentModel = null;
 

@@ -9,7 +9,7 @@ AnimatorOverrideController:
   m_Name: 16.Orcalero Orcala_Override
   m_Controller: {fileID: 9100000, guid: 19d0abdc965784a37bfe66f41a496caf, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: -7616177253730708855, guid: e6640c53915c64ad38a7ed1b41ddc70d, type: 3}
-    m_OverrideClip: {fileID: -8139890900500185699, guid: 7c9c7f5c5208a42b495d069536ab795c, type: 3}
-  - m_OriginalClip: {fileID: -3939750429153035180, guid: 1af0b6cc4116e40bf80ec994f2b0b46b, type: 3}
-    m_OverrideClip: {fileID: 2457663645524119356, guid: d4a8916b3ea6b41619bd1078598e2827, type: 3}
+  - m_OriginalClip: {fileID: -4852677400939973287, guid: d7e2a378645f7dd439c37ad2f7b776cc, type: 3}
+    m_OverrideClip: {fileID: -8139890900500185699, guid: 2d1ab41296e31af43880306324351806, type: 3}
+  - m_OriginalClip: {fileID: -4415722525347947982, guid: baa938c0ac637aa45934422a5a213f4b, type: 3}
+    m_OverrideClip: {fileID: 2457663645524119356, guid: 6c2d93641894ccd4d875549023c936c1, type: 3}

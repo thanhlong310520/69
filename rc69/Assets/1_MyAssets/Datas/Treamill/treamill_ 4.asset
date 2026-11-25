@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Raccoon.Data.TreamillDataSO
   price: 5000000
   speedPerSecond: 0.12
-  prefabModel: {fileID: 0}
+  prefabModel: {fileID: 2629924160533607767, guid: 95c435f0ceb7d96458cd5585d6922e6c, type: 3}

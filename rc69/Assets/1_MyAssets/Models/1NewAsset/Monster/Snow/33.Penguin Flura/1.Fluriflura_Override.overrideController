@@ -9,7 +9,7 @@ AnimatorOverrideController:
   m_Name: 1.Fluriflura_Override
   m_Controller: {fileID: 9100000, guid: 19d0abdc965784a37bfe66f41a496caf, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: -7616177253730708855, guid: e6640c53915c64ad38a7ed1b41ddc70d, type: 3}
-    m_OverrideClip: {fileID: -7032900241817902739, guid: 02532b0bb260244c1969ed1784900540, type: 3}
-  - m_OriginalClip: {fileID: -3939750429153035180, guid: 1af0b6cc4116e40bf80ec994f2b0b46b, type: 3}
-    m_OverrideClip: {fileID: 5915179082107738461, guid: 324f2a455c7ab4501bec9a6c30203e53, type: 3}
+  - m_OriginalClip: {fileID: -4852677400939973287, guid: d7e2a378645f7dd439c37ad2f7b776cc, type: 3}
+    m_OverrideClip: {fileID: -7032900241817902739, guid: 947c5ca4cb24d53439201e649c707266, type: 3}
+  - m_OriginalClip: {fileID: -4415722525347947982, guid: baa938c0ac637aa45934422a5a213f4b, type: 3}
+    m_OverrideClip: {fileID: 5915179082107738461, guid: 7cfd8a6c8df568d4590da02b097051dc, type: 3}

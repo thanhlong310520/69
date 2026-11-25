@@ -32,10 +32,10 @@ ModelImporter:
     clipAnimations:
     - serializedVersion: 16
       name: TrulimeroTrulicina_Idle
-      takeName: TrulimeroTrulicina_Idle
+      takeName: 13 Trulimero Trulicina idle
       internalID: -3887709870665318825
       firstFrame: 0
-      lastFrame: 32
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
