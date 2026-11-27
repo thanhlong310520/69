@@ -214,6 +214,7 @@ public class ChangeEnvironment : MonoBehaviour
 
         public void ChangeMat()
         {
+            if (listRenderAndMat == null) return;
             foreach (var rm in listRenderAndMat)
             {
                 rm.ChangeMatRender();
@@ -229,6 +230,9 @@ class RenderAndMat
     public List<Material> materials;
     public void ChangeMatRender()
     {
-        render.materials = materials.ToArray();
+        // Bỏ qua slot lỗi (renderer bị mất khi thay map) thay vì NullReference
+        if (render == null || materials == null || materials.Count == 0) return;
+        // sharedMaterials: không tạo bản sao material mỗi lần đổi môi trường
+        render.sharedMaterials = materials.ToArray();
     }
 }

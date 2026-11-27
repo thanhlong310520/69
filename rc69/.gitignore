@@ -15,3 +15,19 @@ Assembly-CSharp*.csproj
 /Assets/Firebase/
 /Assets/Editor Default Resources/
 .vs
+
+# Auto-generated / machine-local (added during cleanup)
+/.utmp/
+/BuildReports/
+/UserSettings/
+/UIElementsSchema/
+/ProfilerCaptures/
+*.csproj
+*.sln
+*.slnx
+/Assets/FR2_Cache.asset
+/Assets/FR2_Cache.asset.meta
+
+# Signing keys must not be in git
+*.keystore
+*.jks

@@ -15,11 +15,14 @@ MonoBehaviour:
   use_test_ad: 0
   AdUnitConfigs:
   - ad_type: 70
-    ad_id_android: ca-app-pub-8190506959251235/9115912346
+    ad_id_android: ca-app-pub-8190506959251235/4091542726
     ad_id_ios: 
     is_multi_ad: 1
-    ad_id_android_2: ca-app-pub-8190506959251235/4934406011
+    ad_id_android_2: ca-app-pub-8190506959251235/8553405606
     ad_id_ios_2: 
+    is_multi_ad_3: 0
+    ad_id_android_3: 
+    ad_id_ios_3: 
     removable: 1
     preload_ad: 0
     reload_on_fail: 1
